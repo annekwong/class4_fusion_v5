@@ -1,0 +1,2 @@
+UPDATE version_information SET major_ver = 'V5.0.0', build_date = '2018-02-09' WHERE program_name = 'dnl_softswitch';
+UPDATE version_information SET major_ver = 'V5.2.20180213', build_date = '2018-02-13' WHERE program_name = 'database_version';

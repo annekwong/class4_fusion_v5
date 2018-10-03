@@ -1,0 +1,1 @@
+ALTER TABLE did_billing_rel ADD COLUMN fee_per_port NUMERIC DEFAULT 0;

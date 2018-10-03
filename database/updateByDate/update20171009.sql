@@ -1,0 +1,1 @@
+insert into version_information (program_name, major_ver, minor_ver, build_date, start_time) values ('database_version', 'V5.2.20171009', '2df1fa28374399273fddb8bd90c901951dd70531', '2017-10-09', DEFAULT);
