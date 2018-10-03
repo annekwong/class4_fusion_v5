@@ -1,0 +1,3 @@
+answer_time_of_date,egress_id,egress_rate,egress_erro_string,ingress_name,ingress_client_id,ingress_client_rate,ingress_dnis_type,origination_destination_number,release_cause,release_cause_from_protocol_stack,binary_value_of_release_cause_from_protocol_stack,time
+,,0,,,,0,dnis,900441729810030,3,,403:Forbidden,"2017-03-14 09:09:25+00"
+,,0,,,,0,dnis,0099810441798888016,3,,403:Forbidden,"2017-03-14 08:57:07+00"

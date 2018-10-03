@@ -1,0 +1,116 @@
+--- /home/yaro/class4-v5.0/web_2017_03_31/app/models/mailtmp.php	2017-03-31 08:45:20.795999939 +0000
++++ /home/yaro/class4-v5.0/web/app/models/mailtmp.php	2017-04-17 14:37:34.282999939 +0000
+@@ -116,7 +116,9 @@
+                 'header_tags' => array(),
+                 'tags' => array(
+                     'company_name','client_name','start_time','end_time','beginning_balance','buy_amount',
+-                    'sell_amount','ending_balance','allowed_credit','remaining_credit'
++                    'sell_amount','ending_balance','allowed_credit','remaining_credit','begining_of_day',
++                    'current_time', 'current_day', 'beginning_of_day_balance', 'current_balance', 'credit_limit',
++                    'balance'
+                 ),
+             ),
+ 
+@@ -133,7 +135,7 @@
+                 ),
+             ),
+             array(
+-                'title' => __('Daily Payment Email Template',true),
++                'title' => __('Payment Received Notification Email Template',true),
+                 'from_email' => 'daily_payment_from',
+                 'subject'   => 'daily_payment_subject',
+                 'content' => 'daily_payment_content',
+@@ -144,17 +146,6 @@
+                 ),
+             ),
+             array(
+-                'title' => __('Payment Sent Email Template',true),
+-                'from_email' => 'payment_sent_from',
+-                'subject'   => 'payment_sent_subject',
+-                'content' => 'payment_sent_content',
+-                'cc' => 'payment_sent_cc',
+-                'header_tags' => array(),
+-                'tags' => array(
+-                    'company_name','amount','receiving_time','client_name'
+-                ),
+-            ),
+-            array(
+                 'title' => __('Payment Received Email Template',true),
+                 'from_email' => 'payment_received_from',
+                 'subject'   => 'payment_received_subject',
+@@ -201,18 +192,6 @@
+                 ),
+             ),
+             array(
+-                'title' => __('Notice of Fraud Detection Template',true),
+-                'from_email' => 'fraud_detection_from',
+-                'subject'   => 'fraud_detection_subject',
+-                'content' => 'fraud_detection_content',
+-                'cc' => 'fraud_detection_cc',
+-                'header_tags' => array(),
+-                'tags' => array(
+-                    'company_name','username','rule_name','client_name','ingress_name','type','limit_value',
+-                    'actual_value'
+-                ),
+-            ),
+-            array(
+                 'title' => __('Email Template: Rate is Downloaded Notification',true),
+                 'from_email' => 'download_rate_notice_from',
+                 'subject'   => 'download_rate_notice_subject',
+@@ -235,36 +214,14 @@
+                 ),
+             ),
+             array(
+-                'title' => __('Email Template: New Rate Notification',true),
++                'title' => __('Email Template: Send Downloaded CDR',true),
+                 'from_email' => 'download_cdr_from',
+                 'subject'   => 'download_cdr_subject',
+                 'content' => 'download_cdr_content',
+                 'cc' => 'download_cdr_cc',
+                 'header_tags' => array(),
+                 'tags' => array(
+-                    'company_name','client_name','download_link'
+-                ),
+-            ),
+-            array(
+-                'title' => __('Email Template: New Rate Notification',true),
+-                'from_email' => 'download_cdr_from',
+-                'subject'   => 'download_cdr_subject',
+-                'content' => 'download_cdr_content',
+-                'cc' => 'download_cdr_cc',
+-                'header_tags' => array(),
+-                'tags' => array(
+-                    'company_name','client_name','download_link'
+-                ),
+-            ),
+-            array(
+-                'title' => __('Email Template: Vendor Invoice Dispute Note Template',true),
+-                'from_email' => 'vendor_invoice_dispute_from',
+-                'subject'   => 'vendor_invoice_dispute_subject',
+-                'content' => 'vendor_invoice_dispute_content',
+-                'cc' => 'vendor_invoice_dispute_cc',
+-                'header_tags' => array(),
+-                'tags' => array(
+-                    'company_name','client_name','dispute_value','carrier_name','billing_duration'
++                    'download_link'
+                 ),
+             ),
+ //            array(
+@@ -275,6 +232,17 @@
+ //                'cc' => 'vendor_invoice_dispute_cc',
+ //                'header_tags' => array(),
+ //                'tags' => array(
++//                    'company_name','client_name','dispute_value','carrier_name','billing_duration'
++//                ),
++//            ),
++//            array(
++//                'title' => __('Email Template: Vendor Invoice Dispute Note Template',true),
++//                'from_email' => 'vendor_invoice_dispute_from',
++//                'subject'   => 'vendor_invoice_dispute_subject',
++//                'content' => 'vendor_invoice_dispute_content',
++//                'cc' => 'vendor_invoice_dispute_cc',
++//                'header_tags' => array(),
++//                'tags' => array(
+ //                    'dispute_value','carrier_name','billing_duration'
+ //                ),
+ //            ),

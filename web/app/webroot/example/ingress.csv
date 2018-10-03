@@ -1,0 +1,2 @@
+trunk_name,carrier_name,media_type,cps_limit,call_limit,pdd_timeout,ignore_early_media,active,rfc2833,dip_from,min_duration,max_duration
+ingress_001,client_001,bypass/proxy,1,1,1000,none/180/183/180 and 183,true/false,true/false,client/server,1,1

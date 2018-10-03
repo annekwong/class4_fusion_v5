@@ -1,0 +1,41 @@
+
+.login_logo {
+	height:45px;
+	clear:both;
+	padding:0px;
+	margin:0px auto;
+	width:500px;
+	vertical-align:bottom;
+	margin-bottom:10px;
+}
+#container {
+	margin-top:70px auto;
+	padding:10px;
+	width:480px;
+	height:200px;
+	margin:0px auto;
+}
+.login_container {
+	width:380px;
+	margin:0px auto;
+	margin-top:30px;
+}
+.login_container li {
+	width:480px;
+	clear:both;
+	text-align:left;
+	height:30px;
+	line-height:30px;
+}
+.login_name {
+	width:100px;
+	float:left;
+	text-align:right;
+	height:30px;
+	line-height:30px;
+	padding-right:5px;
+}
+
+#footer {
+	width:495px;
+}

@@ -1,0 +1,3 @@
+Carrier,Invoice Num,Amount,Invoice Period Start,Invoice Period End,GMT,Invoice Date,Due Date
+11111111d,1234556,100,2014-06-24 00:00:00,2014-06-24 23:59:59,'+0000',2014-06-24,2014-06-24
+112233eeeeeeee,65234,120,2014-06-24 00:00:00,2014-06-24 23:59:59,'-0100',2014-06-24,2014-06-24

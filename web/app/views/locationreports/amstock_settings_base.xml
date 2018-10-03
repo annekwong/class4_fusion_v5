@@ -1,0 +1,15 @@
+  <margins>0</margins>                                                   
+  <text_size>15</text_size>                                               
+
+  <header>
+    <enabled>false</enabled>
+  </header>
+
+  <number_format>
+  	<decimal_separator>.</decimal_separator>  
+    <letters>
+       <letter number="1000">K</letter>
+       <letter number="1000000">M</letter>
+       <letter number="1000000000">B</letter>
+    </letters>      
+  </number_format>

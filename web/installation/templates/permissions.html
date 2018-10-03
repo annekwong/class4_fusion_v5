@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Permissions</h1>
+<div class="innerLR">
+    <div class="widget widget-heading-simple widget-body-gray">
+        <div class="widget-body">
+            <p class="lead center margin-none">
+            {% if all_success %}
+                It seems everthing is fine!
+            {% else %}
+                There is something wrong! Try to run `python install.py` first, then refresh this page.
+            {% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="widget widget-heading-simple widget-body-white">
+        <div class="widget-body">
+            <!-- Table -->
+            <table class="table table-bordered table-condensed">
+                <!-- Table body -->
+                <tbody>
+                    {% for permission in permissions %}
+                    <!-- Table row -->
+                    <tr>
+                        <td>{{ permission[0] }}</td>
+                        <td>
+                            {% if permission[1] == true %}
+                            <span class="label label-success">Success</span>
+                            {% else %}
+                            <span class="label label-danger">Failed</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <!-- // Table row END -->
+                    {% endfor %}
+                </tbody>
+                <!-- // Table body END -->
+            </table>
+            <!-- // Table END -->
+        </div>
+    </div>
+    
+    {% if all_success %}
+    <a class="btn btn-block btn-primary btn-icon glyphicons right_arrow" href="{{ app.request.baseUrl ~ '/configurations' }}" type="submit"><i></i>Next</a>
+    {% endif %}
+</div>
+{% endblock %}

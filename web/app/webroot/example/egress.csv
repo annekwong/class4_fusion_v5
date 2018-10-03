@@ -1,0 +1,2 @@
+trunk_name,carrier_name,media_type,call_limit,cps_limit,pdd_timeout,active,rate_table_name,host_route_strategy,rfc2833,pass_dip_head,min_duration,max_duration
+egress_001,client_002,bypass/proxy,1,1,1000,true/false,rate_table_001,round-robin/top-down,true/false,true/false,1,1

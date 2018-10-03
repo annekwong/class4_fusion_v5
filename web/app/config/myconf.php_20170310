@@ -1,0 +1,278 @@
+<?php
+
+$sections = parse_ini_file(CONF_PATH, TRUE);
+foreach ($sections as $section_key => &$section)
+{
+    foreach ($section as $item_key => &$item)
+    {
+        while (strpos($item, '$') !== FALSE)
+        {
+            list($key, $value) = explode('.', $item);
+            $item = @$sections[$key][trim($value, '$')];
+        }
+    }
+}
+
+$config['client']['name'] = $sections['client']['name'];
+
+//class4脚本配置目录，不要提供末尾目录符
+$config['script']['path'] = realpath(ROOT . '/../script/');
+$config['script']['conf'] = CONF_PATH;
+
+
+//LRN 测试功能所执行的二进制文件
+$config['lrn_test']['lrn_test_bin'] = APP . "binexec/lrn_test/dnl_lrn_testing";
+
+
+//费率上传相关配置文件
+$config['rateimport']['bin'] = APP . "binexec/dnl_import_rate/dnl_import_rate";    // 费率上传执行的二进制文件,777 权限
+#$config['rateimport']['conf'] = APP . "binexec/dnl_import_rate/conf/";             // 二进制文件配置文件目录
+$config['rateimport']['conf'] = CONF_PATH;             // 二进制文件配置文件目录
+$config['rateimport']['out'] = WWW_ROOT . "upload/rates_log";                      // 上传log件存放目录
+$config['rateimport']['put'] = WWW_ROOT . "upload/rates";                          // 存放上传文件 
+//生成Invoice(PDF)存放目录
+$config['generate_invoice']['path'] = APP . 'webroot' . DS . 'upload' . DS . 'invoice_file';
+
+
+//Mutual Balance 生成PDF存放目录
+$config['generate_balance']['path'] = APP . 'webroot' . DS . 'upload' . DS . 'balance_file';
+
+
+//后台SOCK server 通讯服务器ip & port,command_api_ip/port
+$config['backend']['ip'] = $sections['web_switch']['event_ip'];
+$config['backend']['port'] = $sections['web_switch']['event_port'];
+
+//LRN Local Bind IP & Port
+Configure::write("lrn.ip", $sections['web_ip']['web_local_ip']);
+Configure::write("lrn.port", $sections['web_ip']['lrn_port']);
+
+/*
+ * PCAP API IP
+ */
+if(isset($sections['pcap']['ip'])) {
+    Configure::write("pcap.api.ip", $sections['pcap']['ip']);
+} else {
+    Configure::write("pcap.api.ip", '');
+}
+
+//数据库导出目录,需要数据库机器网络映射
+Configure::write('database_export_path', realpath(ROOT . '/../db_nfs_path/')); // 数据库机器上导出的目录
+Configure::write('database_actual_export_path', $sections['web_path']['db_export_path']); // 实际WEB机器上目录
+//php解释器目录
+Configure::write('php_exe_path', $sections['web_path']['php_interpreter_path']);
+
+
+//SIP Capture 相关配置,/usr/local/sip_capture/sip_capture_server -i 173.205.112.249 -p 8500 -c /opt/nfs_files/dial/web_sip_capture/
+Configure::write('sip_capture', array(
+    'host_ip' => $sections['web_sip_capture']['ip'], //-i
+    'port' => $sections['web_sip_capture']['port'], //-p
+    'ngrep' => $sections['web_sip_capture']['ngrep_path'],
+    'timeout_shell' => APP . 'vendors/shells/timeout.sh',
+    'sip_scenario' => APP . 'vendors/shells/sip_scenario.pl',
+    'single' => APP . 'vendors/shells/single.pl',
+    'pcap_dir' => "/opt/nfs_files/class4/web_sip_capture/", //-c
+    'is_debug' => $sections['web_sip_capture']['debug'], // 是否打开路径调试 (true 打开, false 关闭)
+));
+
+
+//上传License文件放置目录
+Configure::write('system.license', $sections['web_path']['license_path']);
+
+
+//Copyright Hyperlink
+Configure::write('is_copyright_hypelink', $sections['web_feature']['copyright_link']);
+Configure::write('carrier_show_copyright', false);
+
+
+//系统类型
+$config['system']['type'] = 1;      //1 class4 , 2 exchange
+//$config['system']['enable_trunk_type'] = true;      // 是否开启 trunk type
+//Origination 相关配置
+$config['did']['enable'] = $sections['web_feature']['did'];  //开启或关闭 true or false
+$config['did']['upload_path'] = APP . 'webroot' . DS . 'upload' . DS . 'did';
+
+
+//SSH Login,需要安装php ssh模块
+$config['ssh']['host'] = 'localhost';
+$config['ssh']['port'] = 22;
+$config['ssh']['username'] = 'hewenxiang';
+$config['ssh']['pubkeyfile'] = '/home/hewenxiang/.ssh/id_dsa.pub';
+$config['ssh']['privkeyfile'] = '/home/hewenxiang/.ssh/id_dsa';
+
+
+//在线支付相关配置
+$config['payline']['enable_paypal'] = $sections['web_feature']['paypal'];
+$config['payline']['yourpay_enabled'] = $sections['web_feature']['yourpay'];
+$config['payline']['yourpay_host'] = 'secure.linkpt.net';
+$config['payline']['yourpay_port'] = '1129';
+$config['payline']['is_new_window'] = $sections['web_feature']['pay_in_new_window'];  // paypal 是否在新窗口进行支付
+//Call Monitor,class4 dnl_softswitch start_sipcapture.sh start_rtpdump.sh使用
+//Active Call Application,./active_call_api -H 192.168.112.190 -P 4320 -h 192.168.112.190 -p 4313 -q 192.168.112.190 -w 4305 -m 1
+//$config['active_call']['exec'] = APP . "binexec/active_call/active_call_api";
+//$config['active_call']['test_local_ip'] = $sections['web_ip']['web_local_ip'];   //test local IP -H
+//$config['active_call']['test_local_port'] = $sections['web_ip']['active_port']; //test local port -P
+$config['active_call']['active_call_server_ip'] = $sections['web_active_call']['active_call_ip']; //active call server IP -h
+$config['active_call']['active_call_server_port'] = $sections['web_active_call']['active_call_port']; //active call server port -p
+//billing listen IP & port :
+//$config['active_call']['billing_server'] = array(
+//    $sections['web_billing']['server_ip'] . ':' . $sections['web_billing']['server_port'], //-q -w
+//);
+
+
+//update log,class4 dnl_softswitch log
+$config['update_log']['current'] = $sections['web_path']['switch_update_log_current'];
+$config['update_log']['history'] = $sections['web_path']['switch_update_log_history'];
+
+
+//发送invoice CDR 存放目录
+$config['send_invoice']['cdr_path'] = $sections['web_path']['send_invoice_cdr'] . DS . 'invoice_cdr';   // 注意配置为 x-sendfile path
+// Mail Export CDR Path
+$config['export_cdr']['path'] = realpath(ROOT . '/../script/storage/cdr_down/');
+
+// 报表分组
+$config['statistics']['group_all'] = $sections['web_feature']['statistics_group_all'];  // 是否显示报表所有分组
+$config['statistics']['have_code_rate'] = $sections['web_feature']['statistics_have_code_rate'];
+// 是否打开命令调试
+$config['cmd']['debug'] = $sections['web_base']['cmd_debug'];
+
+// Log文件 Web需要具备rx权限
+$config['logfile']['script_log'] = '/tmp/class4';  // 脚本Log目录
+$config['logfile']['switch_log_path'] = '';    // 后台的Log目录
+// CDR TMP Path
+$config['cdr']['tmp'] = $sections['web_path']['cdr_backup_path'];
+
+// License Path
+$config['license']['path'] = $sections['web_path']['license_path'];
+
+$config['system']['token'] = $sections['web_base']['system_token'];
+
+//
+//$config['call_monitor']['port'] = $sections['call_monitor']['port'];
+//$config['call_monitor']['videosnarf'] = $sections['call_monitor']['videosnarf_path'];
+
+// Redis
+//$config['redis']['host'] = $sections['redis']['ip'];
+//$config['redis']['port'] = $sections['redis']['port'];
+
+$config['backend']['ani_file'] = '/tmp/listof1000numbers.csv';
+
+$config['voipmonitor']['path'] = '/opt/voip/';
+
+$config['web_base']['checkswitch'] = $sections['web_base']['check_switch_license'];
+
+//登录时 判断是否可读写文件 
+$config['file_permission']['read'] = array(
+    CONF_PATH,
+    APP . 'upload',
+    APP . 'upload_act',
+    APP . 'tmp',
+    APP . 'webroot' . DS . 'stock',
+    APP . 'webroot' . DS . 'ratedown',
+    APP . 'webroot' . DS . 'rerate_db',
+    APP . 'webroot' . DS . 'upload',
+    APP . 'webroot' . DS . 'favicon.ico',
+//    APP . 'webroot' . DS . 'images' . DS . 'logo.png',
+//    APP . 'webroot' . DS . 'images' . DS . 'ilogo.png',
+    APP . 'webroot' . DS . 'rerate_db',
+    APP . 'binexec',
+//    'favicon.ico',
+    APP . 'vendors' . DS . 'net' . DS . 'crontab.txt',
+    APP . 'config' . DS . 'database.php',
+    APP . 'webroot' . DS . 'index.php',
+);
+$config['file_permission']['write'] = array(
+    CONF_PATH,
+    APP . 'upload',
+    APP . 'tmp',
+    APP . 'webroot' . DS . 'stock',
+    APP . 'webroot' . DS . 'upload',
+    APP . 'webroot' . DS . 'favicon.ico',
+    APP . 'binexec',
+    APP . 'config' . DS . 'database.php',
+    APP . 'webroot' . DS . 'index.php',
+);
+
+$config['stripe']['pkey'] = 'pk_test_4SMecF3ItiYoDi0Xcyv05QSK';
+$config['stripe']['skey'] = 'sk_test_4SMeRRoDRGX7gX7mlE5i6STs';
+
+$config['email']['support_email'] = 'xiongzt@mail.yht.com';
+
+//cloud shark
+$config['cloud_shark']['upload_api'] = "http://wireshark.denovolab.com/api/v1/d0c7536f5e2c8c66d9de884183ee4c4e/upload";
+$config['cloud_shark']['view_api'] = "http://wireshark.denovolab.com/api/v1/d0c7536f5e2c8c66d9de884183ee4c4e/open?url=";
+$config['cloud_shark']['search_api'] = "http://wireshark.denovolab.com/api/v1/d0c7536f5e2c8c66d9de884183ee4c4e/search";
+$config['cloud_shark']['cloud_api'] = "http://176.9.30.112:9000/search/";
+$config['cloud_shark']['wireshark'] = "http://wireshark.denovolab.com";
+$config['cloud_shark']['listen'] = "http://108.165.2.57:90/ring.php";
+
+
+//voipmoniter
+//$config['voip_moniter']['pcap_path'] = $sections['voip_moniter']['pcap_path'];
+
+//sip
+//$config['sipp']['sipp_exe'] = "/opt/sipp/sipp-3.4.1/sipp";
+$config['sipp']['sipp_exe'] = $sections['sipp']['sipp_exe'];
+
+//check_route 
+//$config['check_route']['carrier_name'] = "Check Route";
+//$config['check_route']['trunk_name'] = "check_route_ingress_trunk";
+//$config['check_route']['ip'] = $sections['check_route']['check_route_ip'];
+//$config['check_route']['ani'] = $sections['check_route']['ani'];
+
+
+//storage_server
+//$config['storage_server']['ftp_dir'] = $sections['storage_server']['ftp_dir'];
+//$config['storage_server']['ip'] = $sections['storage_server']['ip'];
+//$config['storage_server']['port'] = $sections['storage_server']['port'];
+//$config['storage_server']['user'] = $sections['storage_server']['ftp_user'];
+//$config['storage_server']['password'] = $sections['storage_server']['ftp_password'];
+//$config['storage_server']['ftp_jurisdiction_dir'] = $sections['storage_server']['ftp_jurisdiction_dir'];
+//$config['storage_server']['jurisdiction_file_name'] = $sections['storage_server']['jurisdiction_file_name'];
+
+
+//support email
+$config['support_email']['active'] = $sections['web_feature']['is_support_email'];
+$config['support_email']['api'] = "https://api.sparkpost.com/api/v1/transmissions";
+$config['support_email']['api_key'] = "fa86963279c4992661dc2e1b4792e082749e855b";
+$config['support_email']['from_email'] = "sandbox@sparkpostbox.com";
+$config['support_email']['to_email'] = "support@denovolab.com";
+
+//$config['support_email']['active'] = $sections['web_feature']['is_support_email'];
+//$config['support_email']['host'] = "mail.denovolab.com";
+//$config['support_email']['port'] = "587";
+//$config['support_email']['from_email'] = "huangzj@denovolab.com";
+//$config['support_email']['from_name'] = "huangzj";
+//$config['support_email']['from_username'] = "huangzj@denovolab.com";
+//$config['support_email']['from_password'] = "Lx7wZ!TaC";
+//$config['support_email']['to_email'] = "hzjkb24@163.com";
+
+
+## postgres bin
+$config['psql_bin'] = $sections['psql']['psql_bin'];
+
+##portal 配置
+$config['portal']['change_ip'] = $sections['portal']['change_ip'];
+$config['portal']['show_switch_ip'] = $sections['portal']['show_switch_ip'];
+$config['portal']['build_trunk_from_product'] = $sections['portal']['build_trunk_from_product'];
+$config['portal']['add_ingress'] = $sections['portal']['add_ingress'];
+$config['portal']['add_egress'] = $sections['portal']['add_egress'];
+
+
+## number to npa nxx xml address
+//$config['xml']['get_npanxx'] = $sections['xml']['get_npanxx'];
+
+## URL HTML
+$config['web_base']['url'] = $sections['web_base']['url'];
+
+$config['help_link'] = isset($sections['web_feature']['help_link']) ? $sections['web_feature']['help_link'] : '';
+
+$config['pcap_url'] = $sections['pcap_api']['url'];
+$config['cdr_url'] = $sections['cdr_api']['url'];
+if(isset($sections['invoice']) && isset($sections['invoice']['url'])) {
+    $config['invoice_url'] = $sections['invoice']['url'];
+}
+if(isset($sections['import']) && isset($sections['import']['url'])) {
+    $config['import_url'] = $sections['import']['url'];
+}
+
+$config['memsql']['enabled'] = 0;

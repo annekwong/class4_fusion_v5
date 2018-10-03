@@ -1,0 +1,2 @@
+ani_prefix,ani_min_length,ani_max_length,dnis_prefix,dnis_min_length,dnis_max_length,route_type,dynamic_route_name,static_route_name,intra_static_route_name,inter_static_route_name,jurisdiction_country
+1,0,32,1,0,32,dynamic/static/static_jd/dynamic-static/dynamic-static_jd/static-dynamic/static-dynamic_jd,dynamic_route_001,static_route_001,static_route_002,static_route_003,usa

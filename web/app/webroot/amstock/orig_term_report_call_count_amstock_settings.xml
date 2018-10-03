@@ -1,0 +1,230 @@
+<settings>  <margins>0</margins>                                                   
+  <text_size>15</text_size>                                               
+
+  <header>
+    <enabled>false</enabled>
+  </header>
+
+  <number_format>
+  	<decimal_separator>.</decimal_separator>  
+    <letters>
+       <letter number="1000">K</letter>
+       <letter number="1000000">M</letter>
+       <letter number="1000000000">B</letter>
+    </letters>      
+  </number_format><data_sets><data_set did="0">
+ <title>Calls Not Zero	</title>
+ <short>Calls Not Zero	 Calls Not Zero	</short>
+ <description>   Calls Not Zero	;</description>
+<file_name>orig_term_report_notzero_calls.csv</file_name>
+<main_drop_down selected="true"></main_drop_down>
+   	  
+       					<compare_list_box selected="false"></compare_list_box>
+
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>  
+         </columns>
+       </csv>
+</data_set>
+<data_set did="1">
+ <title> Calls  Total</title>
+ <short> Calls  Total  Calls  Total</short>
+ <description>    Calls  Total;</description>
+<file_name>orig_term_report_total_calls.csv</file_name>
+<main_drop_down selected="true"></main_drop_down>
+   	  
+       					<compare_list_box selected="false"></compare_list_box>
+
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>  
+         </columns>
+       </csv>
+</data_set>
+<data_set did="2">
+ <title>Calls  Success</title>
+ <short>Calls  Success Calls  Success</short>
+ <description>   Calls  Success;</description>
+<file_name>orig_term_report_succ_calls.csv</file_name>
+<main_drop_down selected="true"></main_drop_down>
+   	  
+       					<compare_list_box selected="false"></compare_list_box>
+
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>  
+         </columns>
+       </csv>
+</data_set>
+<data_set did="3">
+ <title>Calls Busy</title>
+ <short>Calls Busy Calls Busy</short>
+ <description>   Calls Busy;</description>
+<file_name>orig_term_report_busy_calls.csv</file_name>
+<main_drop_down selected="true"></main_drop_down>
+   	  
+       					<compare_list_box selected="false"></compare_list_box>
+
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>  
+         </columns>
+       </csv>
+</data_set>
+<data_set did="4">
+ <title>Calls No Channel</title>
+ <short>Calls No Channel Calls No Channel</short>
+ <description>   Calls No Channel;</description>
+<file_name>orig_term_report_notchannel_calls.csv</file_name>
+<main_drop_down selected="true"></main_drop_down>
+   	  
+       					<compare_list_box selected="false"></compare_list_box>
+
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>  
+         </columns>
+       </csv>
+</data_set>
+</data_sets> <charts>
+  	<chart cid="0">
+  		
+  		<bg_color>E9D7A1,ffffff</bg_color>
+      <border_color>#CCCCCC</border_color>
+      <border_alpha>100</border_alpha>
+      <grid>
+        <x>
+          <dashed>true</dashed>    
+        </x>
+        
+       
+        <y_right>
+          <color>cccccc</color>
+          <alpha>100</alpha>
+          <dashed>true</dashed>    
+        </y_right>    
+      </grid>	
+
+      <legend>
+        <graph_on_off>false</graph_on_off>
+        <fade_others_to>10</fade_others_to>
+        <show_date>true</show_date>
+      </legend>
+  		<graphs>
+  			<graph gid="0">
+  			  <axis>right</axis>
+  				<type>line</type>
+  				<data_sources>
+  				  <close>close</close>
+          </data_sources>
+          
+          <compare_source>close</compare_source>
+
+  		    <legend>
+            <date key="true" title="true"><![CDATA[<b>{close}</b>]]></date>
+            <period key="true" title="true"><![CDATA[open:<b>{open}</b> low:<b>{low}</b> high:<b>{high}</b> close:<b>{close}</b>]]></period>
+            <date_comparing key="true" title="true"><![CDATA[{close.percents}]]></date_comparing>
+            <period_comparing key="true" title="true"><![CDATA[{close.percents}]]></period_comparing>
+          </legend>         
+  			</graph>  			
+  		</graphs>
+  	</chart>
+  </charts>
+  
+  <date_formats>
+  	 <x_axis>     
+  	  <days>YYYY-MM-DD hh:mm:ss</days>
+  	   </x_axis>
+ <legend>
+     <seconds></seconds>
+     <minutes></minutes>
+     <hours></hours>
+     <days>YYYY-MM-DD hh:mm:ss</days>
+     <weeks></weeks>
+     <months></months>
+     <years></years>
+   </legend>
+
+  	  </date_formats>  
+  	  
+  	  
+  	  
+  <data_set_selector>
+    <width>180</width>
+    <max_comparing_count>3</max_comparing_count>
+ 		<main_drop_down_title>Select:</main_drop_down_title> 		
+ 		<compare_list_box_title>Compare to:</compare_list_box_title>
+ 		<balloon_text>{title}: {description}</balloon_text>
+  </data_set_selector>
+  	  
+
+  
+  <period_selector>
+    <button>
+      <bg_color_hover>b81d1b</bg_color_hover>
+      <bg_color_selected>b81d1b</bg_color_selected>
+      <text_color_hover>ffffff</text_color_hover>
+      <text_color_selected>ffffff</text_color_selected>
+    </button>
+  
+		<periods>		
+    	<period type="hh" count="3">last 3 hour</period>
+    	<period    type="DD" count="1">last  24 hour</period>
+    	<period type="DD"	count="3">last 3 days</period>
+    		<period type="WW"	count="1">last 7 days</period>
+
+    	<period type="YTD" count="0">YTD</period>
+    	<period type="MAX">MAX</period>
+		</periods>
+		
+		<periods_title>Zoom:</periods_title>
+		<custom_period_title>Custom period:</custom_period_title> 
+  </period_selector>
+
+  <header>
+    <enabled></enabled>
+    <text><![CDATA[<b>{title}</b> ({short}) {description}]]></text>
+    <text_size>18</text_size>
+  </header>
+
+  <plot_area>
+    <border_color>cccccc</border_color>
+  </plot_area>
+
+  <scroller>
+    <enabled>true</enabled>
+    <height>50</height>    
+    <graph_data_source>close</graph_data_source>
+    <bg_color>f5f5f5,ffffff</bg_color>
+    <resize_button_style>dragger</resize_button_style>
+        <playback>
+      <enabled>true</enabled>
+      <speed>1</speed>
+    </playback>
+  </scroller></settings>

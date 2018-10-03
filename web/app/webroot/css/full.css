@@ -1,0 +1,195 @@
+html, body {
+    min-height: 100%;
+    background: #f7f7f7;
+}
+
+::selection {
+    background: #b7beff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #b7beff; /* Gecko Browsers */
+}
+
+#app {
+    height: 100%;
+}
+
+a.i-logo {
+    color: lightblue;
+}
+
+ul.color-white, ul.color-white li, ul.color-white li a, .navbar-inverse ul.color-white li a {
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
+.right::after {
+    clear: both;
+}
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+    padding: 30px;
+    max-width: 450px;
+    width: 100% !important;
+    background-color: #ffffff;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #959595;
+}
+
+.loginmodal-container h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 35px 0 35px;
+}
+
+.loginmodal-container h1.green {
+    color: green;
+    font-size: 1.6em;
+}
+
+.loginmodal-container p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.loginmodal-container input[type=submit] {
+    width: 100%;
+    display: block;
+    margin: 20px 0px 10px 0px;
+    position: relative;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #cccccc;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #cccccc;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #cccccc;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #cccccc;
+}
+
+.loginmodal-submit {
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #4d90fe;
+    padding: 10px 0px;
+    font-size: 18px;
+    height: 45px;
+}
+
+.loginmodal-submit:hover {
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+}
+
+.loginmodal-container a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
+}
+
+.login-help{
+    font-size: 12px;
+}
+/****** END Login Modal ******/
+
+.intro::before{
+    background-color: rgba(0, 0, 0, 0.37);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.login-help {
+    max-width: 450px;
+    width: 100% !important;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.login-help a {
+    color: #dddcdc;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+label.error {
+    font-weight: 100;
+    padding: 0;
+    margin: 0px 0px 5px 0px;
+    color: red;
+}
+
+input.error {
+    border: 1px solid red !important;
+}
+
+a.navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+ul.collapse li.active a{
+    color: #fff !important;
+}
+
+ul.collapse li.active {
+    outline: none;
+    background-color: #000 !important;
+}
+
+#page-wrapper {
+    min-height: 100%;
+    background: #f7f7f7;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.page-title i {
+    display: inline-block;
+    color: #73777c;
+    font-size: 30px;
+    margin-right: 12px;
+    position: relative;
+}
+
+div.content {
+    padding: 10px;
+    color: #73777c;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.grid.simple .grid-body {
+    background-color: #ffffff;
+    padding: 26px;
+    border: 1px solid #dddddd;
+    color: #6f7b8a;
+}

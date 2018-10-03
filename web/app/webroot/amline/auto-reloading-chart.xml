@@ -1,0 +1,72 @@
+<settings> 
+  <data_type>csv</data_type>                                 
+  <reload_data_interval>1</reload_data_interval>             
+  <add_time_stamp>true</add_time_stamp>                
+  <digits_after_decimal>2</digits_after_decimal>      
+
+  <plot_area>
+    <border_alpha>100</border_alpha>
+    <border_color>DAF0FD</border_color>
+    <margins>
+      <top>10</top>
+      <bottom>30</bottom>
+      <left>5</left>
+      <right>3</right>
+    </margins>
+  </plot_area>
+
+  <grid>
+    <x>
+      <color>DAF0FD</color>
+      <alpha>100</alpha>
+    </x>
+    <y_left>
+      <color>DAF0FD</color>
+      <alpha>100</alpha>
+    </y_left>    
+  </grid>
+  
+  <axes>
+    <x>
+      <width>1</width>
+      <color>DAF0FD</color>
+    </x>
+    <y_left>
+      <alpha>0</alpha>
+    </y_left>    
+  </axes>
+
+  <values>                                                   
+    <x>                                       
+      <skip_first>true</skip_first>          
+      <skip_last>false</skip_last>            
+    </x>
+    <y_left>                                  
+      <min>50</min>                           
+      <max>70</max>
+      <unit>$</unit>                          
+      <unit_position>left</unit_position>
+      <inside>true</inside>
+      <skip_last>true</skip_last>     
+    </y_left>
+  </values>  
+  
+  <indicator>                  
+    <zoomable>false</zoomable> 
+    <color>92C7E7</color>
+    <x_balloon_text_color>FFFFFF</x_balloon_text_color>
+    <y_balloon_on_off>false</y_balloon_on_off>
+  </indicator>
+    
+  <legend>                     
+    <enabled>false</enabled>   
+  </legend>
+  
+  <graphs>
+    <graph>
+      <color>92C7E7</color>
+      <bullet>round_outlined</bullet>
+    </graph>
+  </graphs> 
+  
+</settings>

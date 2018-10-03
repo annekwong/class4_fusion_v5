@@ -1,0 +1,183 @@
+--- /home/yaro/class4-v5.0/web/app/views/rate_log/import.ctp	2016-10-03 11:18:05.083000012 +0000
++++ /home/yaro/class4-v5.0/web/app/views/rate_log/import_new.ctp	2016-11-23 02:12:52.714000021 +0000
+@@ -4,9 +4,9 @@
+ <ul class="breadcrumb">
+     <li><?php __('You are here') ?></li>
+     <li class="divider"><i class="icon-caret-right"></i></li>
+-    <li><a href="<?= $this->webroot?>rate_log/import"><?php __('Log') ?></a></li>
++    <li><?php __('Log') ?></li>
+     <li class="divider"><i class="icon-caret-right"></i></li>
+-    <li><a href="<?= $this->webroot?>rate_log/import"><?php echo __('Rate Import Log') ?></a></li>
++    <li><?php echo __('Rate Import Log') ?></li>
+ </ul>
+ 
+ <div class="heading-buttons">
+@@ -80,26 +80,23 @@
+                 </form>
+             </div>
+             <div class="clearfix"></div>
++            <?php if(!count($this->data)): ?>
++                <div class="msg center"><br /><h2><?php  echo __('no_data_found') ?></h2></div>
++            <?php else: ?>
+             <div class="overflow_x">
+                 <table class="list footable table table-striped dynamicTable tableTools table-bordered  table-white table-primary">
+                     <thead style="background:none;">
+                     <tr>
+-                        <th class="footable-first-column expand" data-class="expand"  rowspan="2"><?php echo $appCommon->show_order('rate_table.name', __('Rate Table', true)) ?></th>
+-                        <th rowspan="2"><?php __('File Name') ?></th>
+-                        <th rowspan="2"><?php __('User') ?></th>
+-                        <th rowspan="2"><?php __('Status') ?></th>
+-                        <th colspan="4"><?php __('Records') ?></th>
+-                        <th rowspan="2"><?php echo $appCommon->show_order('ImportRateStatus.method', __('Method', true)) ?></th>
+-                        <th rowspan="2"><?php echo $appCommon->show_order('ImportRateStatus.start_epoch', __('Start Time', true)) ?></th>
+-                        <th data-hide="phone,tablet"  style="display: table-cell;" rowspan="2"><?php echo $appCommon->show_order('ImportRateStatus.end_epoch', __('Finish Time', true)) ?></th>
+-                        <th data-hide="phone,tablet"  style="display: table-cell;" rowspan="2"><?php echo $appCommon->show_order('ImportRateStatus.time', __('Upload Time', true)) ?></th>
+-                        <th data-hide="phone,tablet" class="footable-last-column"  style="display: table-cell;" rowspan="2"><?php __('Action') ?></th>
+-                    </tr>
+-                    <tr>
+-                        <th><?php echo $appCommon->show_order('ImportRateStatus.delete_queue', __('Delete', true)) ?></th>
+-                        <th><?php echo $appCommon->show_order('ImportRateStatus.update_queue', __('Update', true)) ?></th>
+-                        <th><?php echo $appCommon->show_order('ImportRateStatus.insert_queue', __('Insert', true)) ?></th>
+-                        <th><?php echo $appCommon->show_order('ImportRateStatus.error_counter', __('Error', true)) ?></th>
++                        <th class="footable-first-column expand" data-class="expand" ><?php echo $appCommon->show_order('rate_table.name', __('Rate Table', true)) ?></th>
++                        <th><?php __('File Name') ?></th>
++                        <th><?php __('User') ?></th>
++                        <th><?php __('Status') ?></th>
++                        <th><?php __('Records') ?></th>
++                        <th><?php echo $appCommon->show_order('RateUploadTask.method', __('Method', true)) ?></th>
++                        <th><?php echo $appCommon->show_order('RateUploadTask.start_time', __('Start Time', true)) ?></th>
++                        <th data-hide="phone,tablet"  style="display: table-cell;"><?php echo $appCommon->show_order('RateUploadTask.end_time', __('Finish Time', true)) ?></th>
++                        <th data-hide="phone,tablet"  style="display: table-cell;"><?php echo $appCommon->show_order('RateUploadTask.time', __('Upload Time', true)) ?></th>
++                        <th data-hide="phone,tablet" class="footable-last-column"  style="display: table-cell;"><?php __('Action') ?></th>
+                     </tr>
+                     </thead>
+ 
+@@ -107,57 +104,35 @@
+                     <?php foreach ($this->data as $item): ?>
+                         <tr>
+                             <td class="footable-first-column expand" data-class="expand" >
+-                                <?php
+-                                /*
+-                                  <?php if ((int)$item['ImportRateStatus']['status'] < 6): ?>
+-                                  <a href="<?php echo $this->webroot ?>rate_log/stop/<?php echo $item['rate_table']['rate_table_id'] ?>">
+-                                  <img src="<?php echo $this->webroot ?>images/stop.png" />
+-                                  </a>
+-                                  <?php endif; ?>
+-                                 */
+-                                ?>
+                                 <a href="<?php echo $this->webroot ?>clientrates/view/<?php echo base64_encode($item['rate_table']['rate_table_id']) ?>">
+                                     <?php echo $item['rate_table']['name']; ?>
+                                 </a>
+                             </td>
+-                            <td><?php echo basename($item['ImportRateStatus']['upload_file_name']); ?></td>
+-                            <td><?php echo $item['users']['name']; ?></td>
+-                            <td><?php echo $status[$item['ImportRateStatus']['status']]; ?></td>
+-                            <td><?php echo $item['ImportRateStatus']['delete_queue']; ?></td>
+-                            <td><?php echo $item['ImportRateStatus']['update_queue']; ?></td>
+-                            <td><?php echo $item['ImportRateStatus']['insert_queue']; ?></td>
+-                            <td><?php echo $item['ImportRateStatus']['error_counter']; ?></td>
+-                            <td><?php echo $item['ImportRateStatus']['method']; ?></td>
+-                            <td><?php
+-                                if (strcmp('1', $item['ImportRateStatus']['status']) && strcmp('-1', $item['ImportRateStatus']['status']))
+-                                {
+-                                    echo date('Y-m-d H:i:s', $item['ImportRateStatus']['start_epoch']);
+-                                }
+-                                ?></td>
+-                            <td data-hide="phone,tablet"  style="display: table-cell;"><?php
+-                                if (strcmp('1', $item['ImportRateStatus']['status']) && strcmp('-1', $item['ImportRateStatus']['status']))
+-                                {
+-                                    echo date('Y-m-d H:i:s', $item['ImportRateStatus']['end_epoch']);
+-                                }
+-                                ?></td>
+-                            <td data-hide="phone,tablet"  style="display: table-cell;"><?php echo $item['ImportRateStatus']['time']; ?></td>
++                            <td><?php echo $item['RateUploadTask']['upload_orig_file']; ?></td>
++                            <td><?php echo $item['RateUploadTask']['operator_user']; ?></td>
++                            <td><?php echo $status[$item['RateUploadTask']['status']]; ?></td>
++                            <td><?php echo $item['RateUploadTask']['progress']; ?></td>
++                            <td><?php echo $method[$item['RateUploadTask']['reduplicate_rate_action']]; ?></td>
++                            <td>
++                                <?php if (strcmp('1', $item['RateUploadTask']['status']) && strcmp('-1', $item['RateUploadTask']['status'])){
++                                    echo date('Y-m-d H:i:sO', $item['RateUploadTask']['start_time']);
++                                } ?>
++                            </td>
++                            <td data-hide="phone,tablet"  style="display: table-cell;">
++                                <?php echo $item['RateUploadTask']['end_time'] ? date('Y-m-d H:i:sO', $item['RateUploadTask']['end_time']) : ''; ?>
++                            </td>
++                            <td data-hide="phone,tablet"  style="display: table-cell;">
++                                <?php echo $item['RateUploadTask']['create_time'] ? date('Y-m-d H:i:sO', $item['RateUploadTask']['create_time']) : ''; ?>
++                            </td>
+                             <td data-hide="phone,tablet" class="footable-last-column"  style="display: table-cell;">
+-                                <a class="show_default" href="#MyModal_showRateImportDefault" data-toggle="modal" info="<?php echo $item['ImportRateStatus']['default_info']; ?>"
+-                                   title="<?php __('Default Value'); ?>:<br /><?php echo $item['ImportRateStatus']['default_info']; ?>">
++                                <a class="show_default" href="#MyModal_showRateImportDefault" data-toggle="modal" info="<?php echo $item['RateUploadTask']['default_info']; ?>"
++                                   title="<?php __('Default Value'); ?>:<br /><?php echo $item['RateUploadTask']['default_info']; ?>">
+                                     <i class="icon-info"></i>
+                                 </a>
+-                                <a target="_blank" title="<?php __('Upload File') ?>" href="<?php echo $this->webroot; ?>rate_log/get_file/?file=<?php echo base64_encode($item['ImportRateStatus']['local_file']); ?>">
++                                <a target="_blank" title="<?php __('Upload File') ?>" href="<?php echo $this->webroot; ?>rate_log/get_file/?file=<?php echo base64_encode($item['RateUploadTask']['upload_file_path'] . DS .$item['RateUploadTask']['upload_format_file']); ?>">
+                                     <i class="icon-file-text"></i></a>
+-                                <a target="_blank" title="<?php __('Error File') ?>" href="<?php echo $this->webroot; ?>rate_log/get_file/?file=<?php echo base64_encode($item['ImportRateStatus']['error_log_file']); ?>">
++                                <a target="_blank" title="<?php __('Error File') ?>" href="<?php echo $this->webroot; ?>rate_log/get_file/?file=<?php echo base64_encode($item['RateUploadTask']['result_file_path'] . 'rate_import.log'); ?>">
+                                     <i class="icon-download"></i></a>
+-                                <a title="<?php __('Re-Upload') ?>" onclick="myconfirm('<?php __('Are you sure to re-upload'); ?>?',this);return false;"
+-                                   href="<?php echo $this->webroot; ?>rate_log/re_upload/<?php echo base64_encode($item['ImportRateStatus']['id']); ?>">
+-                                    <i class="icon-repeat"></i></a>
+-                                <?php if ((int) $item['ImportRateStatus']['status'] == '-1'): ?>
+-                                    <a title="<?php __('Cancel') ?>" href="<?php echo $this->webroot ?>rate_log/stop/<?php echo $item['rate_table']['rate_table_id'] ?>/<?php echo $item['ImportRateStatus']['id'] ?>">
+-                                        <i class="icon-remove"></i>
+-                                    </a>
+-                                <?php endif; ?>
+                             </td>
+                         </tr>
+                     <?php endforeach; ?>
+@@ -170,6 +145,7 @@
+                 </div>
+             </div>
+             <div class="clearfix"></div>
++            <?php endif; ?>
+         </div>
+     </div>
+ </div>
+@@ -209,41 +185,5 @@
+                 $("#MyModal_showRateImportDefault").find('.table').append(html_item);
+             }
+         });
+-
+-        /* $('td.footable-last-column a:nth-child(2)').on('click',function(){
+-            var count = 0, filename;
+-            var href = $(this).data('href');
+-            $(this).parent().parent().children().each(function(){
+-                count++;
+-                if(count == 2){
+-                    filename = $(this).text();
+-                }
+-            });
+-            $.ajax({
+-                url: '<?php echo $this->webroot ?>rate_log/get_file',
+-                data: {filename: filename,href: href},
+-                dataType: 'json',
+-                method: 'get',
+-                success: function(res){
+-                    window.open('http://posevkin.denovolab.com' + href, '_blank');
+-                }
+-            });
+-        }); */
+-
+-        $('td.footable-last-column a:nth-child(2)').each(function(){
+-            $(this).parent().parent().children().each(function(){
+-                if($(this).html().endsWith('.csv')){
+-                    var count = 0;
+-                    var filename = $(this).text().replace(/\s+/g, '');
+-                    $(this).siblings('.footable-last-column').children().each(function(){
+-                        count++;
+-                        if(count == 2){
+-                            $(this).attr('href',$(this).attr('href') + '&filename=' + filename);
+-                        }
+-                    });
+-                }
+-            });
+-        });
+-
+     });
+ </script>
+\ No newline at end of file

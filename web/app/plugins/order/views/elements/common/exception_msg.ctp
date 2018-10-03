@@ -1,0 +1,1 @@
+<table style="width:80%"><tr><td class="red"><?php echo $exception_msg ?></td></tr></table>

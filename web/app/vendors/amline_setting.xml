@@ -1,0 +1,105 @@
+<decimals_separator>.</decimals_separator>
+<data_type>xml</data_type>
+<export_as_image>
+	<color>#ff9933</color>
+	<text_color>#ffffff</text_color>
+	<x>391</x>
+	<y>123</y>
+	<alpha>100</alpha>
+	<text_size>12</text_size>
+</export_as_image>
+<axes>
+	<x>
+		<color>#ffffff</color>
+		<alpha>100</alpha>
+		<tick_length>0</tick_length>
+		<width>1</width>
+	</x>
+	<y_right>
+		<color>#ffffff</color>
+		<alpha>100</alpha>
+		<tick_length>0</tick_length>
+		<width>1</width>
+	</y_right>
+	<y_left>
+		<color>#ffffff</color>
+		<alpha>100</alpha>
+		<tick_length>0</tick_length>
+		<width>1</width>
+	</y_left>
+</axes>
+<indicator>
+	<color>#666666</color>
+	<x_balloon_text_color>#ffffff</x_balloon_text_color>
+</indicator>
+<text_color>#333333</text_color>
+<values>
+	<x>
+		<skip_first>true</skip_first>
+		<skip_last>true</skip_last>
+		<inside>false</inside>
+	</x>
+	<y_right>
+		<skip_last>true</skip_last>
+		<inside>true</inside>
+		<unit></unit>
+	</y_right>
+	<y_left>
+		<skip_last>true</skip_last>
+		<inside>true</inside>
+		<unit></unit>
+	</y_left>
+</values>
+<connect>true</connect>
+<background>
+	<color>#ffffff, #ffffff</color>
+	<alpha>0</alpha>
+	<border_color>#ffffff</border_color>
+	<border_alpha>0</border_alpha>
+</background>
+<plot_area>
+	<color>#ffffff</color>
+	<alpha>0</alpha>
+	<border_color>#333333</border_color>
+	<border_alpha>0</border_alpha>
+	<margins>
+		<top>35</top>
+		<right>3</right>
+		<left>5</left>
+		<bottom>20</bottom>
+	</margins>
+</plot_area>
+<grid>
+	<x>
+		<color>#cccccc</color>
+		<dashed>true</dashed>
+		<enabled>true</enabled>
+		<dash_length>2</dash_length>
+		<alpha>40</alpha>
+		<approx_count>12</approx_count>
+	</x>
+	<y_right>
+		<color>#cccccc</color>
+		<dashed>true</dashed>
+		<enabled>true</enabled>
+		<dash_length>2</dash_length>
+		<alpha>40</alpha>
+		<approx_count>6</approx_count>
+	</y_right>
+	<y_left>
+		<color>#cccccc</color>
+		<dashed>true</dashed>
+		<enabled>true</enabled>
+		<dash_length>2</dash_length>
+		<alpha>40</alpha>
+		<approx_count>6</approx_count>
+	</y_left>
+</grid>
+<text_size>11</text_size>
+<font>Helvetica</font>
+<legend>
+	<y>10</y>
+	<x>0</x>
+	<align>right</align>
+</legend>
+<start_on_axis>false</start_on_axis>

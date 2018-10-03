@@ -1,0 +1,2 @@
+ip,port,timeout,retry,dynamic_timeout,filter_timeout,option,option_interval
+192.168.1.1,5022,1000,3,true/false,true/false,true/false,100

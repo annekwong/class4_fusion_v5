@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h1>Requirements</h1>
+ <div class="innerLR">
+     <div class="widget widget-heading-simple widget-body-white">
+         <div class="widget-body">
+             <!-- Table -->
+             <table class="table table-bordered table-condensed">
+                 <!-- Table body -->
+                 <tbody>
+                    {% for requirement in requirements %}
+                     <!-- Table row -->
+                     <tr>
+                         <td>{{ requirement.module }}</td>
+                         <td>
+                              {% if requirement.supported == true %}
+                             <span class="label label-success">Success</span>
+                             {% else %}
+                             <span class="label label-danger">Failed</span>
+                             {% endif %}
+                         </td>
+                     </tr>
+                     <!-- // Table row END -->
+                     {% endfor %}
+                 </tbody>
+                 <!-- // Table body END -->
+             </table>
+             <!-- // Table END -->
+         </div>
+     </div>
+        <a class="btn btn-block btn-primary btn-icon glyphicons right_arrow" href="{{ app.request.baseUrl ~ '/../' }}" role="button">Done</a>
+ </div>
+ {% endblock %}

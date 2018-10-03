@@ -1,0 +1,17 @@
+app/log/
+app/upload/
+app/upload_act/
+app/tmp/
+app/tmp/upload
+app/webroot/stock/
+app/webroot/ratedown/
+app/webroot/rerate_db/
+app/webroot/upload/
+app/binexec/
+favicon.ico
+app/webroot/favicon.ico
+app/webroot/css/themer.css
+app/config/database.php
+app/config/myconf.php
+app/webroot/index.php 
+

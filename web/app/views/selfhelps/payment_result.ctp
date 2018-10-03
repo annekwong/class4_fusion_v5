@@ -1,0 +1,1 @@
+<result><?PHP echo $rtnOk; ?></result><redirecturl><?PHP echo $rtnUrl; ?></redirecturl>

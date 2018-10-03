@@ -1,0 +1,2 @@
+trunk_name,time_profile_name,target,code,action,chars,number_type,number_length
+ingress_001,time_profile_001,ani/dnis,1,add_prefix/del_prefix/add_suffix/del_suffix,1,all/>/=/<,10 

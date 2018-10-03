@@ -1,0 +1,1 @@
+ <font class="editname" title="Name">[<?php  echo  $name ;?>]</font>

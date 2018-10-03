@@ -1,0 +1,321 @@
+
+
+#    /home/huangzj/htdocs/class4_v5/class4_v5.0/frontend/web/app/views/systemparams/view.ctp
+#224
+msgid "Systemparametershavebeenupdatedyouneedtorestartthesystemtotakeeffect"
+msgstr "Systemparametershavebeenupdatedyouneedtorestartthesystemtotakeeffect"
+#226
+msgid "Save LRN setting failed"
+msgstr "Save LRN setting failed"
+#228
+msgid "Edit failed"
+msgstr "Edit failed"
+#243
+msgid "You are here"
+msgstr "You are here"
+#245
+msgid "Configuration"
+msgstr "Configuration"
+#247
+msgid "Syssetting"
+msgstr "Syssetting"
+#250
+msgid "System Setting"
+msgstr "System Setting"
+#262
+msgid "System Logo"
+msgstr "System Logo"
+#267
+msgid "Change Logo File"
+msgstr "Change Logo File"
+#277
+msgid "Change favicon Icon"
+msgstr "Change favicon Icon"
+#294
+msgid "Operationsystem"
+msgstr "Operationsystem"
+#299
+msgid "Switch Alias"
+msgstr "Switch Alias"
+#308
+msgid "Welcome Message"
+msgstr "Welcome Message"
+#317
+msgid "System currency"
+msgstr "System currency"
+#322
+msgid "Default System Currency"
+msgstr "Default System Currency"
+#325
+msgid "Timezone"
+msgstr "Timezone"
+#357
+msgid "Default System Timezone used for billing and reporting"
+msgstr "Default System Timezone used for billing and reporting"
+#361
+msgid "Code Deck"
+msgstr "Code Deck"
+#371
+msgid "Code Deck"
+msgstr "Code Deck"
+#374
+msgid "Pre-load data on display"
+msgstr "Pre-load data on display"
+#377
+msgid "True"
+msgstr "True"
+#378
+msgid "False"
+msgstr "False"
+#384
+msgid "Different Report Count"
+msgstr "Different Report Count"
+#387
+msgid "hr"
+msgstr "hr"
+#388
+msgid "hr"
+msgstr "hr"
+#394
+msgid "Landing Page"
+msgstr "Landing Page"
+#397
+msgid "QoSReport"
+msgstr "QoSReport"
+#398
+msgid "Summary Report"
+msgstr "Summary Report"
+#399
+msgid "Orig-Term Report"
+msgstr "Orig-Term Report"
+#400
+msgid "Carrier Management"
+msgstr "Carrier Management"
+#422
+msgid "Inactivity Timeout"
+msgstr "Inactivity Timeout"
+#426
+msgid "Minute"
+msgstr "Minute"
+#429
+msgid "Show Mutual Balance"
+msgstr "Show Mutual Balance"
+#433
+msgid "False"
+msgstr "False"
+#435
+msgid "True"
+msgstr "True"
+#442
+msgid "Require Comment Logging After Update"
+msgstr "Require Comment Logging After Update"
+#446
+msgid "False"
+msgstr "False"
+#448
+msgid "True"
+msgstr "True"
+#460
+msgid "System Default Timeout Setting"
+msgstr "System Default Timeout Setting"
+#465
+msgid "Ingress PDD Timeout"
+msgstr "Ingress PDD Timeout"
+#467
+msgid "ms"
+msgstr "ms"
+#470
+msgid "Egress PDD Timeout"
+msgstr "Egress PDD Timeout"
+#472
+msgid "ms"
+msgstr "ms"
+#475
+msgid "Ring Timeout"
+msgstr "Ring Timeout"
+#477
+msgid "s"
+msgstr "s"
+#480
+msgid "Call Timeout"
+msgstr "Call Timeout"
+#482
+msgid "s"
+msgstr "s"
+#496
+msgid "Mailserverhost"
+msgstr "Mailserverhost"
+#498
+msgid "Hostname or IP address of SMTP server"
+msgstr "Hostname or IP address of SMTP server"
+#501
+msgid "SMTP Port"
+msgstr "SMTP Port"
+#503
+msgid "Port for the SMTP server"
+msgstr "Port for the SMTP server"
+#506
+msgid "SMTP Username"
+msgstr "SMTP Username"
+#511
+msgid "SMTP Password"
+msgstr "SMTP Password"
+#516
+msgid "SMTP Login Authentication"
+msgstr "SMTP Login Authentication"
+#518
+msgid "true"
+msgstr "true"
+#518
+msgid "false"
+msgstr "false"
+#524
+msgid "From Email"
+msgstr "From Email"
+#529
+msgid "Email Sender Name"
+msgstr "Email Sender Name"
+#535
+msgid "SMTP Secure"
+msgstr "SMTP Secure"
+#539
+msgid "TLS"
+msgstr "TLS"
+#540
+msgid "SSL"
+msgstr "SSL"
+#541
+msgid "NTLM"
+msgstr "NTLM"
+#546
+msgid "Realm"
+msgstr "Realm"
+#546
+msgid "workstation"
+msgstr "workstation"
+#552
+msgid "Send Test To"
+msgstr "Send Test To"
+#556
+msgid "Test"
+msgstr "Test"
+#564
+msgid "Notification Setting"
+msgstr "Notification Setting"
+#569
+msgid "System Admin Email"
+msgstr "System Admin Email"
+#574
+msgid "Finance Email"
+msgstr "Finance Email"
+#579
+msgid "NOC Email"
+msgstr "NOC Email"
+#584
+msgid "FTP Failure Notification Email"
+msgstr "FTP Failure Notification Email"
+#590
+msgid "Withdraw Email"
+msgstr "Withdraw Email"
+#602
+msgid "UI Configuration"
+msgstr "UI Configuration"
+#607
+msgid "Include calls from unauthorized IPs in CDR"
+msgstr "Include calls from unauthorized IPs in CDR"
+#611
+msgid "False"
+msgstr "False"
+#613
+msgid "True"
+msgstr "True"
+#618
+msgid "Default US IJ Rule"
+msgstr "Default US IJ Rule"
+#621
+msgid "A-Z"
+msgstr "A-Z"
+#622
+msgid "US Non-JD"
+msgstr "US Non-JD"
+#623
+msgid "US JD"
+msgstr "US JD"
+#624
+msgid "OCN-LATA-JD"
+msgstr "OCN-LATA-JD"
+#625
+msgid "OCN-LATA-NON-JD"
+msgstr "OCN-LATA-NON-JD"
+#635
+msgid "QoS Routing"
+msgstr "QoS Routing"
+#640
+msgid "Qos Sample Period"
+msgstr "Qos Sample Period"
+#644
+msgid "min"
+msgstr "min"
+#645
+msgid "hr"
+msgstr "hr"
+#646
+msgid "day"
+msgstr "day"
+#653
+msgid "Minimal Call Attempt Required"
+msgstr "Minimal Call Attempt Required"
+#661
+msgid "Low Call Attempt Handling"
+msgstr "Low Call Attempt Handling"
+#665
+msgid "Use Latest Value"
+msgstr "Use Latest Value"
+#666
+msgid "Set to"
+msgstr "Set to"
+#666
+msgid "none"
+msgstr "none"
+#678
+msgid "Automatic Rate Processing"
+msgstr "Automatic Rate Processing"
+#683
+msgid "SMTP Server"
+msgstr "SMTP Server"
+#688
+msgid "SMTP Server Port"
+msgstr "SMTP Server Port"
+#693
+msgid "Username"
+msgstr "Username"
+#698
+msgid "Password"
+msgstr "Password"
+#703
+msgid "SMTP Type"
+msgstr "SMTP Type"
+#707
+msgid "SSL"
+msgstr "SSL"
+#708
+msgid "TLS"
+msgstr "TLS"
+#719
+msgid "LRN Setting"
+msgstr "LRN Setting"
+#724
+msgid "Master LRN IP"
+msgstr "Master LRN IP"
+#728
+msgid "Master LRN Port"
+msgstr "Master LRN Port"
+#732
+msgid "Slave LRN IP"
+msgstr "Slave LRN IP"
+#736
+msgid "Slave LRN Port"
+msgstr "Slave LRN Port"
+#804
+msgid "submit"
+msgstr "submit"

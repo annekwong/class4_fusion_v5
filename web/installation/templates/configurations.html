@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="assets/css/validationEngine.jquery.css" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+<h1>Configurations</h1>
+<div class="innerLR">
+    <div class="widget widget-heading-simple widget-body-simple">
+        <div class="widget-body">
+            {% if error_messages is defined %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for error_message in error_messages %}
+                    <li>{{ error_message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="widget widget-heading-simple widget-body-simple">
+        <div class="widget-body">
+            <form id="myform" class="bs-example form-horizontal" method="post">
+                <fieldset>
+                    <h3>Database</h3>
+                    <div class="control-group row {% if dbConn is defined and not dbConn %}has-error{% endif %}">
+                        <label class="span4 center " for="dbHost">Host</label>
+                        <div class="span8">
+                            <input type="text" placeholder="Database Host" name="dbHost" id="dbHost" class="form-control validate[required]" value="{{ request.request.get('dbHost')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="control-group row {% if dbConn is defined and not dbConn %}has-error{% endif %}">
+                        <label class="span4  center" for="dbPort">Port</label>
+                        <div class="span8">
+                            <input type="text" placeholder="Database Port" name="dbPort" id="dbPort" class="form-control validate[required]" value="{{ request.request.get('dbPort')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="control-group row {% if dbConn is defined and not dbConn %}has-error{% endif %}">
+                        <label class="span4  center" for="dbName">Name</label>
+                        <div class="span8">
+                            <input type="text" placeholder="Database Name" name="dbName" id="dbName" class="form-control validate[required]" value="{{ request.request.get('dbName')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="control-group row {% if dbConn is defined and not dbConn %}has-error{% endif %}">
+                        <label class="span4  center" for="dbUser">User</label>
+                        <div class="span8">
+                            <input type="text" placeholder="Database User" name="dbUser" id="dbUser" class="form-control validate[required]" value="{{ request.request.get('dbUser')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="control-group row {% if dbConn is defined and not dbConn %}has-error{% endif %}">
+                        <label class="span4  center" for="dbPassword">Password</label>
+                        <div class="span8">
+                            <input type="text" placeholder="Database Password" name="dbPassword" id="dbPassword" class="form-control" value="{{ request.request.get('dbPassword')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </fieldset>
+
+                <fieldset>
+                    <h3>Switch Communication</h3>
+                    <div class="control-group row {% if switchConn is defined and not switchConn %}has-error{% endif %}">
+                        <label class="span4  center" for="switchIP">IP</label>
+                        <div class="span8">
+                            <input type="text" name="switchIP" id="switchIP" class="form-control validate[required]" value="{{ request.request.get('switchIP')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="control-group row {% if switchConn is defined and not switchConn %}has-error{% endif %}">
+                        <label class="span4  center" for="switchPort">Port</label>
+                        <div class="span8">
+                            <input type="text" name="switchPort" id="switchPort" class="form-control validate[required]" value="{{ request.request.get('switchPort')|default('') }}">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </fieldset>
+
+                <fieldset>
+                    <h3>Path</h3>
+                    <div class="control-group row {% if rightScriptPath is defined and not rightScriptPath %}has-error{% endif %}">
+                        <label class="span4  center" for="scriptPath">Scripts Path</label>
+                        <div class="span8">
+                            <input type="text" name="scriptPath" id="scriptPath" class="form-control validate[required]" value="{{ request.request.get('scriptPath')|default('') }}">
+                        </div>
+                    </div>
+
+                    <div class="control-group row {% if rightActualDBPath is defined and not rightActualDBPath %}has-error{% endif %}">
+                        <label class="span4  center" for="actualDBPath">Mounted database path by NFS?</label>
+                        <div class="span8">
+                            <input type="checkbox" name="byNFS" id="byNFS" class="form-control" {% if request.request.get('byNFS') %} checked="chcked" {% endif %}>
+                        </div>
+                    </div>
+
+                    <div class="control-group row {% if rightActualDBPath is defined and not rightActualDBPath %}has-error{% endif %}">
+                        <label class="span4  center" for="actualDBPath">Database Export Path</label>
+                        <div class="span8">
+                            <input type="text" name="actualDBPath" id="actualDBPath" class="form-control validate[required]" value="{{ request.request.get('actualDBPath')|default('') }}">
+                        </div>
+                    </div>
+
+                    <div class="control-group row {% if rightWebDBPath is defined and not rightWebDBPath %}has-error{% endif %}">
+                        <label class="span4  center" for="webDBPath">Web Database Path</label>
+                        <div class="span8">
+                            <input type="text" name="webDBPath" id="webDBPath" class="form-control validate[required]" value="{{ request.request.get('webDBPath')|default('') }}">
+                        </div>
+                    </div>
+
+                    <div class="control-group row {% if rightPhpPath is defined and not rightPhpPath %}has-error{% endif %}">
+                        <label class="span4  center" for="phpPath">PHP Interpreter Path</label>
+                        <div class="span8">
+                            <input type="text" name="phpPath" id="phpPath" class="form-control validate[required]" value="{{ request.request.get('phpPath')|default('') }}">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="span8 col-lg-offset-2">
+                            <a href="{{ app.request.baseUrl ~ '/requirements' }}" class="btn btn-default">Cancel</a> 
+                            <button class="btn btn-primary" type="submit">Submit</button> 
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="assets/js/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(document).ready(function() {
+    $('#myform').validationEngine();
+});
+</script>
+{% endblock %}

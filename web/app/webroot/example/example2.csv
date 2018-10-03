@@ -1,0 +1,3 @@
+Country,code_name,Code,inter_rate,intra_rate,Rate,Interval,effective_date,min_time
+USA,USA,1201007,0.0024,0.0024,0.0024,6,2012-06-27,6
+USA,USA,1201032,0.0142,0.0126,0.0126,6,2012-06-27,6

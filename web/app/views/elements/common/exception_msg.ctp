@@ -1,0 +1,1 @@
+<table class="footable table table-striped dynamicTable tableTools table-bordered  table-white table-primary"><tr><td style="color:red;"><?php echo $exception_msg ?></td></tr></table>

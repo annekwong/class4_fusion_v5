@@ -1,0 +1,351 @@
+@CHARSET "UTF-8";
+.resource_add_Edit_style_6  {
+display:none;
+}
+
+.template {
+background-color:#FFFFDD;
+color:#E8F5FE;
+display:none;
+}
+table{
+	width : 100% !important;
+	width:95%;
+	border-collapse:collapse;
+	border-color: #108AC6;
+}
+th{
+	border:1px solid #108AC6;
+	border-color:#108AC6;
+	background: #cee2fd;
+	height: 35px;
+	text-align: left;
+	padding-left: 10px;
+}
+td{
+	border:1px solid #108AC6;
+		border-color:#108AC6;
+	height: 35px;
+	text-align: left;
+	padding-left: 10px;
+}
+#shop .page{
+	text-align: center;
+	margin-top:10px;
+}
+#shop .current{
+	color: red;
+	font-size: large;
+}
+#shop .pageQuery span{
+	float:right;
+	margin-right:5px;
+}
+#shop .pageQuery .preview{
+	float:left;
+	background: url("../../images/preview.gif") no-repeat left;
+	width: 18px;
+	height:17px;
+}
+#shop .pageQuery .pageleft{
+	float:left;
+	background: url("../../images/pageleft.gif") no-repeat left;
+	width: 18px;
+	height:17px;
+}
+#shop .pageQuery .selectPageNumber{
+	background : #458CCA;
+	width : 20px;
+	height:17px;
+	line-height:17px;
+	text-align:center;
+	border:1px solid #C2C5CA;
+	float:left;
+	color: #fff;
+}
+#shop .pageQuery .pageNumber{
+	background : #fff;
+	width : 20px;
+	height:17px;
+	line-height:17px;
+	text-align:center;
+	border:1px solid #C2C5CA;
+	float:left;
+}
+#shop .pageQuery .pageright{
+	float:left;
+	background: url("../../images/pageright.gif") no-repeat left;
+	width: 18px;
+	height:17px;
+}
+#shop .pageQuery .next{
+	float:left;
+	background: url("../../images/next.gif") no-repeat left;
+	width: 18px;
+	height:17px;
+}
+#shop .pageQuery .inputPage{
+	width:30px;
+	font-size:12px;
+	height:20px;
+	background:none repeat scroll 0 0 #FFFFFF;
+}
+#shop .pageQuery .btnPage{
+	width:18px;
+	height:17px;
+	background: url("../../images/pageright.gif") no-repeat left #fff;
+	border:none;
+}
+#shop .pageQuery .pageTxtZD{
+		height:17px;
+		line-height: 17px;
+		margin-left:30px;
+}
+
+#wrapper{
+	
+	height:680px;
+
+}
+#shop{
+	padding: 10px;
+	background:none repeat scroll 0 0 #FFFFFF;
+}
+#shop .title{
+	background: #a7c9f9;
+	height: 30px;
+	line-height: 30px;
+	padding-left:10px;
+	margin-top:0px;
+	width : auto !important;
+	
+}
+#shop .title .title_img{
+	padding-top:6px;
+}
+#shop .title .title_text{
+	margin-left:10px;
+	font-weight:bold;
+}
+#shop .table_div{
+	margin-top:5px;
+}
+#shop .copyright{
+	color: #4c97da;
+	margin-top:30px;
+	text-align: right;
+}
+#shop .bar{
+	width:100px;
+	border:1px solid #c8cccb;
+	height:20px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+#shop .bar .bar_value{
+	background: #4c97da;
+	height: 20px;
+}
+/******ipcentrex*****/
+#shop .content_title{
+	margin-top:10px;
+}
+#shop .content_title .title_txt{
+	color:#242424;
+font-size:20px;
+text-align:left;
+	
+}
+#shop .list_table{
+	margin-top:10px;
+	clear: both;
+}
+#shop .list_table table{
+	text-align:center;
+}
+/***form**/
+#shop .content_form{
+	margin-top:10px;
+	width : 90%;
+}
+#shop .form_arrow{
+	float:left;
+	width:16px;
+	height:16px;
+	margin:0px 5px 5px;
+	background: url("../../images/right_jt.gif") no-repeat left ;
+}
+#shop .form_add a{
+	float :left;
+	background: url("../../images/addnew.gif") no-repeat left;
+	height: 17px;
+	line-height:17px;
+	margin-left:5px;
+	margin-right:5px;
+	padding-left:20px;
+}
+#shop .form_del a{
+	float :left;
+	background: url("../../images/del.gif") no-repeat left;
+	height: 17px;
+	line-height:17px;
+	margin-left:5px;
+	margin-right:5px;
+	padding-left:20px;
+}
+#shop .voice-play a{
+	float :left;
+	background: url("../../images/voice-play.gif") no-repeat left;
+	height:22px;
+	width:22px;
+	margin-right:2px;
+} 
+#shop .voice-stop a{
+	float :left;
+	background: url("../../images/voice-stop.gif") no-repeat left;
+	height:22px;
+	width:22px;
+	margin-right:2px;
+} 
+#shop .voice-addnew a{
+	float :left;
+	background: url("../../images/voice-addnew.gif") no-repeat left;
+	height:22px;
+	width:22px;
+	margin-right:2px;
+} 
+#shop .voice-refresh a{
+	float :left;
+	background: url("../../images/voice-refresh.gif") no-repeat left;
+	height:22px;
+	width:22px;
+	margin-right:2px;
+}
+#shop .submit_div{
+	text-align: right;
+	padding-right: 10px;
+	margin-bottom: 10px;
+	margin-top:10px;
+	padding:5px 10px 5px 0px;
+	background:#A7C9F9;
+	width: auto !important;
+	width : 95%;
+	border:1px solid #108AC6;
+}
+#shop .back{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#shop .back a{
+	background: url("../../images/back.gif") no-repeat left;
+	float: left;
+	height:14px;
+	line-height :14px;
+	padding-left:20px;
+	color: #005F95;
+	font-weight:bold;
+}
+
+
+#shop .ext a{
+	background: url("../../images/edit.gif") no-repeat left;
+	float: left;
+	height:14px;
+	line-height :14px;
+	padding-left:70px;
+	color: #005F95;
+	font-weight:bold;
+}
+
+
+#chart{
+	border-left:1px solid #004080;
+	border-bottom:1px solid #004080;
+	width : 900px;
+	height : 300px;
+	margin-left:45px;
+	margin-top:20px;
+	position: relative;
+}
+#shop .addList a{
+		float :right;
+		background: url("../../images/addnew.gif") no-repeat left;
+		height: 17px;
+		line-height:17px;
+		margin-right:5px;
+		padding-left:20px;
+		font-weight: bold;
+		margin-bottom: 5px;
+}
+#shop .ivr_extention{
+	height: 60px;
+	overflow-Y:auto;
+	width: 400px;
+}
+#shop .ivr_extention div{
+	float: left;
+	margin-right:10px;
+}
+
+#shop .selectBtn{
+	margin-top:25px;
+	width:40px;
+	text-align: center;
+}
+#shop .selectBtn button{
+	width:38px;
+	margin-top:5px;
+}
+
+#shop .back1{
+	margin-top: 20px;
+	float:left;
+	margin-bottom:5px;
+}
+#shop .back1 a{
+	background: url("../../images/back.gif") no-repeat left;
+	float: left;
+	height:14px;
+	line-height :14px;
+	padding-left:20px;
+	color: #005F95;
+	font-weight:bold;
+}
+#shop .addList1{
+	margin-top:20px;
+	float:right;
+	margin-bottom:5px;
+}
+#shop .addList1 a{
+		float :right;
+		background: url("../../images/addnew.gif") no-repeat left;
+		height: 17px;
+		line-height:17px;
+		margin-right:5px;
+		padding-left:20px;
+		font-weight: bold;
+		float:right;
+}
+#shop .fax_top{
+	
+}
+#shop .fax_top .fax_title{
+	font-size:14px;
+	font-weight:bold;
+}
+
+.mycover{
+	background: #fff;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=50); /* IE */
+	-moz-opacity:0.5; /* Moz + FF */
+	opacity: 0.5;
+}
+
+.prompt_info{
+	color: red;
+}

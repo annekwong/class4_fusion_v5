@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Installation</h1>
+<div class="innerLR">
+    <div class="relativeWrap" style="overflow: visible;">
+        <div class="widget widget-heading-simple widget-body-gray">
+            <div class="widget-body padding-none">
+                <div class="hero-unit margin-none center">
+                    <h1 class="separator bottom">Really getting your attention!</h1>
+                    <p>The following step may have risk!</p>
+                    <p><a href="{{ app.request.baseUrl ~ '/permissions' }}" class="btn btn-primary btn-large">Install Now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

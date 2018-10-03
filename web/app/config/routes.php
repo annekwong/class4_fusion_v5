@@ -1,0 +1,63 @@
+<?php
+
+/* SVN FILE: $Id$ */
+/**
+ * Short description for file.
+ *
+ * In this file, you set up routes to your controllers and their actions.
+ * Routes are very important mechanism that allows you to freely connect
+ * different urls to chosen controllers and their actions (functions).
+ *
+ * PHP versions 4 and 5
+ *
+ * CakePHP(tm) :  Rapid Development Framework (http://www.cakephp.org)
+ * Copyright 2005-2010, Cake Software Foundation, Inc. (http://www.cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @filesource
+ * @copyright     Copyright 2005-2010, Cake Software Foundation, Inc. (http://www.cakefoundation.org)
+ * @link          http://www.cakefoundation.org/projects/info/cakephp CakePHP(tm) Project
+ * @package       cake
+ * @subpackage    cake.app.config
+ * @since         CakePHP(tm) v 0.2.9
+ * @version       $Revision$
+ * @modifiedby    $LastChangedBy$
+ * @lastmodified  $Date$
+ * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
+ */
+/**
+ * Here, we are connecting '/' (base path) to controller called 'Pages',
+ * its action called 'display', and we pass a param to select the view file
+ * to use (in this case, /app/views/pages/home.ctp)...
+ */
+//默认请求方法首页
+Router::connect('/', array('controller' => 'Homes', 'action' => 'login'));
+Router::connect('/client_login', array('controller' => 'Homes', 'action' => 'client_login'));
+Router::connect('/cdr_download/index/:key/', array('controller' => 'CdrreportsDb', 'action' => 'export_log_down'));
+/**
+ * ...and connect the rest of 'Pages' controller's urls.
+ */
+Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+
+/*
+Router::connect('/c4_v3/*', array(
+    'controller' => 'orig',
+));
+*/
+
+/**
+ * 让Cakephp启用JSON的扩展名解析
+ */
+//Router::parseExtensions('json', 'xml');
+
+Router::mapResources("api.clients");
+Router::mapResources("api.vendors");
+Router::mapResources("api.did_reposs");
+
+Router::mapResources('c4_v3');
+Router::mapResources('rate_management');
+Router::parseExtensions();
+
+?>

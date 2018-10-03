@@ -1,0 +1,1 @@
+<br /><h3 class="msg center"><?php echo __('no_data_found')?></h3>

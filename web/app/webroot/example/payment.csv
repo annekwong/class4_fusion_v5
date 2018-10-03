@@ -1,0 +1,3 @@
+name,datetime,note,amount,type,invoice_numbers,invoice_paids
+carrier001,2012-01-01 12:12:12,,100,Prepayment,,
+carrier002,,,100,Invoice Payment,532325256879,20

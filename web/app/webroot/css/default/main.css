@@ -1,0 +1,203 @@
+@CHARSET "UTF-8";
+#container{
+	min-width:1000px;
+}
+A:VISITED{
+	text-decoration : none;
+}
+A:LINK{
+	text-decoration : none;
+}
+a:HOVER{
+	text-decoration: underline;
+}
+
+#navigate {
+	margin-top:20px;
+}
+#navigate .logout{
+	float: right;background : url('../../images/quit.gif') no-repeat left;
+	font-size:14px;
+	font-weight:lighter;
+}
+#navigate .OneNavigation{
+	border:1px solid #fff;
+	border-bottom:0px;
+}
+#navigate .OneNavigation ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#navigate .OneNavigation ul li{
+	float:left;
+	margin-left:8px;
+	background:url('../../images/default/buttom_off.gif') no-repeat left;
+	height:34px;
+	width:84px;
+}
+#navigate .OneNavigation ul li a{
+	float:left;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	width : 80px;
+	color:#000;
+}
+#navigate .OneNavigation ul .select{
+	float:left;
+	margin-left:8px;
+	background:url('../../images/default/buttom_on.gif') no-repeat left;
+	height:34px;
+	width:84px;
+}
+#navigate .NodeNavigation{
+	background:#458cca;
+	height:34px;
+	padding-top:4px;
+	clear:both;
+	padding-left:10px;
+}
+#navigate .NodeNavigation ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#navigate .NodeNavigation ul li{
+	margin-left:5px;
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+#navigate .NodeNavigation ul li a{
+	float:left;
+	color:#fff;
+	font-weight:bold;
+	text-align: center;
+	min-width:60px;
+	padding:0px 2px 0px 2px;
+}
+#navigate .NodeNavigation ul li .select{
+	background-color : #276cb9;
+	text-align: center;
+}
+#main{
+	clear:both;
+}
+#main #menu{
+	float:left;
+	height : 672px;
+	width:15%;
+	background : #cee2fd;
+	overflow-Y:auto; 
+}
+#main #menu .link_menu{
+	background:#fff;
+	margin:10px;
+	border:1px solid #666;
+}
+#main #menu .link_menu ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	padding-bottom:10px;
+}
+#main #menu .link_menu ul li{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #ccc;
+	padding:5px 10px 5px 10px;
+	margin-left:4px;
+	margin-right:4px;
+}
+
+#main #menu .link_menu ul .ks_link{
+	background:#a7c9f9;
+	margin-top:2px;
+	padding-left:10px;
+	font-weight:bold;
+	margin-left:2px;
+	margin-right:2px;
+}
+
+#main #menu .link_menu ul li a{
+	background-position:left;
+	background-repeat:no-repeat;
+	padding-left:25px;
+	float:left;
+	height:30px;
+	line-height:30px;
+	color:#000;
+}
+
+#main #separated{
+	float:left;
+	width:1%;
+	height : 672px;
+	background:#eee;
+}
+#main #separated div{
+	text-align:center;
+	margin-top:300px;
+}
+#main .content{
+	float:left;
+	height : 672px;
+	width:84%;
+}
+#main .content2{
+	float:left;
+	height : 672px;
+	width:99%;
+}
+
+
+
+
+
+
+
+.dumascroll {}		/*只需对需要渲染滚动条的div设置该class即可*/
+.dumascroll_area {
+	height:100%;
+	overflow:hidden;
+}
+.dumascroll_bar,.dumascroll_handle,.dumascroll_handle_a,.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {
+	background-image:url(http://www.blueidea.com/articleimg/2009/07/6875/un_bg_bar.gif);
+}
+.dumascroll_bar {
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:9;
+	width:14px;
+	height:100%;
+	cursor:default;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+	background-repeat:repeat-y;
+	background-position:-42px 0;
+	float:left;
+}
+.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_handle,.dumascroll_handle_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {
+	position:absolute;
+	left:0;
+}
+.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {
+	width:100%;
+	height:14px;
+	color:#fff;
+	text-align:center;
+}
+.dumascroll_arrow_up,.dumascroll_arrow_up_a { top:0; }
+.dumascroll_arrow_down,.dumascroll_arrow_down_a { bottom:0; }
+.dumascroll_handle,.dumascroll_handle_a { width:100%; background-repeat:repeat-y; }
+.dumascroll_arrow_up { background-position:0 0; }
+.dumascroll_arrow_up_a { background-position:-14px 0; }
+.dumascroll_handle { background-position:-28px 0; }
+.dumascroll_handle_a { background-position:-56px 0; }
+.dumascroll_arrow_down { background-position:-70px 0; }
+.dumascroll_arrow_down_a { background-position:-84px 0; }

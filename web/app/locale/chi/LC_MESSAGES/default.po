@@ -1,0 +1,6962 @@
+###上传下载（导入－－导出路径配置）
+
+
+##数据库服务器导出数据的目录  （请勿改动）
+msgid "database_export_path"
+msgstr "/tmp/exports/"
+##本地下载目录(web服务器共享目录)
+msgid "local_download_path"
+msgstr "/tmp/exports/"
+
+
+
+
+##数据库服务器导入数据的目录  （请勿改动）
+msgid "database_import_path"
+msgstr "/tmp/exports/"
+
+
+###########SIP Capture sockect 访问的地址
+msgid "capturesocket"
+msgstr "192.168.1.105"
+msgid "captureport"
+msgstr "81"
+
+##本地上传目录(web服务器共享目录)
+msgid "local_upload_path"
+msgstr "/tmp/exports/"
+
+##上传文件大小限制(200k)
+msgid "upload_size"
+msgstr "20000000000"
+################     系统参数配置   请勿删除
+
+#############登录FreeSwitch的认证密码
+msgid "fspass"
+msgstr "ClueCon"
+
+#############登录的主机
+msgid "fshost"
+msgstr "192.168.1.116:9021"
+
+#############登录的主机的端口
+msgid "fsport"
+msgstr "8021"
+
+#############主机 (SIP Capture时需要调用)
+msgid"capture_host"
+msgstr "192.168.1.115"
+
+#############用户(SIP Capture时需要调用)
+msgid "capture_user"
+msgstr "root"
+
+#############数据库名称 (SIP Capture时需要调用)
+msgid "capture_db"
+msgstr "class4v3"
+
+
+####################################
+
+msgid "State"
+msgstr "状态"
+
+msgid "EnteredBy"
+msgstr "最后修改人"
+
+msgid "EnteredDate"
+msgstr "最后修改时间"
+
+msgid "Fileistoolarge"
+msgstr "文件太大"
+
+msgid "pay_amount"
+msgstr "付款金额"
+
+msgid "total_amount"
+msgstr "发票金额"
+
+msgid "InvoiceNo"
+msgstr "发票号"
+
+msgid "lastCreateInvoiceTime"
+msgstr "上次生成发票时间"
+
+msgid "thisCurrencyisuseredplasedeleteratetable"
+msgstr "这个币率正在被使用，请先删除相应的费率模板！"
+
+msgid "web"
+msgstr "当前界面显示"
+
+msgid "proto"
+msgstr "协议"
+
+msgid "DisconnectCode"
+msgstr "断开代码"
+
+msgid "DownloadIngress"
+msgstr "导出对接网关"
+
+msgid "interstate"
+msgstr "不同的地区"
+
+
+msgid "intrastate"
+msgstr "同一个地区"
+
+msgid "others"
+msgstr "其他"
+
+msgid "ratetype"
+msgstr "rate Type"
+
+msgid "QueryTime"
+msgstr "查询耗时"
+
+msgid "pleaseSelectOneServer"
+msgstr "    "
+
+
+msgid "sec"
+msgstr "秒"
+
+
+msgid "RealPeriod"
+msgstr "当前汇总时间"
+
+msgid "Management"
+msgstr "管理"
+msgid "Carriers"
+msgstr "路由伙伴"
+msgid "LocationReport"
+msgstr "路由伙伴地区汇总统计"
+
+
+msgid "Orig-TermReport"
+msgstr "路由伙伴进出统计"
+
+msgid "SummaryReport"
+msgstr "路由伙伴汇总统计"
+msgid "Transaction"
+msgstr "路由伙伴交易明细"
+
+
+msgid "MutualSettlements"
+msgstr "路由伙伴结算明细"
+
+msgid "Invoices"
+msgstr "帐单记录"
+
+msgid "Payments"
+msgstr "Payments"
+
+msgid "GatewayType"
+msgid "网关类型"
+
+msgid "Statistics"
+msgstr "统计"
+msgid "UsageReport"
+msgstr "费率使用统计"
+
+msgid "CDRsList"
+msgstr "话单查找"
+
+msgid "QoSReport"
+msgstr "Qos监控"
+
+msgid "DisconnectCauses"
+msgstr "断开码分析"
+
+msgid "MismatchesRepor"
+msgstr "计费异常分析"
+
+msgid "TerminationReport"
+msgstr "电路使用报表"
+
+msgid "ChargesReport"
+msgstr "落地网关费用分析"
+
+msgid "Tools"
+msgstr "工具"
+
+msgid "RatesAnalysis"
+msgstr "费率分析"
+
+msgid "SIPCapture"
+msgstr "信令跟踪"
+
+msgid "CallSimulation"
+msgstr "呼叫模拟"
+
+msgid "IngressTrunkSimulation"
+msgstr "模拟对接网关"
+
+msgid "EgressTrunkSimulation"
+msgstr "模拟落地网关"
+
+
+
+msgid "Routing"
+msgstr "路由配置"
+
+msgid "DigitTranslation"
+msgstr "号码转换"
+
+
+
+msgid "Trunks"
+msgstr "VoIP网关"
+
+msgid "DynamicRoute"
+msgstr "动态路由"
+
+msgid "StaticRoute"
+msgstr "静态路由表"
+
+msgid "BlockList"
+msgstr "拒绝名单"
+
+msgid "RoutingStrategies"
+msgstr "路由策略"
+
+
+msgid "System"
+msgstr "系统配置"
+
+msgid "Jurisdiction"
+msgstr "计费区域管理"
+
+msgid "Capacity"
+msgstr "系统容量设置 "
+
+msgid "Switch"
+msgstr "软交换配置"
+
+
+
+msgid "VoIPGateway"
+msgstr "server配置"
+
+
+msgid "CodeDeck"
+msgstr "号码组管理"
+
+msgid "PaymentTerms"
+msgstr "PaymentTerms"
+
+msgid "TimeProfile"
+msgstr "时间段管理"
+
+msgid "Location"
+msgstr "地区管理"
+msgid "Currency"
+msgstr "币率管理"
+
+msgid "TaskSchedulers"
+msgstr "定时器"
+
+msgid "EmailTemplate"
+msgstr "邮件模板"
+
+
+msgid "Configuration"
+msgstr "系统管理"
+
+msgid "Roles"
+msgstr " 角色管理"
+
+msgid "Users"
+msgstr "用户管理 "
+
+msgid "Events"
+msgstr " 事件管理"
+
+msgid "ChangePassword"
+msgstr "修改密码"
+
+msgid "Settings"
+msgstr " 系统参数"
+
+msgid "ImportLog"
+msgstr "上传记录"
+
+msgid "ExportLog"
+msgstr "下载记录"
+
+msgid "CDRArchives"
+msgstr "话单备份"
+
+msgid "LRNSetting"
+msgstr "LRN设置"
+
+
+msgid "term_country"
+msgstr "国家"
+msgid "editpoint"
+msgstr "积分兑换话费"
+
+msgid "term_state"
+msgstr "省份"
+
+msgid "term_city"
+msgstr "城市"
+
+msgid "egress_alias"
+msgstr "落地网关"
+
+msgid "egress_alias"
+msgstr "落地网关"
+msgid "reseller_name"
+msgstr "代理商名字"
+msgid "client_name"
+msgstr "路由伙伴名字"
+
+
+msgid "term_client_name"
+msgstr "打出路由伙伴"
+
+
+msgid "DownloadRate"
+msgstr "导出费率"
+
+
+msgid "UploadRate"
+msgstr "上传费率"
+
+
+msgid "rateUploadSuccess"
+msgstr "费率已经上传成功"
+
+
+msgid "org_client_name"
+msgstr "打进路由伙伴"
+
+
+
+msgid "term_reseller_name"
+msgstr "打出代理商"
+
+msgid "org_reseller_name"
+msgstr "打进代理商"
+msgid "org_code"
+msgstr "打进号码"
+msgid "term_code"
+msgstr "打出号码"
+
+msgid "org_code_name"
+msgstr "打进号码名称"
+msgid "term_code_name"
+msgstr "打出号码名称"
+
+msgid "code_name"
+msgstr "号码名称"
+msgid "egress_post"
+msgstr "落地网关"
+
+msgid "ingress_post"
+msgstr "对接网关"
+msgid "card_series_name"
+msgstr "帐号池"
+msgid "batch_num"
+msgstr "帐号池批次"
+msgid "termination_source_host_name"
+msgstr "class4-server"
+msgid "Unknown"
+msgstr ""
+msgid "rate_table_name"
+msgstr "费率模板名称"
+msgid "rate_name"
+msgstr "费率模板名称"
+msgid "nocancomplainfeedback"
+msgstr "此投诉已经被管理员关闭，不能留言"
+msgid "exportlog"
+msgstr "下载记录"
+msgid "importlog"
+msgstr "上传记录"
+msgid "bonus"
+msgstr "积分"
+msgid "connectionaddress"
+msgstr "连接地址"
+msgid "statis"
+msgstr "统计"
+msgid "canSupport"
+msgstr "是否支持"
+msgid "returnsalesstrategy"
+msgstr "返回充值策略"
+
+msgid "sales_strategy_charges"
+msgstr "查看赠送话费规则"
+msgid "pointchangeamount"
+msgstr "积分换话费规则"
+
+msgid "addpointchangeamount"
+msgstr "添加积分换话费规则"
+msgid "editpointchangeamount"
+msgstr "修改积分换话费规则"
+msgid "viewpointchangeamount"
+msgstr "查看积分换话费规则"
+msgid "sysfunction"
+msgstr "系统功能管理"
+msgid "functiontype"
+msgstr "模块类型"
+msgid "functionname"
+msgstr "模块名称"
+msgid "imagename"
+msgstr "模块图片名称"
+msgid "functionurl"
+msgstr "模块url"
+##############系统模块功能配置(----------请不要修改------------)
+##管理模块
+
+msgid "client_location_report"
+msgstr "路由伙伴地区汇总统计"
+
+msgid "onlineusermanager"
+msgstr "在线用户管理"
+msgid "login_time"
+msgstr "登录时间"
+msgid "parentReseller"
+msgstr "所属代理商"
+
+##零售模块
+
+msgid "retail_callcard"
+msgstr "零售帐户"
+msgid "callcard"
+msgstr "帐户列表"
+
+msgid "callbackcard"
+msgstr "回拨卡"
+
+msgid "conferencecard"
+msgstr "电话会议"
+
+msgid "lowcost"
+msgstr "最低消费"
+
+
+msgid "accpayment"
+msgstr "帐户充值记录"
+
+
+msgid "msgmonthly"
+msgstr "短信包月"
+
+msgid "firstprofit"
+msgstr "按首次提成"
+
+msgid "retail_accpoint"
+msgstr "零售    ----[帐户积分记录]"
+msgid "accpoint"
+msgstr "帐户积分记录"
+
+
+msgid "paymentpoint"
+msgstr "充值积分策略"
+
+
+msgid "resinfo"
+msgstr "代理商信息"
+
+msgid "consume_minute"
+msgstr "消费时长"
+msgid "consume_amount"
+msgstr "消费总额"
+msgid "refillcard"
+msgstr "充值卡"
+msgid "refilltotal"
+msgstr "充值总额"
+msgid "systemrefillcard"
+msgstr "系统充值卡"
+msgid "systemrefillcardtotal"
+msgstr "系统充值卡总额"
+msgid "proxyfillcardtotal"
+msgstr "代充值卡总额"
+
+msgid "cards_all"
+msgstr "帐户信息"
+
+msgid "retail_cards_sip"
+msgstr "帐户    ---[SIP号码]"
+msgid "cards_sip"
+msgstr "SIP号码"
+
+msgid "retail_transferscore"
+msgstr "帐户    ---[积分换话费]"
+msgid "transferscore"
+msgstr "积分换话费"
+
+
+msgid "cards_sip_member"
+msgstr "集团成员"
+
+
+msgid "cards_conf_member"
+msgstr "参会人员"
+
+
+msgid "sipconf"
+msgstr "当前会议"
+
+msgid "cards_msg"
+msgstr "在线短信"
+
+
+msgid "cards_international"
+msgstr "国际长途"
+
+msgid "res_cli_refill"
+msgstr "充值"
+
+
+msgid "cards_internationalreq"
+msgstr "国际长途请求"
+
+
+msgid "cards_recommend"
+msgstr "号码推荐"
+
+
+msgid "cards_recommend1"
+msgstr "查看号码推荐"
+
+
+msgid "usingcards"
+msgstr "开户帐户"
+
+
+
+##统计模块
+
+msgid "callsummary"
+msgstr "地区汇总统计"
+
+msgid "orig"
+msgstr "进出统计"
+
+
+msgid "cdrsummary"
+msgstr "话单统计"
+
+
+msgid "disconnectCause"
+msgstr "断开码分析"
+
+
+
+msgid "mismatchreport"
+msgstr "计费异常分析"
+
+
+
+msgid "routeusage"
+msgstr "电路使用报表"
+msgid "returnrouteusage"
+msgstr "返回电路使用报表"
+
+
+msgid "paymentreport"
+msgstr "费用报表"
+
+msgid "concurrentsize"
+msgstr "并发数"
+
+
+
+
+msgid "businessreport"
+msgstr "业务统计"
+
+
+
+
+msgid "resellerreport"
+msgstr "代理商统计报表"
+
+msgid "accountincomedetail"
+msgstr "帐户收支明细"
+
+msgid "salesreport"
+msgstr "销售月报"
+
+msgid "smslog"
+msgstr "短信记录"
+
+
+msgid "salestatis"
+msgstr "销售统计"
+
+
+
+msgid "connectionanalysis"
+msgstr "接通分析"
+
+
+msgid "calldistribution"
+msgstr "呼叫分布"
+
+
+msgid "paymentrecor"
+msgstr "查看缴费记录"
+
+msgid "viewcdrlist"
+msgstr "查看话单"
+msgid "cdrlistreport"
+msgstr "查看话费"
+
+
+msgid "gatewaybalance"
+msgstr "落地网关费用分析"
+
+
+
+
+msgid "transationdetail"
+msgstr "帐户交易记录"
+msgid "accountname"
+msgstr "帐户名"
+msgid "carduserreport"
+msgstr "帐号卡使用统计报表"
+msgid "cardcostreport"
+msgstr "帐号卡费用统计报表"
+
+msgid "packageusereport"
+msgstr "套餐使用统计"
+msgid "rateusereport"
+msgstr "费率使用统计"
+msgid "clientbalance"
+msgstr "结算报表"
+##工具模块
+
+
+
+msgid "rateAnalysis"
+msgstr "费率分析"
+
+
+msgid "activeconfs"
+msgstr "在线会议"
+
+
+
+msgid "hisconfs"
+msgstr "历史会议"
+
+msgid "activecalls"
+msgstr "在线通话"
+
+
+
+msgid "paymentrecord"
+msgstr "充值记录"
+
+
+msgid "cdrSearchtools"
+msgstr "话单查找"
+
+
+msgid "onlinegateway"
+msgstr "在线网关"
+
+
+msgid "onlineIPPhone"
+msgstr "在线话机"
+
+
+msgid "systatus"
+msgstr "系统状态"
+
+msgid "EventLog"
+msgstr "事件管理"
+msgid "changepw"
+msgstr "修改密码"
+msgid "sender"
+msgstr "发出"
+
+msgid "syssetting"
+msgstr "系统参数"
+
+msgid "paymentgateway"
+msgstr "支付通道"
+
+msgid "Cappaign"
+msgstr "优惠活动"
+
+msgid "switchSetting"
+msgstr "软交换配置"
+
+msgid "dataMaintainence"
+msgstr "话单备份"
+
+msgid "selfrefill"
+msgstr "自助充值"
+
+msgid "accountselfrefill"
+msgstr "增值业务"
+
+##系统配置
+
+msgid "ivrconfig"
+msgstr "IVR配置"
+
+msgid "Currencies"
+msgstr "增值业务请求"
+
+
+msgid "routeStrategy"
+msgstr "路由策略"
+msgid "config_locationPrefixes"
+msgstr "帐户    ----[增值业务]"
+msgid "locationPrefixes"
+msgstr "增值业务"
+msgid "config_CallPhonePrefixes"
+msgstr "帐户    ----[推荐策略]"
+msgid "CallPhonePrefixes"
+msgstr "推荐策略"
+msgid "config_GateWayGroup"
+msgstr "路由配置    ----[voip网关]"
+msgid "config_IVR"
+msgstr "系统配置    ----[语音配置]"
+msgid "IVR"
+msgstr "语音配置"
+msgid "config_areamanager"
+msgstr "系统配置    ----[地区管理]"
+msgid "areamanager"
+msgstr "地区管理"
+
+msgid "retail_levelofaccount"
+msgstr "系统配置    ----[客户等级]"
+msgid "levelofaccount"
+msgstr "客户等级"
+
+
+
+
+msgid "MutualSettlements"
+msgstr "充值结算"
+
+msgid "freemonitor"
+msgstr "后台监控"
+msgid "perresellerreport"
+msgstr "提成代理业务统计"
+msgid "invoice"
+msgstr "缴款单"
+msgid "accountinfo"
+msgstr "帐户基本信息"
+msgid "rateTable"
+msgstr "费率模板"
+
+msgid "smsrate"
+msgstr "短信费率"
+
+
+msgid "accountrate"
+msgstr "帐户费率"
+
+
+##路由配置
+msgid "DRanalysis"
+msgstr "动态路由分析"
+
+
+
+
+
+
+
+msgid "strategym"
+msgstr "策略管理"
+
+##投诉建议
+msgid "complain"
+msgstr "投诉建议"
+msgid "addcomplain"
+msgstr "新增投诉建议"
+msgid "createtime"
+msgstr "创建日期"
+msgid "modifytime"
+msgstr "最后修改日期"
+msgid "titile"
+msgstr "主题"
+msgid "content"
+msgstr "内容"
+
+################## 登录界面
+
+msgid "authorization"
+msgstr "用户登录"
+
+msgid "user_login"
+msgstr "登录"
+
+msgid "user_language"
+msgstr "语言"
+
+msgid "chinese"
+msgstr "中文"
+
+msgid "english"
+msgstr "英语"
+
+
+#################
+
+
+
+################layout的国际化
+
+msgid "login_account"
+msgstr "登录帐号"
+
+msgid "change_pass"
+msgstr "修改密码"
+
+msgid "logout"
+msgstr "退出"
+
+msgid "manage"
+msgstr "管理"
+
+msgid "monitor"
+msgstr "实时监控"
+
+msgid "product"
+msgstr "静态路由表"
+
+msgid "digitmapping"
+msgstr "号码转换"
+
+msgid "Action"
+msgstr "号码转换"
+
+
+msgid "DigitMapping"
+msgstr "主被叫转换规则配置"
+
+msgid "simulatedcall"
+msgstr "呼叫模拟"
+
+msgid "testdevice"
+msgstr "模拟对接网关"
+
+msgid "username"
+msgstr "用户名"
+
+msgid "password"
+msgstr "密码"
+
+msgid "audiotest"
+msgstr "模拟落地网关"
+
+msgid "voipgateway"
+msgstr "网关管理"
+
+msgid "retail"
+msgstr "零售"
+
+msgid "tool"
+msgstr "工具"
+
+msgid "sipcapture"
+msgstr "信令跟踪"
+
+msgid "system"
+msgstr "系统管理"
+
+msgid "clientmanage"
+msgstr "客户组管理"
+
+msgid "codedeckmanage"
+msgstr "号码组管理"
+msgid "serverconfig"
+msgstr "server配置"
+msgid "timeprofles"
+msgstr "	时间段管理"
+
+msgid "systemc"
+msgstr "系统配置"
+
+msgid "lrnsettings"
+msgstr "LRN设置"
+
+msgid "ivrmanager"
+msgstr "语音配置"
+
+msgid "sq"
+msgstr "上传"
+
+msgid "xz"
+msgstr "下载"
+
+msgid "nouploaded"
+msgstr "上传文件失败,请检查文件稍后再试"
+
+msgid "onlywav"
+msgstr "对不起,目前只支持wav格式的文件"
+
+msgid "filetoobig"
+msgstr "对不起,您上传的文件过大,请压缩或更换文件"
+
+msgid "nofiletoupload"
+msgstr "没有上传任何文件"
+
+msgid "uploaded"
+msgstr "上传文件成功"
+
+msgid "haserror"
+msgstr "文件已经上传,但服务器出现错误,请联系管理员"
+############################
+
+
+
+###########呼叫模拟
+
+msgid "resource"
+msgstr "网关"
+
+msgid "ing_ip"
+msgstr "对接网关IP"
+
+msgid "host_ip"
+msgstr "IP：端口"
+
+msgid "origdnis"
+msgstr "原始被叫号码"
+
+msgid "origani"
+msgstr "原始主叫号码"
+
+msgid "simulatedres"
+msgstr "模拟呼叫结果"
+
+
+
+
+################Digit Mapping
+msgid "adddetail"
+msgstr "添加详细转换规则"
+
+msgid "goback"
+msgstr "返回"
+
+msgid "translatedani"
+msgstr "转换后的主叫号码"
+
+msgid "translateddnis"
+msgstr "转换后的被叫号码"
+
+msgid "aniaction"
+msgstr "主叫匹配规则"
+
+msgid "ignore"
+msgstr "忽略"
+
+msgid "compare"
+msgstr "比较"
+
+msgid "replace"
+msgstr "替换"
+
+msgid "dnisaction"
+msgstr "被叫匹配规则"
+
+msgid "createnew"
+msgstr "创建"
+
+msgid "deleteall"
+msgstr "删除所有"
+msgid "downloadoldfile"
+msgstr "下载原文件"
+msgid "downloaderrfile"
+msgstr "下载错误文件"
+msgid "deletedate"
+msgstr "删除某时间段"
+msgid "deleteselected"
+msgstr "删除选中"
+msgid "againuploadfile"
+msgstr "重新上传"
+msgid "digitmapping"
+msgstr "号码转换"
+
+msgid "namesearch"
+msgstr "输入名字搜索..."
+
+msgid "tranname"
+msgstr "名称"
+
+msgid "tranid"
+msgstr "ID"
+
+msgid "updateat"
+msgstr "最后更新时间"
+
+
+
+msgid "CharstoAdd/Num ofcharstoDel"
+msgstr "添加或删除的字符数"
+
+msgid "action"
+msgstr "操作"
+
+
+
+msgid "numbertype"
+msgstr "号码类型"
+
+msgid "numberlength"
+msgstr "号码长度"
+
+msgid "Target"
+msgstr "目标"
+
+msgid "AddPrefix"
+msgstr "加前缀"
+
+
+msgid "DelPrefix"
+msgstr "减前缀"
+
+
+msgid "Addsuffix"
+msgstr "加后缀"
+
+msgid " Delsuffix"
+msgstr "减后缀"
+
+msgid "modifyingdetail"
+msgstr "修改详细规则"
+
+msgid "download"
+msgstr "导出"
+
+msgid "Upload"
+msgstr "导入"
+
+
+msgid "trandetail"
+msgstr "详细规则"
+
+msgid "prefixsearch"
+msgstr "请输入前缀查询"
+
+msgid "selectfile"
+msgstr "请选择您要上传的文件"
+
+
+msgid "overwrite"
+msgstr "覆盖"
+
+msgid "remove"
+msgstr "忽略重复"
+
+msgid "clearrefresh"
+msgstr "清空再上传"
+
+
+msgid "refresh"
+msgstr "刷新"
+
+msgid "rollbackonfail"
+msgstr "出错不提交任何数据"
+
+msgid "downloadtempfile"
+msgstr "下载文件模板"
+
+msgid "clickhere"
+msgstr "点击这里"
+
+msgid "codenames"
+msgstr "号码名称"
+
+msgid "erroroccured"
+msgstr "行被提交。错误信息如下"
+
+msgid "code_name_null_error"
+msgstr "号码名称不能为空"
+
+
+
+################Monitor
+
+msgid "pointintime"
+msgstr "时间点"
+
+msgid "currently"
+msgstr "当前最高"
+
+msgid "24hrpeak"
+msgstr "24小时最高"
+
+msgid "7dayspeak"
+msgstr "7天最高"
+
+msgid "recentpeak"
+msgstr "历史最高"
+
+msgid "historical"
+msgstr "历史信息"
+
+msgid "minutes"
+msgstr "分钟"
+msgid "minutess"
+msgstr "分钟数"
+msgid "hour"
+msgstr "小时"
+
+msgid "refreshtime"
+msgstr "刷新时间"
+
+msgid "clear"
+msgstr "清除"
+
+msgid "monitor"
+msgstr "实时监控"
+
+msgid "globals"
+msgstr "总统计"
+
+msgid "productstat"
+msgstr "路由状态"
+
+msgid "resstat"
+msgstr "网关状态"
+
+msgid "lasthour"
+msgstr "上一小时"
+
+msgid "last3hr"
+msgstr "最近3小时"
+
+msgid "last24hrs"
+msgstr "最近24小时"
+
+msgid "last3days"
+msgstr "最近3天"
+
+
+msgid "last7days"
+msgstr "最近7天"
+
+msgid "hideinactive"
+msgstr "隐藏不活动的项"
+
+msgid "search"
+msgstr "请输入关键字..."
+
+msgid "proname"
+msgstr "路由表名称"
+
+msgid "egress"
+msgstr "落地网关"
+
+msgid "ingress"
+msgstr "对接网关"
+
+msgid "codepart"
+msgstr "号段管理"
+
+########Route
+
+msgid "startdate"
+msgstr "开始时间"
+msgid "startcode"
+msgstr "开始号码"
+
+msgid "endcode"
+msgstr "结束号码"
+msgid "enddate"
+msgstr "结束时间"
+
+msgid "addroutes"
+msgstr "添加路由"
+
+msgid "basicinfo"
+msgstr "基本信息"
+
+msgid "routename"
+msgstr "路由名称"
+
+msgid "prefix"
+msgstr "前缀"
+
+msgid "approach"
+msgstr "策略"
+
+msgid "topdown"
+msgstr "从上至下"
+
+msgid "bypercentage"
+msgstr "按百分比"
+
+msgid "roundrobin"
+msgstr "循环"
+
+msgid "timeprofile"
+msgstr "时间段"
+
+msgid "select"
+msgstr "请选择"
+
+msgid "alias"
+msgstr "别名"
+
+msgid "route1"
+msgstr "网关"
+
+msgid "addroutegate"
+msgstr "添加网关"
+
+msgid "weight1"
+msgstr "百分比"
+
+msgid "route2"
+msgstr "百分比总和必须在95到105之间"
+
+msgid "weight2"
+msgstr "百分比2"
+
+msgid "route3"
+msgstr "别名3"
+
+msgid "weight3"
+msgstr "百分比3"
+
+msgid "companyname"
+msgstr "公司名称"
+
+msgid "route"
+msgstr "别名4"
+
+msgid "weight4"
+msgstr "百分比4"
+
+msgid "route5"
+msgstr "别名5"
+
+msgid "weight5"
+msgstr "百分比5"
+
+msgid "route6"
+msgstr "别名6"
+
+msgid "weight6"
+msgstr "百分比6"
+
+msgid "route7"
+msgstr "别名7"
+
+msgid "weight7"
+msgstr "百分比7"
+
+msgid "route8"
+msgstr "别名8"
+
+msgid "weight8"
+msgstr "百分比8"
+
+msgid "modifyroute"
+msgstr "修改路由"
+
+msgid "swap"
+msgstr "交换"
+
+msgid "addproduct"
+msgstr "添加路由表"
+
+msgid "produname"
+msgstr "路由表名称"
+
+msgid "cancel"
+msgstr "取消"
+
+msgid "swaping"
+msgstr "交换路由表"
+
+msgid "tobeswapped"
+msgstr "将要交换的路由表"
+
+msgid "selectapro"
+msgstr "与之交换的路由表"
+
+msgid "ofroutes"
+msgstr "路由数"
+
+msgid "ofingress"
+msgstr "网关数"
+
+msgid "ofusers"
+msgstr "用户数"
+
+
+msgid "close"
+msgstr "关闭"
+
+
+msgid "simulattedcall"
+msgstr "呼叫模拟"
+
+msgid "resource"
+msgstr "网关"
+
+msgid "egressalias"
+msgstr "网关名称"
+
+
+msgid "ipport"
+msgstr "IP:端口"
+
+msgid "ani"
+msgstr "主叫号码"
+
+msgid "dnis"
+msgstr "被叫号码"
+
+msgid "calleeani"
+msgstr "呼出主叫号码"
+
+msgid "calleednis"
+msgstr "呼出被叫号码"
+
+msgid "addtrans"
+msgstr "添加转换规则"
+
+
+
+##网关验证信息
+msgid "gate_client"
+msgstr "请选择一个路由伙伴"
+
+msgid "CreateCarrierSuccess"
+msgstr "路由伙伴创建成功"
+msgid "pleaseselrole"
+msgstr "请选择一个角色"
+msgid "activestatus"
+msgstr "活动状态"
+msgid "gatewayname"
+msgstr "网关名字"
+
+msgid "gatewayID"
+msgstr "网关ID"
+msgid "gate_red_id"
+msgstr "请填写网关ID"
+msgid "gate_red_id2"
+msgstr "Resource ID已经存在,请更换一个"
+msgid "gate_red_name"
+msgstr "请填写网关名字"
+msgid "gate_red_name2"
+msgstr "网关名字已经存在，请更换一个"
+
+####################所有错误或提示信息
+
+
+msgid "pro_name_null"
+msgstr "请输入路由表名称"
+
+msgid "pro_name_format_error"
+msgstr "路由表名称只能由字母或者数字组成"
+
+msgid "pro_name_len"
+msgstr "路由表名称的长度必须小于30"
+
+msgid "pro_name_exists"
+msgstr "该路由表名称已被使用"
+
+msgid "pro_add_failed"
+msgstr "添加路由表失败,请稍后重试"
+
+msgid "swap_same_pro"
+msgstr "相同的路由表不能交换"
+
+msgid "confirm_swap"
+msgstr "确定交换这两个路由表?"
+
+msgid "swapped_success"
+msgstr "交换成功!"
+
+msgid "swapped_failed"
+msgstr "交换失败,请稍后重试!"
+
+msgid "loading_pro"
+msgstr "正在加载路由表"
+
+msgid "cannot_del"
+msgstr "删除该项失败,请稍后重试"
+
+msgid "pro_add_success"
+msgstr "创建新路由表成功!"
+
+msgid "pro_del_success"
+msgstr "已成功删除一个路由表"
+
+msgid "pro_has_routes"
+msgstr "该路由表有路由,不能删除该路由表"
+
+msgid "delallprosuc"
+msgstr "删除所有路由表成功"
+
+msgid "delallprofail"
+msgstr "删除所有路由表失败,请稍后重试"
+
+msgid "delselprosuc"
+msgstr "删除选中路由表成功"
+
+msgid "delselprofail"
+msgstr "删除选中路由表失败,请稍后重试"
+
+##################  Route
+
+msgid "route_name_null"
+msgstr "请输入路由名称"
+
+msgid "route_name_format"
+msgstr "路由名称只能由字母或数字组成"
+
+msgid "route_name_exists"
+msgstr "该路由名称已经被使用"
+
+msgid "no_prefix_error"
+msgstr "请输入该路由匹配的前缀"
+
+msgid "prefix_format"
+msgstr "前缀只能由数字组成"
+
+msgid "prefix_exists"
+msgstr "该前缀已经被其他路由使用"
+
+msgid "weight_integer"
+msgstr "百分比只能是数字"
+
+msgid "route_add_failed"
+msgstr "添加路由失败,请稍后重试"
+
+msgid "route_edit_failed"
+msgstr "修改路由失败,请稍后重试"
+
+msgid "alias"
+msgstr "名称"
+
+msgid "digits"
+msgstr "前缀"
+
+msgid "start_date"
+msgstr "开始时间"
+
+msgid "end_date"
+msgstr "结束时间"
+
+msgid "percentage"
+msgstr "百分比"
+
+msgid "invalidformat"
+msgstr "格式不正确"
+
+msgid "exists"
+msgstr "已存在"
+
+msgid "policyerror"
+msgstr "策略只能是0或1或2, 0－按百分比  1－从上至下  2－循环"
+
+msgid "policy"
+msgstr "Policy"
+
+msgid "row"
+msgstr "行"
+
+msgid "route_del_success"
+msgstr "删除路由成功"
+
+msgid "todtypeerror"
+msgstr "TOD类型必须是0或1或2!  0 是 所有时间,1 是 按星期  2 是每天."
+
+msgid "todtype"
+msgstr "TOD类型"
+
+msgid "starttoderror"
+msgstr "开始周和结束周必须是0-6之间"
+
+msgid "starttod"
+msgstr "开始TOD"
+
+msgid "enddot"
+msgstr "结束TOD"
+
+msgid "starttoderror2"
+msgstr "开始TOD不能为空并且要小于结束TOD当TOD类型为1时"
+
+msgid "starttoderror3"
+msgstr "结束TOD不能为空并且要大于开始TOD当TOD类型为1时"
+
+msgid "endtoderror1"
+msgstr "TOD类型为0或2时,结束TOD必须为0"
+
+msgid "starttimeerror2"
+msgstr "当TOD类型等于0时,结束时间只能为0"
+
+msgid "starttoderror1"
+msgstr "TOD类型为0或2时,开始TOD必须为0"
+
+msgid "routes_del_success"
+msgstr "已成功清空该路由表"
+
+msgid "ettime"
+msgstr "结束时间"
+
+msgid "minlength"
+msgstr "最小长度"
+
+msgid "maxlength"
+msgstr "最大长度"
+
+msgid "minlen0"
+msgstr "最小长度必须大于0"
+
+msgid "maxlen0"
+msgstr "最大长度必须大于0"
+
+msgid "sttime"
+msgstr "开始时间"
+
+msgid "starttimeerror"
+msgstr "当TOD类型等于0时,开始时间只能为0"
+
+msgid "starttimeerror1"
+msgstr "当TOD类型等于1或2时,开始时间不能为空并且要小于结束时间"
+
+msgid "del_some_route_succ"
+msgstr "已成功删除选中路由"
+
+msgid "add_route_success"
+msgstr "已成功创建一个路由"
+
+msgid "update_route_success"
+msgstr "已成功更新该路由"
+
+msgid "pro_update_success"
+msgstr "已成功更新该路由表"
+
+msgid "pro_update_failed"
+msgstr "更新路由表失败,请稍后重试"
+
+##########################
+
+
+##################Digit Mapping 模块
+msgid "atleatone"
+msgstr "至少需要填写一项"
+
+msgid "aniaction012"
+msgstr "'aniaction'字段只能为0,1,2.   0-忽略  1-比较  2-替换"
+
+msgid "dnisaction012"
+msgstr "'dnisaction'字段只能为0,1,2.   0-忽略  1-比较  2-替换"
+
+msgid "tran_name_null"
+msgstr "请输入号码匹配名称"
+
+msgid "tran_name_format_error"
+msgstr "号码匹配名称只能由字母或者数字组成"
+
+msgid "tran_name_len"
+msgstr "号码匹配名称的长度必须小于30"
+
+msgid "tran_name_exists"
+msgstr "该号码匹配名称已被使用"
+
+msgid "tran_add_failed"
+msgstr "添加号码匹配失败,请稍后重试"
+
+msgid "tran_add_success"
+msgstr "创建新号码匹配成功!"
+
+msgid "tran_update_success"
+msgstr "已成功更新该号码匹配"
+
+msgid "tran_update_failed"
+msgstr "更新号码匹配失败,请稍后重试"
+
+msgid "tran_has_childs"
+msgstr "该号码匹配含有子项详细信息,不能将其删除"
+
+msgid "tran_del_success"
+msgstr "删除该号码匹配成功!"
+
+msgid "transs_del_success"
+msgstr "删除所有号码匹配成功!"
+
+msgid "del_some_trans_succ"
+msgstr "删除选中号码匹配成功!"
+
+msgid "tran_haschilds"
+msgstr "有号码匹配存在详细信息,不能删除"
+
+msgid "transs_del_success"
+msgstr "已成功清空号码匹配"
+
+msgid "del_tran_detail_suc"
+msgstr "已成功删除"
+
+msgid "del_all_tran_detail_suc"
+msgstr "已成功删除所有规则"
+
+msgid "del_some_tran_detail_suc"
+msgstr "已成功删除选中详细规则"
+
+msgid "tran_ani_null"
+msgstr "请输入要转换的主叫号码前缀"
+
+msgid "tran_ani_format"
+msgstr "您输入的主叫号码前缀格式不正确(只允许字母或数字)"
+
+msgid "tran_dnis_null"
+msgstr "请输入要转换的被叫号码前缀"
+
+msgid "tran_dnis_format"
+msgstr "您输入的被叫号码前缀格式不正确(只允许字母或数字)"
+
+msgid "tran_ani_action_null"
+msgstr "请输入主叫号码前缀的转换规则"
+
+msgid "tran_ani_action_format"
+msgstr "您输入主叫号码前缀的转换规则格式不正确(只允许字母或数字)"
+
+msgid "tran_dnis_action_null"
+msgstr "请输入被叫号码前缀的转换规则"
+
+msgid "tran_dnis_action_format"
+msgstr "您输入被叫号码前缀的转换规则格式不正确(只允许字母或数字)"
+
+msgid "tran_detail_add_suc"
+msgstr "添加转换规则成功"
+
+msgid "tran_detail_add_failed"
+msgstr "添加转换规则失败"
+
+msgid "upload_route_is_null"
+msgstr "为空"
+
+msgid "upload_route_format"
+msgstr "格式不正确"
+
+msgid "upload_route_len"
+msgstr "长度大于30"
+
+
+#############################呼叫模拟
+
+msgid "ingress_ip_null"
+msgstr "对接网关不能为空"
+
+msgid "ingress_ip_format"
+msgstr "您输入的对接网关地址格式不正确"
+
+msgid "ani_null"
+msgstr "测试的主叫号码不能为空"
+
+msgid "dnis_null"
+msgstr "测试的被叫号码不能为空"
+
+msgid "no_ingress_found"
+msgstr "没有找到对接网关或对接网关的IP地址,请选择其他网关来测试"
+msgid "ipaddress"
+msgstr "ip地址"
+####################################
+
+
+#######################################用户登录
+
+msgid "enternameorpass"
+msgstr "请输入您的用户名或密码"
+
+
+
+
+msgid "onlinecallbackcdr"
+msgstr "在线回拨电话"
+msgid "entercaptcha"
+msgstr "Please fill Captcha field."
+msgid "entercaptchaerror"
+msgstr "Captcha Error"
+
+msgid "userpass_format"
+msgstr "Access denied!"
+
+msgid "nameorpass_incorrect"
+msgstr "User Name or Password is incorrect! "
+
+msgid "register_t"
+msgstr "注册成功"
+
+msgid "register_f"
+msgstr "注册失败,请稍后重试"
+
+
+
+#####################################
+
+######通用的
+msgid "edit"
+msgstr "编辑"
+
+msgid "del"
+msgstr "删除"
+
+msgid "save"
+msgstr "保存"
+
+msgid "submit"
+msgstr "提交"
+
+msgid "reset"
+msgstr "重置"
+
+msgid "view"
+msgstr "查看"
+
+msgid "operation"
+msgstr "操作"
+
+msgid "modifying"
+msgstr "修改"
+
+msgid "test"
+msgstr "测试"
+msgid "createpaymentflatform"
+msgstr "创建支付通道"
+
+msgid "paymentflatformname"
+msgstr "支付通道名称"
+msgid "pleaseinputpaymentflatformname"
+msgstr "请输入支付通道名称"
+msgid "pleaseinputip"
+msgstr "请输入ip"
+msgid "no_data_found"
+msgstr "没有数据"
+
+###########
+
+
+#################网关管理
+
+msgid "configu"
+msgstr "配置"
+msgid "gatewaytype"
+msgstr "网关类型"
+msgid "selectgatewaytype"
+msgstr "请选择一个网关类型"
+msgid "voipgateways"
+msgstr "网关"
+msgid "res_ip"
+msgstr "请填写IP"
+msgid "addvoipgateway"
+msgstr "添加网关"
+
+
+msgid "netmask"
+msgstr "网关掩码"
+
+
+msgid "port"
+msgstr "端口"
+
+
+msgid "calllimit"
+msgstr "最大呼叫限制"
+
+
+msgid "cpslimit"
+msgstr "最大处理数"
+
+
+msgid "add"
+msgstr "添加"
+
+msgid "direction"
+msgstr "目标"
+
+msgid "matchprefix"
+msgstr "配额前缀"
+
+msgid "addordelchars"
+msgstr "添加或删除的字符数"
+
+msgid "all"
+msgstr "所有"
+
+msgid "addprefix"
+msgstr "添加前缀"
+
+msgid "delprefix"
+msgstr "删除前缀"
+
+msgid "addsuffix"
+msgstr "添加后缀"
+
+msgid "delsuffix"
+msgstr "删除后缀"
+
+msgid "codec"
+msgstr "编解码器"
+
+msgid "apply"
+msgstr "应用"
+
+msgid "editvoip"
+msgstr "修改网关"
+
+####################信令跟踪
+msgid "cannotcapture"
+msgstr "未能开启跟踪,请稍后重试"
+
+msgid "capturing"
+msgstr "成功开始跟踪,您可以随时按停止跟踪按钮停止"
+
+msgid "nofile"
+msgstr "对不起,该文件已不存在"
+
+
+
+
+
+
+
+#################客户模块
+msgid "call_internalclient"
+msgstr "目前这个帐户可以打国内电话，如果想禁用，请点击"
+
+msgid "call_internalclient_t"
+msgstr "目前这个帐户不能打国内电话，如果想激活，请点击"
+msgid "call_internationalclient"
+msgstr "目前这个帐户可以打国际电话，如果想禁用，请点击"
+
+msgid "call_internationalclient_f"
+msgstr "目前这个帐户不能打国际电话，如果想激活，请点击"
+msgid "client"
+msgstr "路由伙伴"
+msgid "status"
+msgstr "状态"
+msgid "newstatus"
+msgstr "新状态"
+msgid "SystemInformation"
+msgstr "系统信息"
+msgid "Name"
+msgstr "名字"
+msgid "balance"
+msgstr "余额"
+
+msgid "cause"
+msgstr "原因"
+msgid "balanceOperation"
+msgstr "余额查询"
+msgid "Rates"
+msgstr "费率"
+msgid "Reseller"
+msgstr "代理商"
+
+msgid "ORIG"
+msgstr "打入费率"
+msgid "TERM"
+msgstr "打出费率"
+
+msgid "disable"
+msgstr "禁用"
+
+msgid "viewip"
+msgstr "查看IP地址"
+
+msgid "edit"
+msgstr "修改"
+
+msgid "Internal"
+msgstr "可打国内"
+msgid "International"
+msgstr "可打国际"
+
+msgid "Userlevel"
+msgstr "用户级别"
+
+msgid "usertype"
+msgstr "用户类型"
+msgid "selectusertype"
+msgstr "请选择一个用户类型"
+
+
+msgid "isInternal"
+msgstr "是否能打国内电话"
+msgid "International"
+msgstr "是否能打国际电话"
+msgid "clientcounts"
+msgstr "路由伙伴数"
+msgid "mode"
+msgstr "模式"
+msgid "Prepaid"
+msgstr "预付"
+msgid "postpaid"
+msgstr "后付"
+msgid "ratetable"
+msgstr "费率模板"
+msgid "editratetable"
+msgstr "修改费率模板"
+msgid "userlevel1"
+msgstr "VIP"
+msgid "userlevel2"
+msgstr "普通用户"
+msgid "roletype2"
+msgstr "角色类型"
+msgid "userlevel3"
+msgstr "体验用户"
+
+msgid "usertype1"
+msgstr "纯ip用户"
+msgid "usertype2"
+msgstr "集团用户"
+
+msgid "usertype3"
+msgstr "亲情号码"
+msgid "yes"
+msgstr "是"
+
+msgid "no"
+msgstr "否"
+
+msgid "active"
+msgstr "开通"
+
+
+msgid "createclient"
+msgstr "新增路由伙伴"
+msgid "allowedcredit"
+msgstr "容许欠费"
+
+msgid "money"
+msgstr "元"
+msgid "Companyinfo"
+msgstr "公司信息"
+msgid "Companyname"
+msgstr "公司名称"
+msgid "email"
+msgstr "电子邮件"
+msgid "fullname"
+msgstr "全名"
+msgid "address"
+msgstr "地址"
+msgid "currency"
+msgstr "主叫货币"
+msgid "BillingSettings"
+msgstr "费率设置"
+msgid "DynamicRouting"
+msgstr "动态路由"
+msgid "staticRouting"
+msgstr "静态路由"
+msgid "staticRoutingor"
+msgstr "动态路由后再静态路由"
+msgid "dynamicrouteid"
+msgstr "默认动态路由策略"
+msgid "staticrouteid"
+msgstr "默认静态路由表"
+msgid "overequel"
+msgstr "覆盖重复的"
+
+msgid "setnullupload"
+msgstr "清空后在上传"
+msgid "uploading"
+msgstr "上传中"
+msgid "ImportFail"
+msgstr "上传失败"
+msgid "ImportSuccessful"
+msgstr "上传成功"
+msgid "autoinvoicing"
+msgstr "是否自动生成发票"
+msgid "routetype"
+msgstr "默认路由方式"
+
+msgid "paymentterm"
+msgstr "付款规则"
+
+msgid "fs_ip"
+msgstr "软交换地址"
+
+msgid "cdrformat"
+msgstr "话单格式"
+msgid "attachcdrslist"
+msgstr "是否附件话单详细"
+msgid "invoiceformat"
+msgstr "生成发票格式"
+
+msgid "lastinvoiced"
+msgstr "上次发票生成日期"
+
+msgid "notifyclientbalance"
+msgstr "提示路由伙伴余额"
+
+msgid "notifyadminbalance"
+msgstr "提示系统余额"
+
+msgid "lowbalancenotice"
+msgstr "是否提供余额不足提示"
+
+msgid "ispanelaccess"
+msgstr "是否能访问客户模板"
+msgid "isclientinfo"
+msgstr "路由伙伴信息"
+
+msgid "isInvoices"
+msgstr "查看发票"
+
+msgid "israteslist"
+msgstr "费率模板"
+
+msgid "issummaryreport"
+msgstr "查看报表"
+
+msgid "noenoughbalance"
+msgstr "对不起,您的余额已不足,请即时充值"
+
+msgid "iscdrslist"
+msgstr "话单搜索"
+
+msgid "ismutualsettlements"
+msgstr "相互冲帐"
+
+msgid "ischangepassword"
+msgstr "修改密码"
+
+msgid "login"
+msgstr "帐号"
+
+msgid "password"
+msgstr "密码"
+msgid "oldpassword"
+msgstr "旧密码"
+msgid "inputoldpassword"
+msgstr "请输入旧密码"
+msgid "passwordnoequel"
+msgstr "您2次输入的密码不一致"
+msgid "oldpassworderror"
+msgstr "旧密码有误"
+msgid "passwordsucc"
+msgstr "您的密码修改成功"
+msgid "inputnewpassword"
+msgstr "请输入新密码"
+msgid "inputconfirmpassword"
+msgstr "请输入密码确认"
+msgid "newpassword"
+msgstr "新密码"
+msgid "confirmpassword"
+msgstr "密码确认"
+msgid "active"
+msgstr "激活"
+msgid "noactive"
+msgstr "禁用"
+msgid "pleaseactive"
+msgstr "请选择用户状态"
+msgid "selectratetable"
+msgstr "--请选择一个费率模板--"
+msgid "pleaseselectreseller"
+msgstr "--请选择一个代理商---"
+
+msgid "pleaseuserlevel"
+msgstr "--请选择一个用户级别---"
+msgid "checkclientname"
+msgstr "路由伙伴名字已经存在,请换一个"
+
+msgid "clientnamenull"
+msgstr "请填写路由伙伴名字"
+msgid "allowedcreditnull"
+msgstr "请填写容许欠费"
+
+msgid "editClient"
+msgstr "修改路由伙伴"
+msgid "testRole"
+msgstr "体验用户"
+msgid "advancedsearch"
+msgstr "  "
+
+msgid "search"
+msgstr "查询"
+msgid "pleasedynselectroute"
+msgstr "请选择一个动态路由"
+msgid "pleasestaticselectroute"
+msgstr "请选择一个静态路由"
+msgid "pleaseselectstatus"
+msgstr "请选择状态"
+
+
+msgid "confirmdisablegate"
+msgstr "确定要禁用这个网关吗?"
+
+msgid "confirmactivegate"
+msgstr "确定要激活这个网关吗?"
+msgid "wangtodisable"
+msgstr "目前正在活动中,如果想禁用，请点击"
+msgid "wangtoactive"
+msgstr "目前已经被禁用,如果想激活，请点击"
+msgid "pleaseinputkey"
+msgstr "请输入关键字查询"
+
+
+
+
+#####################拒绝名单blocklist######################
+msgid "blocklist"
+msgstr "拒绝名单"
+msgid "prefix"
+msgstr "前缀"
+msgid "routeSet"
+msgstr "路由配置"
+
+msgid "editbolcklist"
+msgstr "修改拒绝号码"
+msgid "addbolcklist"
+msgstr "新增拒绝号码"
+msgid "pleaseselectengress"
+msgstr "请选择落地网关"
+msgid "clientname"
+msgstr "路由伙伴名称"
+msgid "All"
+msgstr "全部"
+msgid "gatewayid"
+msgstr "网关ID"
+
+msgid "gatewayname"
+msgstr "网关名称"
+
+msgid "monthlyplan"
+msgstr "是否包月"
+
+msgid "mediapass"
+msgstr "媒体流透传"
+
+msgid "calllimit"
+msgstr "容许呼叫数"
+
+msgid "cps"
+msgstr "容许处理数"
+
+msgid "egressnamenull"
+msgstr "请选择落地网关"
+
+msgid "pleaseinputprefix"
+msgstr "请输入前缀"
+msgid "confirmdel"
+msgstr "确定删除吗"
+
+
+#######################时间段管理
+
+msgid "timeprofile"
+msgstr "时间段"
+
+msgid "namenotnull"
+msgstr "请输入时间段名称"
+
+msgid "nameformaterror"
+msgstr "您输入的时间段名称格式不正确"
+
+msgid "datenotsuitable"
+msgstr "结束时间应该大于开始时间"
+
+msgid "entersd"
+msgstr "请输入开始时间"
+
+msgid "tfnameexists"
+msgstr "该时间段名称已被使用"
+
+msgid "addtffailed"
+msgstr "添加时间段失败,请稍后重试"
+
+msgid "addtfsuc"
+msgstr "添加时间段成功"
+
+msgid "edittffailed"
+msgstr "修改时间段失败,请稍后重试"
+
+msgid "edittfsuc"
+msgstr "修改时间段成功"
+
+
+msgid "tfusing"
+msgstr "该时间段正在被使用,不能删除"
+
+###########SIP capture 的信息提示
+msgid "invalidsourceip"
+msgstr "无效的源网关地址"
+
+msgid "invaliddestip"
+msgstr "无效的目标网关地址"
+
+msgid "invalidsourceport"
+msgstr "无效的源端口"
+
+msgid "invaliddestport"
+msgstr "无效的目标端口"
+
+msgid "invalidtimeformat"
+msgstr "只能为整数"
+
+
+###############号码组
+
+msgid "code_deck_name_error"
+msgstr "名字不能为空且只能由字母或数字组成"
+
+msgid "code_deck_name_exists"
+msgstr "该号码组名字已经存在"
+
+msgid "add_code_deck_failed"
+msgstr "添加号码组失败,请稍后重试"
+
+msgid "add_code_deck_suc"
+msgstr "添加号码组成功"
+
+msgid "del_codedeck_success"
+msgstr "删除号码组成功"
+
+msgid "del_codedeck_failed"
+msgstr "删除号码组失败,请稍后重试"
+
+msgid "code_deck_inuse"
+msgstr "该号码组已经被使用,不能删除"
+
+msgid "edit_code_deck_failed"
+msgstr "修改号码组失败,请稍后重试"
+
+msgid "edit_code_deck_suc"
+msgstr "修改号码组成功"
+
+msgid "code_null_error"
+msgstr "号码不能为空"
+
+msgid "code_format_error"
+msgstr "您填写的号码格式不正确"
+
+msgid "code_exists"
+msgstr "对不起,该号码已经存在"
+
+msgid "add_code_failed"
+msgstr "添加号码失败"
+
+msgid "add_code_success"
+msgstr "添加号码成功"
+
+msgid "edit_code_failed"
+msgstr "修改号码失败"
+
+msgid "edit_code_success"
+msgstr "修改号码成功"
+
+msgid "del_code_success"
+msgstr "删除号码成功"
+
+msgid "del_code_failed"
+msgstr "删除号码失败"
+
+msgid "country"
+msgstr "国家"
+
+msgid "state"
+msgstr "省份"
+
+msgid "city"
+msgstr "城市"
+
+msgid "code"
+msgstr "号码"
+
+msgid "add_client_group_failed"
+msgstr "添加客户组失败,请稍后重试"
+
+msgid "add_client_group_success"
+msgstr "添加客户组成功"
+
+msgid "group_name_null"
+msgstr "客户组名称不能为空"
+
+msgid "group_name_format"
+msgstr "客户组名称格式不正确"
+
+msgid "group_name_exists"
+msgstr "该客户组名称已经存在"
+
+msgid "edit_client_group_failed"
+msgstr "修改客户组失败,请稍后重试"
+
+msgid "edit_client_group_success"
+msgstr "修改客户组成功"
+
+msgid "del_client_group_failed"
+msgstr "删除客户组失败"
+
+msgid "del_client_group_success"
+msgstr "删除客户组成功"
+
+
+
+
+###############动态路由
+
+msgid "timeoutinvalid"
+msgstr "请输入合法的timeout"
+
+msgid "inputip"
+msgstr "请输入合法的ip"
+msgid "inputport"
+msgstr "请输入合法的端口"
+msgid "calllimitinvalid"
+msgstr "请输入合法的最大呼叫限制"
+
+msgid "ingrpLimitinvalid"
+msgstr "请输入合法的最大处理数"
+msgid "systemlimit"
+msgstr "系统容量设置"
+msgid "maxbalance"
+msgstr "最大余额"
+msgid "reward_type"
+msgstr "奖励方式"
+msgid "Each calculation"
+msgstr "每次计算"
+msgid "Cumulative"
+msgstr "累积计算"
+msgid "refill_amount"
+msgstr "充值额"
+msgid "addgiftGoupon"
+msgstr "添加赠送话费规则"
+msgid "addpointsto"
+msgstr "添加积分换话费规则"
+msgid "editynamicroute"
+msgstr "修改动态路由"
+msgid "adddynamicroute"
+msgstr "添加动态路由"
+msgid "findegress"
+msgstr "查看落地网关"
+msgid "giftcoupon"
+msgstr "话费赠送"
+msgid "route_name"
+msgstr "策略名字"
+msgid "newrate_table"
+msgstr "新计费模板"
+msgid "egresssize"
+msgstr "落地数"
+msgid "profit"
+msgstr "利润"
+msgid "routingrule"
+msgstr "选路规则"
+msgid "createuser"
+msgstr "创建人"
+msgid "totalcostcdr"
+msgstr "成本"
+msgid "routseller"
+msgstr "代理商"
+msgid "six_seconds"
+msgstr "6秒数"
+msgid "routerule1"
+msgstr "按最大ASR"
+msgid "routerule2"
+msgstr "按最大ACD"
+msgid "routerule3"
+msgstr "按最低费用"
+
+msgid "pleaseselectrouterule"
+msgstr "请选择一个选路策略"
+msgid "pleaseselectrseller"
+msgstr "请选择一个代理商"
+
+msgid "pleaseselectuser"
+msgstr "请选择一个用户"
+
+msgid "pleaseselectegress"
+msgstr "  "
+
+msgid "addegress"
+msgstr "添加落地网关"
+
+msgid "addingress"
+msgstr "添加对接网关"
+
+msgid "a"
+msgstr "个"
+
+msgid "Chargingzoneprefixset"
+msgstr "计费区域前缀设置"
+
+
+msgid "addChargingzoneprefixset"
+msgstr "添加计费区域前缀"
+msgid "pleaseaddegress"
+msgstr "请点机+号继续添加落地网关"
+
+msgid "pleaseinputroutename"
+msgstr "请输入策略名字"
+
+
+msgid "routenameexist"
+msgstr "此策略名字已经存在,请换一个"
+msgid "pleaseinputroutenamequery"
+msgstr "请输入一个策略名字进行查询"
+msgid "inactivesuccess"
+msgstr "禁用成功"
+
+msgid "inactivefailed"
+msgstr "禁用失败"
+
+msgid "activesuccess"
+msgstr "启用成功"
+
+msgid "activefailed"
+msgstr "启用失败"
+
+msgid "del_reseller_success"
+msgstr "删除代理商成功"
+
+msgid "del_reseller_failed"
+msgstr "删除代理商失败,请稍后重试"
+
+msgid "hasmoreclients"
+msgstr "该代理商旗下有cnum个客户、unum个用户、anum个帐户,不能删除"
+
+msgid "add_reseller_success"
+msgstr "添加代理商成功"
+
+msgid "add_reseller_failed"
+msgstr "添加代理商失败"
+
+msgid "reseller_name_null"
+msgstr "代理商名称不能为空"
+
+msgid "reseller_name_format"
+msgstr "代理商名称格式不正确"
+
+msgid "msg_orig_rate_format"
+msgstr "短信收费费率格式不正确"
+
+msgid "msg_term_rate_format"
+msgstr "短信成本费率格式不正确"
+
+msgid "address_format"
+msgstr "地址不能包含特殊字符"
+
+msgid "company_format"
+msgstr "公司名称不能包含特殊字符"
+
+msgid "profit_margin_format"
+msgstr "提成百分比格式不正确"
+
+msgid "email_format"
+msgstr "不是有效的邮箱地址"
+
+msgid "email_null"
+msgstr "请输入邮箱地址"
+
+msgid "allowed_credit_format"
+msgstr "允许信用格式不正确"
+
+msgid "upload_logo_failed"
+msgstr "上传头像失败"
+
+msgid "reseller_name_exists"
+msgstr "该代理商名称已经存在"
+
+msgid "logo_format"
+msgstr "您只能上传jpg、gif、png、bmp、jpeg的后缀名的文件"
+
+msgid "logo_oversize"
+msgstr "你最大只能上传1MB大小的图片"
+
+msgid "edit_reseller_success"
+msgstr "修改代理商成功"
+
+
+msgid "resellerrr"
+msgstr "代理"
+msgid "root"
+msgstr "系统"
+
+msgid "edit_reseller_failed"
+msgstr "修改代理商失败"
+
+msgid "pleaseselectdigitmap"
+msgstr "请选择号码转换"
+
+msgid "lrnsucc"
+msgstr "设置成功"
+
+msgid "package_name_null"
+msgstr "套餐名称不能为空"
+
+msgid "login_name_exists"
+msgstr "登录名已存在"
+
+msgid "package_name_format"
+msgstr "套餐名称格式不正确"
+
+msgid "add_package_success"
+msgstr "添加新套餐成功"
+
+msgid "add_package_failed"
+msgstr "添加新套餐失败"
+
+msgid "package_name_exists"
+msgstr "该套餐名字已经存在"
+
+msgid "fee_null"
+msgstr "租金不能为空"
+
+msgid "fee_format"
+msgstr "租金格式不正确"
+
+msgid "free_minute_format"
+msgstr "赠送时长格式不正确"
+
+msgid "gift_amount_format"
+msgstr "赠送金额格式不正确"
+msgid "amounts"
+msgstr "金额"
+msgid "package_used"
+msgstr "套餐正在被使用,不能删除"
+
+msgid "del_package_success"
+msgstr "删除套餐成功"
+
+msgid "del_package_failed"
+msgstr "删除套餐失败"
+
+msgid "edit_package_success"
+msgstr "修改新套餐成功"
+
+msgid "edit_package_failed"
+msgstr "修改新套餐失败"
+
+msgid "resloginnamenull"
+msgstr "登录名不能为空"
+
+msgid "resloginnameformat"
+msgstr "登录名格式不正确"
+
+msgid "resloginpassnull"
+msgstr "登录密码不能为空"
+
+msgid "resloginpassformat"
+msgstr "登录密码格式不正确"
+
+
+
+##上传记录
+
+
+msgid "importlog"
+msgstr "上传记录"
+msgid "exportlog"
+msgstr "下载记录"
+
+
+##################客户组
+msgid "newclientgroup"
+msgstr "新增客户组"
+
+msgid "groupname"
+msgstr "客户组名称"
+
+msgid "invoicenote"
+msgstr "发票备注"
+
+msgid "editclientgroup"
+msgstr "修改客户组"
+
+msgid "clientgruplist"
+msgstr "客户组列表"
+
+
+#################号码组
+msgid "addcode"
+msgstr "添加号码"
+
+msgid "code"
+msgstr "号码"
+
+msgid "editcode"
+msgstr "修改号码"
+
+msgid "codedecks"
+msgstr "号码组"
+
+msgid "newcodedeck"
+msgstr "添加号码组"
+
+msgid "codedeckname"
+msgstr "号码组名称"
+
+msgid "editcodedeck"
+msgstr "修改号码组"
+
+msgid "ofcodes"
+msgstr "号码数量"
+
+msgid "usage"
+msgstr "使用数"
+
+msgid "codeslist"
+msgstr "号码详细列表"
+
+msgid "upload_overwrite"
+msgstr "该选项会读取CSV文件的每一行插入到数据库中,如果该号码已经存在,将会覆盖数据库中原来有的记录"
+
+msgid "upload_remove"
+msgstr "CSV文件中与数据库重复的记录将被忽略"
+
+msgid "upload_refresh"
+msgstr "删除数据表所有记录,重新上传"
+
+################套餐
+
+msgid "newpackage"
+msgstr "新增套餐"
+
+msgid "packagename"
+msgstr "套餐名称"
+
+msgid "leas_type"
+msgstr "租用类型"
+msgid "trans_type"
+msgstr "交易类型"
+msgid "dailyrate"
+msgstr "日租"
+
+msgid "monthly"
+msgstr "月租"
+
+msgid "yearly"
+msgstr "年租"
+
+msgid "billingpolicy"
+msgstr "计费策略"
+
+msgid "nbilling"
+msgstr "N方计费"
+
+msgid "nmin1billing"
+msgstr "N-1方计费"
+
+msgid "nbillingexceptcaller"
+msgstr "N方计费但主叫扣1分钟"
+
+msgid "billingterm"
+msgstr "计费规则"
+
+msgid "bindconnected"
+msgstr "绑定接通时间"
+
+msgid "notbindconnected"
+msgstr "非绑定接通时间"
+
+msgid "fee"
+msgstr "租用租金"
+
+msgid "freeminutes"
+msgstr "赠送时长"
+
+msgid "giftamount"
+msgstr "赠送金额"
+
+msgid "note"
+msgstr "备注"
+
+msgid "minutes"
+msgstr "分钟"
+
+msgid "editpackage"
+msgstr "修改套餐"
+
+msgid "packagelist"
+msgstr "套餐管理"
+
+msgid "createdby"
+msgstr "创建用户"
+
+msgid "package_rate_tmp"
+msgstr "套餐费率模板"
+
+msgid "package_rate"
+msgstr "费率"
+
+msgid "package_tf"
+msgstr "时间段"
+
+msgid "applytype"
+msgstr "应用类型"
+
+msgid "newcustomer"
+msgstr "新客户"
+msgid "newcustomeruser"
+msgstr "新客户使用"
+msgid "oldcustomer"
+msgstr "老客户"
+msgid "oldcustomeruser"
+msgstr "老客户使用"
+msgid "nospecial"
+msgstr "不区分"
+
+msgid "add_pk_rate_suc"
+msgstr "添加套餐费率成功"
+
+msgid "add_pk_rate_fail"
+msgstr "添加套餐费率失败,请稍后重试"
+
+msgid "del_suc"
+msgstr "删除成功"
+
+msgid "del_fail"
+msgstr "删除失败"
+
+msgid "update_suc"
+msgstr "修改成功"
+
+msgid "update_fail"
+msgstr "修改失败"
+
+
+#################时间段
+
+msgid "newtimeprofile"
+msgstr "添加时间段"
+msgid "systemadmin"
+msgstr "系统管理员"
+msgid "logintype"
+msgstr "登录身份"
+msgid "timeprofilename"
+msgstr "名称"
+
+msgid "startdate"
+msgstr "开始日期"
+
+msgid "enddate"
+msgstr "结束日期"
+
+msgid "edittimeprofile"
+msgstr "修改时间段"
+
+##################3REseller
+msgid "addreseller"
+msgstr "添加代理商"
+
+msgid "resellername"
+msgstr "名字"
+msgid "result"
+msgstr "结果"
+msgid "service"
+msgstr "提成"
+msgid "uploadparams"
+msgstr "上传参数"
+msgid "parent"
+msgstr "上级代理"
+
+msgid "resellertype"
+msgstr "类型"
+
+msgid "mode"
+msgstr "模式"
+
+msgid "msgorigrate"
+msgstr "短信收费费率"
+
+msgid "msgtermrate"
+msgstr "短信成本费率"
+
+msgid "wayinto"
+msgstr "充值分成方式"
+
+msgid "firstinto"
+msgstr "首次分成"
+
+msgid "addinto"
+msgstr "累计分成"
+
+msgid "profitmargin"
+msgstr "提成比例"
+
+msgid "origcapacity"
+msgstr "打入限制"
+
+msgid "termcapacity"
+msgstr "打出限制"
+
+msgid "allowedvoip"
+msgstr "允许使用的VoIP网关"
+
+msgid "applytosub"
+msgstr "应用到该代理及其所有旗下客户或用户"
+
+msgid "billinginfo"
+msgstr "计费信息"
+
+msgid "origrate"
+msgstr "收费费率"
+
+msgid "termrate"
+msgstr "成本费率"
+
+msgid "invoicebilling"
+msgstr "发票计费"
+
+msgid "contactinfo"
+msgstr "联系信息"
+
+msgid "bankaccount"
+msgstr "银行帐号"
+
+msgid "logginandlogo"
+msgstr "登录信息、头像图标"
+
+msgid "uploadlogo"
+msgstr "选择头像"
+
+msgid "invoiceemailtemp"
+msgstr "邮件模板: 发票"
+
+msgid "from"
+msgstr "来自"
+
+msgid "replyto"
+msgstr "回复至"
+
+msgid "subject"
+msgstr "主题"
+
+msgid "generatedbysys"
+msgstr "系统自动生成"
+
+msgid "paymentnotifytemp"
+msgstr "邮件模板: 付款通知"
+
+msgid "lowbalancetemp"
+msgstr "邮件模板: 余额不足"
+
+msgid "editreseller"
+msgstr "修改代理商"
+
+msgid "usinglogo"
+msgstr "正在使用的头像"
+
+msgid "cost2"
+msgstr "支出金额"
+
+msgid "paymenttime"
+msgstr "付款时间"
+
+msgid "paymentamount"
+msgstr "付款金额"
+
+msgid "paymentmethod"
+msgstr "付款方式"
+
+msgid "result"
+msgstr "执行结果"
+
+msgid "currencyname"
+msgstr "货币名称"
+
+msgid "currencyrate"
+msgstr "货币费率"
+msgid "addsmartbar"
+msgstr "添加快捷方式"
+
+msgid "Rellerusable"
+msgstr "代理商是否能用"
+msgid "usercount"
+msgstr "使用次数"
+msgid "viewpw"
+msgstr "查看密码权限"
+msgid "clients"
+msgstr "路由伙伴"
+msgid "Roles"
+msgstr "角色管理"
+msgid "RolesName"
+msgstr "角色名称"
+msgid "Role"
+msgstr "角色"
+##################付款规则
+
+msgid "paymentterm"
+msgstr "付款规则"
+msgid "logincard"
+msgstr "帐号卡"
+msgid "termname"
+msgstr "规则名称"
+
+msgid "paymenttime"
+msgstr "付款时间"
+
+msgid "gracedays"
+msgstr "宽限期"
+
+msgid "notify"
+msgstr "通知"
+
+msgid "termusage"
+msgstr "使用次数"
+
+msgid "everyxdays"
+msgstr "每X天"
+
+msgid "onxdayofmonth"
+msgstr "每月的第X天"
+
+msgid "days"
+msgstr "天"
+
+msgid "graceexpired"
+msgstr "宽限期结束前"
+
+msgid "newpaymentterm"
+msgstr "创建付款规则"
+
+msgid "paymenttype"
+msgstr "付款方式"
+
+msgid "editpaymentterm"
+msgstr "修改付款规则"
+
+msgid "termnamenull"
+msgstr "规则名称不能为空"
+
+msgid "termnameformat"
+msgstr "规则名称格式不正确"
+
+msgid "termnameexists"
+msgstr "规则名称已存在"
+
+
+msgid "termdateformat"
+msgstr "日期格式不正确"
+msgid "termdatenull"
+msgstr "请输入日期"
+
+msgid "notifyformat"
+msgstr "通知日期格式不正确"
+
+
+msgid "gracedaysformat"
+msgstr "宽限日期格式不正确"
+
+msgid "addtermsuccess"
+msgstr "添加规则成功"
+
+msgid "addtermfail"
+msgstr "添加规则失败"
+
+msgid "edittermsuc"
+msgstr "修改规则成功"
+
+msgid "edittermfail"
+msgstr "修改规则失败"
+
+msgid "termused"
+msgstr "规则已被使用,不能删除"
+
+msgid "deltermsuc"
+msgstr "删除规则成功"
+
+msgid "deltermfail"
+msgstr "删除规则失败"
+
+
+
+##############帐号池
+msgid "cardseries"
+msgstr "帐号池"
+
+msgid "allcards"
+msgstr "所有帐户"
+
+msgid "cardseriesname"
+msgstr "帐号池名称"
+
+msgid "cardseriesrate"
+msgstr "默认费率模板"
+
+msgid "salesstrategy"
+msgstr "充值策略"
+
+msgid "firstsalesstrategy"
+msgstr "首次充值策略"
+msgid "addsalesstrategy"
+msgstr "添加充值策略"
+msgid "editsalesstrategy"
+msgstr "修改充值策略"
+msgid "viewsalesstrategy"
+msgstr "查看充值策略"
+msgid "viewgift_amount"
+msgstr "查看赠送话费规则"
+msgid "bonusstrategy"
+msgstr "送话费策略"
+msgid "gift_amount"
+msgstr "送话费"
+msgid "bonus_credit"
+msgstr "送积分"
+msgid "cardseriesprefix"
+msgstr "前缀"
+
+msgid "expiretype"
+msgstr "到期策略"
+
+msgid "startnum"
+msgstr "开始编号"
+
+msgid "fromgenerated"
+msgstr "从生成日"
+
+msgid "fromstarted"
+msgstr "从开始日"
+
+msgid "createcardseries"
+msgstr "创建帐号池"
+
+msgid "seriesnamenull"
+msgstr "帐号池名称不能为空"
+
+msgid "seriesnameformat"
+msgstr "帐号池名称格式不正确"
+
+msgid "seriesnameexists"
+msgstr "帐号池名称已经存在"
+
+msgid "expiredaysnull"
+msgstr "过期日期不能为空"
+
+msgid "expiredaysformat"
+msgstr "过期日期格式不正确"
+
+msgid "startnumnull"
+msgstr "开始编号不能为空"
+
+msgid "startnumlen"
+msgstr "开始编号只能由6位数字组成"
+
+msgid "addpoolsuc"
+msgstr "创建帐号池成功"
+
+msgid "istrial"
+msgstr "是否体验"
+
+msgid "buckupdateaccount"
+msgstr "批量修改卡"
+
+
+msgid "Rellerusable"
+msgstr "代理商是否能用"
+msgid "usercount"
+msgstr "使用次数"
+msgid "viewpw"
+msgstr "查看密码权限"
+msgid "isviewpw"
+msgstr "是否有查看密码权限"
+msgid "pleaseinputrolename"
+msgstr "请输入角色名称"
+msgid "pleaseselectusingrole"
+msgstr "请选择用户正在使用的角色"
+msgid "pleaseselectbatchrole"
+msgstr "请选择批量修改为新的角色"
+msgid "pleaseinputusername"
+msgstr "请输入用户名"
+msgid "pleaseinputaccountname"
+msgstr "请输入帐号名"
+msgid "pleaseinputpass"
+msgstr "请输入密码"
+msgid "rolenameexist"
+msgstr "角色名称已经存在，请换一个"
+msgid "usernameexist"
+msgstr "用户名已经存在，请换一个"
+msgid "paymentplatformnameexist"
+msgstr "支付通道名字已经存在，请换一个"
+msgid "pleaseinputemail"
+msgstr "请输入合法的email"
+msgid "viewfunc"
+msgstr "查看角色权限"
+msgid "viewuser"
+msgstr "查看用户"
+msgid "Batchupdateuser"
+msgstr "批量修改用户"
+msgid "Batchupdateusertitle"
+msgstr "对某一个代理商所有的用户批量改为另外一个代理商的用户"
+msgid "Batchupdaterole"
+msgstr "批量修改角色"
+msgid "Batchupdateroletitle"
+msgstr "对所有正在使用某个角色的用户改批量改为另外一个角色"
+msgid "editrole"
+msgstr "修改角色"
+msgid "clients"
+msgstr "路由伙伴"
+msgid "Roles"
+msgstr "角色管理"
+msgid "RolesName"
+msgstr "角色名称"
+
+msgid "addpoolfail"
+msgstr "创建帐号池失败"
+
+msgid "editpoolsuc"
+msgstr "修改帐号池成功"
+
+msgid "editpoolfail"
+msgstr "修改帐号池失败,请稍后重试"
+
+msgid "editcardpool"
+msgstr "修改帐号池"
+
+msgid "hascards"
+msgstr "帐号池内有卡,不能删除该帐号池"
+
+msgid "generatednums"
+msgstr "生成数量"
+
+msgid "defaultmodule"
+msgstr "默认模块"
+msgid "viewpw"
+msgstr "查看密码权限"
+
+msgid "createrole"
+msgstr "创建角色"
+msgid "createroletitle"
+msgstr "点击这里就可以创建一个新的角色"
+msgid "batchupdatenewrole"
+msgstr "批量修改为新的角色"
+msgid "usingrole"
+msgstr "用户正在使用的角色"
+msgid "usingreseller"
+msgstr "用户当前所属的代理商"
+msgid "batchupdateuserreseller"
+msgstr "批量修改为新的代理商"
+
+
+msgid "selbatchupdateuserreseller"
+msgstr "请选择用户当前所属的代理商"
+msgid "selectbatchupdateuserreseller"
+msgstr "请选择批量修改为新的代理商"
+
+
+msgid "funcmodule"
+msgstr "功能模块"
+msgid "moduleName"
+msgstr "模块名称"
+
+msgid "accessPermissions"
+msgstr "访问权限"
+msgid "executable"
+msgstr "可执行"
+msgid "writable"
+msgstr "可写"
+
+msgid "noexecutable"
+msgstr "不可执行"
+msgid "nowritable"
+msgstr "不可写"
+msgid "readable"
+msgstr "可读"
+msgid "noreadable"
+msgstr "不可读"
+msgid "modulecancletitle"
+msgstr "如果这个模块的可读，可写权限被取消，当前角色将不能选择这个模块作为默认模块"
+
+
+
+
+
+
+
+msgid "generatedcards"
+msgstr "生成卡"
+
+msgid "generatednumnull"
+msgstr "请输入要生成的卡的数量"
+
+msgid "generatednumformat"
+msgstr "生成数量只能为正整数"
+
+msgid "generatedsuc"
+msgstr "生成成功"
+
+msgid "generatedfail"
+msgstr "生成失败"
+
+msgid "viewcard"
+msgstr "查看卡信息"
+
+msgid "numbersearch"
+msgstr "请输入卡号搜索"
+
+msgid "cardnumber"
+msgstr "卡号"
+
+msgid "expiredate"
+msgstr "过期时间"
+
+msgid "createdate"
+msgstr "创建日"
+
+msgid "effectivedate"
+msgstr "激活日"
+
+msgid "bindnumber"
+msgstr "綁定号码"
+msgid "currenymange"
+msgstr "币率管理"
+msgid "delcardsuc"
+msgstr "删除卡成功"
+
+msgid "delcardfail"
+msgstr "删除卡失败"
+
+msgid "createnewcard"
+msgstr "新增卡"
+
+msgid "card_number"
+msgstr "卡号"
+
+msgid "expiredatenull"
+msgstr "过期日期不能为空"
+
+msgid "expiredatetoosmall"
+msgstr "过期日期不能小于当前日期"
+
+
+msgid "addcardsuc"
+msgstr "添加卡成功"
+
+msgid "addcardfail"
+msgstr "添加卡失败"
+
+msgid "editcard"
+msgstr "修改卡"
+
+msgid "editcardsuc"
+msgstr "修改卡成功"
+
+msgid "editcardfail"
+msgstr "修改卡失败"
+
+msgid "to"
+msgstr "至"
+
+msgid "createstart"
+msgstr "创建开始日"
+
+msgid "createend"
+msgstr "创建结束日"
+
+msgid "iseffectived"
+msgstr "是否激活"
+
+msgid "yes"
+msgstr "是"
+
+msgid "no"
+msgstr "否"
+msgid "addmodule"
+msgstr "添加模块"
+msgid "buckupdate"
+msgstr "批量修改"
+msgid "key_118n"	
+msgstr "模块国际化文件中的key"
+msgid "choosebuck"
+msgstr "请选中要批量修改的卡"
+
+msgid "nocardsselected"
+msgstr "未选中任何卡"
+
+msgid "buckupdatesuc"
+msgstr "批量修改成功"
+
+msgid "over_rate"
+msgstr "超过费率"
+
+msgid "buckupdatefail"
+msgstr "批量修改失败"
+
+msgid "addfamilynum"
+msgstr "设置亲情号码"
+
+msgid "exportallcards"
+msgstr "导出所有卡"
+
+msgid "package_mins"
+msgstr "租用时长"
+
+msgid "package_mins_null"
+msgstr "租用时长不能为空"
+
+msgid "package_mins_format"
+msgstr "租用时长度只能为整数"
+
+msgid "nochanged"
+msgstr "没有作任何改动"
+
+msgid "effective_card"
+msgstr "激活帐户"
+
+msgid "chooseeffective"
+msgstr "请选择要激活的帐户"
+
+msgid "effectivesuc"
+msgstr "激活成功"
+
+msgid "effectivefail"
+msgstr "激活失败"
+
+msgid "refillcardseries"
+msgstr "充值卡号池"
+
+msgid "seriesname"
+msgstr "池名称"
+
+msgid "register"
+msgstr "注册"
+
+msgid "ofcards"
+msgstr "卡数量"
+
+msgid "gofcards"
+msgstr "生成卡数量"
+
+msgid "nofcards"
+msgstr "现有卡数量"
+
+msgid "createrefillseries"
+msgstr "创建充值卡号码池"
+
+msgid "extended_days"
+msgstr "延长账户有效期"
+msgid "extended_daysvalid"
+msgstr "延长账户有效期必须是数字"
+msgid "cardvalue"
+msgstr "卡金额"
+msgid "refillseriesnamenull"
+msgstr "池名称不能为空"
+
+msgid "refillseriesnameformat"
+msgstr "池名称格式不正确"
+
+msgid "refillseriesnameexists"
+msgstr "池名称已经被使用"
+
+msgid "amountnull"
+msgstr "请输入金额,该金额为生成的卡的金额"
+
+msgid "amountformat"
+msgstr "金额格式不正确,可精确到3位小数"
+
+msgid "createrefillsucc"
+msgstr "创建充值卡池成功"
+
+msgid "createrefillfail"
+msgstr "创建充值卡池失败"
+
+msgid "refhascards"
+msgstr "充值卡池内已有卡生成,不能删除"
+
+msgid "editrefillsuc"
+msgstr "修改充值卡池成功"
+
+msgid "editrefillfail"
+msgstr "修改充值卡池失败"
+
+msgid "editrefillseries"
+msgstr "修改充值卡池"
+
+msgid "useddate"
+msgstr "使用日期"
+
+msgid "usedstartd"
+msgstr "使用开始日"
+
+msgid "usedendd"
+msgstr "使用结束日"
+
+msgid "f"
+msgstr "从"
+
+msgid "t"
+msgstr "到"
+
+msgid "isused"
+msgstr "是否使用"
+
+msgid "ratetmps"
+msgstr "费率模板数"
+
+msgid "currencyrate"
+msgstr "币率"
+
+msgid "currencycode"
+msgstr "货币编号"
+
+msgid "addcurrencyrate"
+msgstr "添加币率"
+
+msgid "addcurrencysuc"
+msgstr "添加币率成功"
+
+msgid "addcurrencyfail"
+msgstr "添加币率失败"
+
+msgid "currencycodeexists"
+msgstr "该币率代号已经存在"
+
+msgid "entercurrencycode"
+msgstr "请输入币率代号"
+
+msgid "hasmorerates"
+msgstr "有费率模板正在使用该币率,不能删除"
+
+msgid "editcurrencysuc"
+msgstr "修改币率成功"
+
+msgid "editcurrencyfail"
+msgstr "修改币率失败"
+
+msgid "chooseupdate"
+msgstr "请选择修改时间"
+
+msgid "entercurrency"
+msgstr "请输入要修改的币率"
+
+msgid "currencyrateformat"
+msgstr "币率格式不正确,可精确到3位小数"
+
+msgid "updatecurrratesuc"
+msgstr "修改币率成功"
+
+msgid "updatecurrratefail"
+msgstr "修改币率失败"
+
+msgid "updatedate"
+msgstr "更新日期"
+
+msgid "againdownload"
+msgstr "重新下载"
+
+msgid "updaterate"
+msgstr "更新费率(较上次费率)"
+
+msgid "update"
+msgstr "更新"
+
+msgid "date"
+msgstr "日期"
+msgid "trandate"
+msgstr "交易日期"
+msgid "exportdate"
+msgstr "下载日期"
+msgid "passlen"
+msgstr "密码长度"
+
+msgid "passlennull"
+msgstr "密码长度不能为空"
+
+msgid "passlenformat"
+msgstr "密码长度只能是1到12位之间的整数"
+
+msgid "pin"
+msgstr "卡密码"
+
+msgid "allorno"
+msgstr "全选/全否"
+
+msgid "timeexists"
+msgstr "该时间已经存在"
+
+msgid "choosearate"
+msgstr "请选择一个费率"
+
+msgid "nochanged"
+msgstr "未做任何更改"
+
+msgid "enterbindnumber"
+msgstr "请输入该帐户的绑定号码"
+
+msgid "accountbindnum"
+msgstr "绑定号码"
+
+msgid "ani_bind_num"
+msgstr "主叫绑定"
+
+msgid "update_ani_bind_amount"
+msgstr "改绑定号最低充值"
+
+msgid "enterupdateani"
+msgstr "请输入改绑定号码最低充值金"
+
+msgid "updateaniformat"
+msgstr "改绑定号码最低充值金格式不正确,可精确到3位小数"
+
+msgid "cancommand"
+msgstr "可以"
+
+msgid "chooseeditfield"
+msgstr "请选择要修改的量位"
+
+msgid "nocommand"
+msgstr "不可"
+msgid "iscommand"
+msgstr "是否可被申请"
+
+msgid "noactived"
+msgstr "禁用"
+
+msgid "noeffectived"
+msgstr "未开通"
+
+msgid "expired"
+msgstr "已过期"
+
+
+
+msgid "lowerbalance"
+msgstr "余额不足"
+
+msgid "a_type"
+msgstr "客户类型"
+
+msgid "newaccount"
+msgstr "新客户"
+
+msgid "oldaccount"
+msgstr "老客户"
+
+msgid "updatepass"
+msgstr "更新密码"
+
+msgid "newpass"
+msgstr "新密码"
+
+msgid "autogenerated"
+msgstr "自动生成"
+
+msgid "getnewpass"
+msgstr "正在获取新密码"
+
+msgid "udpatepasssuc"
+msgstr "更新密码成功"
+
+msgid "updatepassfail"
+msgstr "更新密码失败"
+
+msgid "enternewpass"
+msgstr "请输入新密码"
+
+msgid "effectivedatest"
+msgstr "激活开始日"
+
+msgid "effectivedateet"
+msgstr "激活结束日"
+
+msgid "startprefix"
+msgstr "开始前缀"
+
+msgid "endprefix"
+msgstr "结束前缀"
+
+msgid "lowestb"
+msgstr "最小余额"
+
+msgid "greatestb"
+msgstr "最大余额"
+
+msgid "allaccounts"
+msgstr "所有帐户信息"
+
+msgid "viewusing"
+msgstr "正在使用的卡"
+
+msgid "batch"
+msgstr "批次"
+
+msgid "startn"
+msgstr "开始号段"
+
+msgid "endn"
+msgstr "结束号段"
+
+msgid "generatedtime"
+msgstr "生成时间"
+
+msgid "filters"
+msgstr "过滤量位设置"
+
+msgid "paymentfilter"
+msgstr "过滤充值记录尾数"
+
+msgid "bycommas"
+msgstr "添加多个以英文半角逗号隔开"
+
+msgid "accountfilter"
+msgstr "过滤开户帐户尾数"
+
+msgid "expiredrate"
+msgstr "到期转换费率"
+
+msgid "trial"
+msgstr "是否体验用户"
+
+msgid "accountinfo"
+msgstr "帐户信息"
+
+msgid "accountname"
+msgstr "名称"
+
+msgid "phone_number"
+msgstr "电话号码"
+
+msgid "address"
+msgstr "地址"
+
+msgid "email"
+msgstr "邮箱地址"
+
+msgid "company_name"
+msgstr "公司名称"
+
+msgid "balance"
+msgstr "当前余额"
+
+msgid "serviceinfo"
+msgstr "增值业务信息"
+
+msgid "cancommanded"
+msgstr "可申请的业务"
+
+msgid "billing_type"
+msgstr "计费方式"
+
+msgid "fy"
+msgstr "费用"
+
+msgid "command"
+msgstr "申请"
+
+msgid "usingservice"
+msgstr "正在使用的增值业务"
+
+msgid "commandingservice"
+msgstr "申请中的增值业务"
+
+msgid "commanding"
+msgstr "申请中"
+
+msgid "surecommand"
+msgstr "确定申请该业务"
+
+msgid "cancelservice"
+msgstr "退订"
+
+msgid "cancelserviceconfirm"
+msgstr "您确定要退定该业务吗"
+
+msgid "systemadmin"
+msgstr "系统管理员"
+
+msgid "bycard"
+msgstr "系统充值卡"
+
+msgid "yeepay"
+msgstr "易宝"
+
+msgid "kq"
+msgstr "快钱"
+
+msgid "alipay"
+msgstr "支付宝"
+
+msgid "cause"
+msgstr "失败原因"
+
+msgid "payment_time"
+msgstr "充值时间"
+
+msgid "amount"
+msgstr "金额"
+
+msgid "payment_method"
+msgstr "充值方式"
+
+msgid "payment"
+msgstr "充值记录"
+
+msgid "dur"
+msgstr "时长"
+
+msgid "internationalconf"
+msgstr "长途电话前缀配置"
+
+msgid "nointernationsprefix"
+msgstr "您当前没有设置国际电话前缀"
+
+msgid "configuredalready"
+msgstr "前缀重复"
+
+msgid "configuredsuc"
+msgstr "配置新号码前缀成功"
+
+msgid "configuredfail"
+msgstr "配置新号码前缀失败"
+
+msgid "noforbiddennumber"
+msgstr "您当前没有添加禁止呼叫的号码"
+
+msgid "forbiddennumconf"
+msgstr "禁止呼叫号码配置"
+
+msgid "fconfiguredalready"
+msgstr "您已配置设置了该禁止号码"
+
+msgid "configuredfsuc"
+msgstr "添加新禁止号码成功"
+
+msgid "configuredffail"
+msgstr "添加新禁止号码失败"
+
+msgid "usingstate"
+msgstr "该套餐处于使用状态,不能删除"
+
+msgid "anyreseller"
+msgstr "任意代理商"
+
+msgid "chargereport"
+msgstr "充值结算报表"
+
+msgid "msgmonthlyfee"
+msgstr "短信包月费用"
+
+msgid "monthlyalready"
+msgstr "您的短信已包月"
+
+msgid "nomonthlymsg"
+msgstr "您当前没有短信包月"
+
+msgid "date"
+msgstr "日期"
+
+msgid "syscard"
+msgstr "系统充值卡"
+
+msgid "platform"
+msgstr "代充平台"
+
+msgid "chargeamount"
+msgstr "充值总金额"
+
+msgid "chargeamountfilter"
+msgstr "过滤总金额"
+
+msgid "ofcharges"
+msgstr "充值总次数"
+
+msgid "ofchargesfilter"
+msgstr "过滤总次数"
+
+msgid "chargeamountsuc"
+msgstr "充值成功总金额"
+
+msgid "chargeamountsucfilter"
+msgstr "过滤成功总金额"
+
+msgid "chargeamountfailfilter"
+msgstr "过滤失败总金额"
+
+msgid "ofcahrgessuc"
+msgstr "充值成功总次数"
+
+msgid "ofcahrgessucfilter"
+msgstr "过滤成功总次数"
+
+msgid "makepayment"
+msgstr "充值"
+
+msgid "ofcahrgesfailfilter"
+msgstr "过滤失败总次数"
+
+msgid "chargeamountfail"
+msgstr "充值失败总金额"
+
+msgid "ofcahrgesfail"
+msgstr "充值失败总次数"
+
+msgid "othercharge"
+msgstr "其他充值方式"
+
+msgid "otheramount"
+msgstr "其他充值总金额"
+
+msgid "charges"
+msgstr "充值金额"
+
+msgid "chargesbyfilter"
+msgstr "过滤充值金额"
+
+msgid "ofcharge"
+msgstr "充值次数"
+
+msgid "ofchargebyfilter"
+msgstr "过滤充值次数"
+
+msgid "syscardcharges"
+msgstr "系统充值卡总次数"
+
+msgid "platformcharges"
+msgstr "代充平台充值次数"
+
+msgid "othercharges"
+msgstr "其他充值次数"
+
+msgid "platformchargessuc"
+msgstr "代充平台充值成功次数"
+
+msgid "platformchargesfail"
+msgstr "代充平台充值失败次数"
+
+
+#################客户等级
+msgid "accountlevel"
+msgstr "客户等级"
+
+msgid "level_name"
+msgstr "等级名称"
+
+msgid "max_durations"
+msgstr "最长通话时间"
+
+msgid "level_type"
+msgstr "等级"
+
+msgid "egress_type"
+msgstr "落地方式"
+
+msgid "thesame"
+msgstr "同一个"
+
+msgid "difference"
+msgstr "不同一个"
+
+msgid "differencefirst"
+msgstr "先不同再同一个"
+
+msgid "levelnameexists"
+msgstr "该等级名称已存在"
+
+msgid "enterlevelname"
+msgstr "请输入等级名称"
+
+msgid "maxdurations"
+msgstr "最长通话时间只能为正整数"
+
+msgid "norestriction"
+msgstr "无限制"
+
+msgid "filtercard"
+msgstr "过滤充值卡总金额"
+
+msgid "filterplat"
+msgstr "过滤代充总金额"
+
+msgid "filterother"
+msgstr "过滤其他总金额"
+
+msgid "filtercardss"
+msgstr "过滤充值卡总次数"
+
+msgid "filterdaicsspal"
+msgstr "过滤代充平台总次数"
+
+msgid "filtercardssother"
+msgstr "过滤其他充值总次数"
+
+msgid "filtercardsssuc"
+msgstr "过滤代充成功总次数"
+
+msgid "filtercardssfail"
+msgstr "过滤代充失败总次数"
+
+msgid "disconnect"
+msgstr "断开码分析"
+
+msgid "releasecause"
+msgstr "原因"
+
+msgid "src"
+msgstr "主叫地址"
+
+msgid "dst"
+msgstr "被叫地址"
+
+msgid "ofcalls"
+msgstr "个数"
+
+msgid "Description"
+msgstr "原因"
+msgid "Count"
+msgstr "个数"
+
+
+
+
+msgid "sipcode"
+msgstr "SIP 码"
+
+msgid "qh"
+msgstr "电话编号"
+
+msgid "numbernull"
+msgstr "请填写电话编号"
+
+msgid "numberformat"
+msgstr "电话编号不能包含特殊字符"
+
+msgid "viewmessage"
+msgstr "查看留言"
+
+msgid "viewdetail"
+msgstr "查看详细"
+
+msgid "viewcomplain"
+msgstr "查看投诉建议"
+
+msgid "oftrans"
+msgstr "号码转换数"
+
+msgid "pointtoamount"
+msgstr "添加积分转话费规则"
+
+msgid "first_payment_max"
+msgstr "首次充值最大余额"
+
+msgid "first_payment_maxnull"
+msgstr "请输入首次最高充值金额"
+
+msgid "first_payment_maxformat"
+msgstr "您输入的首次最高充值金额不正确"
+
+msgid "giftamountratetable"
+msgstr "赠送金使用的模板"
+
+msgid "sipcodeexists"
+msgstr "该SIP号码已经存在,请更换一个"
+
+msgid "sipcocd"
+msgstr "SIP号码"
+
+msgid "receivenumber"
+msgstr "收信人号码"
+
+msgid "smstype"
+msgstr "短信号码"
+
+msgid "sms_content"
+msgstr "短信内容"
+
+msgid "send_content"
+msgstr "发送内容"
+
+msgid "sippass"
+msgstr "SIP密码"
+
+msgid "entersip_code"
+msgstr "请输入SIP号码"
+
+msgid "sip_passwdformat"
+msgstr "SIP密码只能为0-9a-zA-Z之间的小于12位的字符"
+
+msgid "amountlimitformat"
+msgstr "限制金额格式不正确,可精确到3位小数"
+
+msgid "sip_passwdnull"
+msgstr "请输入SIP密码"
+
+msgid "administrator"
+msgstr "管理员"
+
+msgid "setadministrator"
+msgstr "设为管理员"
+
+msgid "sipmanager"
+msgstr "SIP帐户管理"
+
+msgid "invokemanager"
+msgstr "撤销管理员身份"
+
+msgid "ordinarymsg"
+msgstr "普通发短信费率"
+
+msgid "findpassmsg"
+msgstr "找回密码短信费率"
+
+msgid "onetomanymsg"
+msgstr "群发短信费率"
+
+msgid "viewbalancemsg"
+msgstr "查询余额短信费率"
+
+msgid "accregmsg"
+msgstr "开户注册短信费率"
+
+msgid "configmsgrate"
+msgstr "短信费率配置"
+
+msgid "ordinarym"
+msgstr "普通短信"
+
+msgid "sendmsg"
+msgstr "在线发送短消息"
+
+msgid "phone"
+msgstr "手机号码"
+
+msgid "confm"
+msgstr "会议参与人员"
+
+msgid "confowner"
+msgstr "主持人"
+
+msgid "onetomany"
+msgstr "群发"
+
+msgid "onetoone"
+msgstr "普通"
+
+msgid "addnum"
+msgstr "添加号码"
+
+msgid "send"
+msgstr "发送"
+
+msgid "sended"
+msgstr "信息已发送"
+
+msgid "sendfail"
+msgstr "信息发送失败,请稍后重试"
+
+
+
+msgid "showincoming"
+msgstr "来电显示"
+
+msgid "recored"
+msgstr "录音"
+
+msgid "colorring"
+msgstr "彩玲"
+
+msgid "flymsg"
+msgstr "飞信"
+
+msgid "familynum"
+msgstr "亲情号码"
+
+msgid "accountnotexists"
+msgstr "帐户不存在"
+
+msgid "reged"
+msgstr "是否已注册"
+
+msgid "point_type"
+msgstr "积分类型"
+
+msgid "create_time"
+msgstr "时间"
+
+msgid "user_agent"
+msgstr "用户终端"
+
+msgid "socket"
+msgstr "IP地址"
+
+msgid "last_modified"
+msgstr "上次登录时间"
+
+msgid "regphone"
+msgstr "在线电话"
+
+msgid "afterrefill"
+msgstr "充值后"
+
+msgid "aftercall"
+msgstr "通话后"
+
+msgid "calcprofitway"
+msgstr "计算提成时间"
+
+msgid "title"
+msgstr "标题"
+
+msgid "ads_content"
+msgstr "公告内容"
+
+msgid "ads_time"
+msgstr "公告时间"
+
+msgid "end_time"
+msgstr "结束时间"
+
+msgid "addad"
+msgstr "添加公告"
+
+msgid "editad"
+msgstr "修改公告"
+
+
+msgid "familynumnull"
+msgstr "请输入您要绑定的亲情号码"
+
+msgid "groupnumbymonth"
+msgstr "集团虚拟号码包月"
+
+msgid "fsbymonth"
+msgstr "虚拟小交换机包月"
+
+msgid "servicetype"
+msgstr "业务类型"
+
+msgid "nameused"
+msgstr "该名称已存在,请更换重试"
+
+msgid "ofstratys"
+msgstr "策略数"
+
+msgid "routeconfig"
+msgstr "路由配置"
+
+msgid "static_route"
+msgstr "静态路由"
+
+msgid "dynamic_route"
+msgstr "动态路由"
+
+msgid "digitsrepeats"
+msgstr "前缀重复,请更换重试"
+
+msgid "balancetmp"
+msgstr "余额查询短信"
+
+msgid "setmsgtmp"
+msgstr "短信模板设置"
+
+msgid "findpwdtmp"
+msgstr "找回密码短信"
+
+msgid "accregtmp"
+msgstr "帐户注册"
+
+msgid "setsuc"
+msgstr "设置成功"
+
+msgid "setfail"
+msgstr "设置失败"
+
+msgid "caninternal"
+msgstr "可否打长途"
+
+msgid "preserve"
+msgstr "保留不变"
+
+msgid "setto"
+msgstr "改为"
+
+msgid "incfor"
+msgstr "增加"
+
+msgid "decfor"
+msgstr "减去"
+
+msgid "preview"
+msgstr "预览"
+
+msgid "persinc"
+msgstr "按百分比加"
+
+msgid "persdec"
+msgstr "按百分比减"
+
+msgid "longdistance"
+msgstr "国内长途"
+
+msgid "nolongdistance"
+msgstr "不能国内长途"
+
+msgid "prefixtype"
+msgstr "前缀类型"
+
+msgid "nosipprivicy"
+msgstr "抱歉,您当前没有配置SIP号码的权限"
+
+msgid "haschildd"
+msgstr "该策略里面有详细策略,不能删除"
+
+msgid "samepreifxintime"
+msgstr "在该时间段已有相同的前缀,请更换时间段或前缀"
+
+msgid "caninternaldd"
+msgstr "您当前可以拨打国际长途电话"
+
+msgid "caninternalddno"
+msgstr "您当前尚不能拨打国际长途电话"
+
+msgid "interreq"
+msgstr "国际长途请求"
+
+msgid "use"
+msgstr "使用号码组"
+msgid "d"
+msgstr "的"
+
+msgid "amountlimit"
+msgstr "金额限制"
+
+msgid "recommendinfo"
+msgstr "每个被推荐人充值后,您将会得到意外的惊喜哦,点击推荐吧"
+
+msgid "recommendnum"
+msgstr "被推荐人号码"
+
+msgid "addrecommnednum"
+msgstr "添加被推荐号码"
+
+msgid "description"
+msgstr "描述"
+
+msgid "nocurrency"
+msgstr "您当前没有货币,将无法计费,请先创建货币"
+
+msgid "invalidnum"
+msgstr "个号码格式不正确"
+
+msgid "di"
+msgstr "第"
+
+msgid "yourrequestcommited"
+msgstr "您的推荐请求已经提交"
+
+msgid "yourrequestrollback"
+msgstr "您的请求提交失败,请稍后再试"
+
+msgid "reocnum"
+msgstr "推荐号码"
+
+msgid "recommendtime"
+msgstr "推荐时间"
+
+msgid "enterscore"
+msgstr "请输入积分"
+
+msgid "enteramountofscore"
+msgstr "请输入对应积分换取的话费"
+
+msgid "scoretoamountform"
+msgstr "积分换取的话费格式不正确,可精确到3位小数"
+
+msgid "scoreintergeronly"
+msgstr "积分只能为正整数"
+
+msgid "giftamounttab"
+msgstr "赠送话费"
+
+msgid "scoretoamounttab"
+msgstr "积分换话费"
+
+msgid "enterrefillamount"
+msgstr "请输入充值金额"
+
+msgid "giftrt"
+msgstr "请选择赠送金使用的费率模板"
+
+msgid "refillamountformaterror"
+msgstr "充值金额格式不正确,可精确到3位小数"
+
+msgid "allnullerror"
+msgstr "基础金、赠送金、积分不能全部为空"
+
+msgid "basicamountformaterror"
+msgstr "基础金格式不正确,可精确到3位小数"
+
+msgid "giftamountformaterror"
+msgstr "赠送金格式不正确,可精确到3位小数"
+
+msgid "bonusamountformaterror"
+msgstr "金格式不正确,可精确到3位小数"
+
+msgid "refillamount"
+msgstr "充值金额"
+
+msgid "refillresult"
+msgstr "充值结果"
+
+msgid "viewmsgdetail"
+msgstr "查看短信详细"
+
+msgid "sendsucc"
+msgstr "发送成功"
+
+msgid "sendfail"
+msgstr "发送失败"
+
+msgid "sending"
+msgstr "发送中"
+
+msgid "makepayment"
+msgstr "充值"
+
+
+
+msgid "viewhis"
+msgstr "查看历史更改"
+
+msgid "viewrates"
+msgstr "查看费率"
+
+msgid "calcprofitmargin"
+msgstr "计算提成日期"
+
+msgid "everyday"
+msgstr "每天"
+
+msgid "everymonth"
+msgstr "每月"
+
+msgid "everyweek"
+msgstr "每周"
+
+msgid "msginterface"
+msgstr "短信接口配置"
+
+msgid "bytes"
+msgstr "字节"
+
+msgid "g"
+msgstr "个"
+
+msgid "caller_packets"
+msgstr "主叫语音包"
+
+msgid "callee_packets"
+msgstr "被叫语音包"
+
+msgid "savelogin"
+msgstr "记住密码"
+
+msgid "events"
+msgstr "事件"
+
+msgid "scriptname"
+msgstr "脚本名称"
+
+msgid "action_date"
+msgstr "执行时间"
+
+msgid "message"
+msgstr "执行信息"
+
+msgid "alert"
+msgstr "提示"
+
+msgid "messa"
+msgstr "信息"
+
+msgid "allevents"
+msgstr "所有事件"
+
+msgid "taskscheduler"
+msgstr "定时器"
+
+msgid "name"
+msgstr "名称"
+
+msgid "runat"
+msgstr "执行方式"
+
+msgid "lastrun"
+msgstr "上次执行时间"
+
+msgid "viewtrans"
+msgstr "查看交易记录"
+
+msgid "accountgroup"
+msgstr "帐户组"
+
+msgid "addtoblack"
+msgstr "加入黑名单"
+
+msgid "unhook"
+msgstr "解除黑名单"
+
+msgid "addblacksuc"
+msgstr "加入黑名单成功"
+
+msgid "addblackfail"
+msgstr "加入黑名单失败,请稍后重试"
+
+msgid "unhooksuc"
+msgstr "解除黑名单成功"
+
+msgid "unhookfail"
+msgstr "解除黑名单失败,请稍后重试"
+
+msgid "sysads"
+msgstr "系统公告设置"
+
+msgid "nextonly"
+msgstr "只查看下一级"
+
+msgid "allsub"
+msgstr "所有下级"
+
+msgid "accountpointsrec"
+msgstr "帐户积分记录"
+
+msgid "use_gift_money"
+msgstr "赠送金可用"
+
+msgid "use_money_order"
+msgstr "优先级别"
+
+msgid "giftfirst"
+msgstr "赠送金优先"
+
+msgid "basicfirst"
+msgstr "基础金优先"
+
+msgid "paymenttoobig"
+msgstr "对不起,您的首次充值余额过大"
+
+msgid "withsub"
+msgstr "可建下游代理"
+
+msgid "sips"
+msgstr "SIP数"
+
+
+
+msgid "lowprofit"
+msgstr "最低利润率"
+
+
+
+
+msgid "editbalance"
+msgstr "修改余额"
+
+msgid "configmailtmp"
+msgstr "配置邮件模板"
+
+msgid "configmailtmpsuc"
+msgstr "配置邮件模板成功"
+
+msgid "configmailtmpfail"
+msgstr "配置邮件模板失败"
+
+msgid "typeofcard"
+msgstr "卡类型"
+
+msgid "serverip"
+msgstr "服务器IP"
+
+msgid "globlestatus"
+msgstr "总统计"
+
+msgid "routestatus"
+msgstr "路由状态"
+
+msgid "systemcap"
+msgstr "系统容量"
+
+msgid "totalpermin"
+msgstr "总每秒呼叫数"
+
+msgid "acd"
+msgstr "平均通话时长"
+
+msgid "reporttime"
+msgstr "当前汇总时间"
+
+msgid "querytook"
+msgstr "查询耗时"
+
+msgid "wsrefill"
+msgstr "网上充值金额"
+
+msgid "wsofrefill"
+msgstr "网上充值次数"
+
+msgid "infrefill"
+msgstr "接口充值金额"
+
+msgid "infofrefill"
+msgstr "接口充值次数"
+
+msgid "regs"
+msgstr "注册数"
+
+msgid "totalamount"
+msgstr "费用总计"
+
+msgid "ofcdrs"
+msgstr "话单数量"
+
+msgid "packagedura"
+msgstr "套餐时长"
+
+msgid "hfcost"
+msgstr "话费收入"
+
+msgid "hfcb"
+msgstr "话费成本"
+
+msgid "packagecost"
+msgstr "套餐费用"
+
+msgid "profit"
+msgstr "利润总计"
+
+msgid "noaccountfoundcall"
+msgstr "找不到帐户的通话"
+
+msgid "noratefound"
+msgstr "找不到费率模板"
+
+msgid "noratefound1"
+msgstr "找不到费率"
+
+msgid "ofsixsec"
+msgstr "6秒数"
+
+msgid "count"
+msgstr "结算"
+
+msgid "pifa"
+msgstr "批发"
+
+msgid "egressfees"
+msgstr "落地网关收入"
+
+msgid "conndis"
+msgstr "呼叫接通/呼叫终止"
+
+msgid "conn"
+msgstr "呼叫接通"
+
+msgid "calldis"
+msgstr "呼叫终止"
+
+msgid "serverconf"
+msgstr "服务器配置"
+
+msgid "clientorigterm"
+msgstr "路由伙伴进出统计"
+
+msgid "clienttotal"
+msgstr "路由伙伴汇总统计"
+
+msgid "clienttransaction"
+msgstr "路由伙伴交易明细"
+msgid "clientinvoice"
+msgstr "帐单记录"
+msgid "clientcount"
+msgstr "路由伙伴结算明细"
+
+msgid "resellercount"
+msgstr "代理商统计报表"
+
+msgid "resellertransaction"
+msgstr "代理商交易明细"
+
+msgid "resellercalc"
+msgstr "代理商结算明细"
+
+msgid "accounttran"
+msgstr "帐户收支明细"
+
+msgid "accountcost"
+msgstr "帐户交易记录"
+
+msgid "viewreco"
+msgstr "查看推荐号码"
+
+msgid "packagema"
+msgstr "套餐管理"
+
+msgid "smsrecord"
+msgstr "短信记录"
+
+msgid "servicerequest"
+msgstr "增值业务请求"
+
+msgid "nopointsstrategy"
+msgstr "抱歉,没有相应的积分换话费策略"
+
+msgid "currpoints"
+msgstr "当前积分:"
+
+msgid "starttransfer"
+msgstr "点击换取"
+
+msgid "transfersuc"
+msgstr "换取成功"
+
+msgid "transferfail"
+msgstr "换取失败"
+
+msgid "sysdefault"
+msgstr "系统默认"
+
+msgid "can_create_role"
+msgstr "是否可建角色"
+
+msgid "can_create_user"
+msgstr "是否可建用户"
+
+msgid "confid"
+msgstr "会议编号"
+
+msgid "historyconf"
+msgstr "历史会议"
+
+msgid "memnum"
+msgstr "参与者号码"
+
+msgid "ok"
+msgstr "确定"
+
+
+####################话单显示量位国际化
+msgid "showfields"
+msgstr "显示量位"
+msgid "release_cause"
+msgstr "挂断状态"
+msgid "start_time_of_date"
+msgstr "开始时间"
+msgid "answer_time_of_date"
+msgstr "接通时间"
+msgid "release_tod"
+msgstr "结束时间"
+msgid "release_cause_from_protocol_stack"
+msgstr "SIP状态码"
+msgid "binary_value_of_release_cause_from_protocol_stack"
+msgstr "挂断原因"
+msgid "trunk_id_origination"
+msgstr "主叫网关"
+msgid "origination_source_number"
+msgstr "原始主叫号码"
+msgid "origination_source_host_name"
+msgstr "主叫IP"
+msgid "origination_destination_number"
+msgstr "原始被叫号码"
+msgid "trunk_id_termination"
+msgstr "被叫网关"
+msgid "termination_source_number"
+msgstr "转换主叫号码"
+msgid "termination_destination_number"
+msgstr "转换被叫号码"
+msgid "termination_destination_host_name"
+msgstr "被叫IP"
+msgid "call_duration"
+msgstr "通话时间"
+msgid "pdd"
+msgstr "延迟时间"
+msgid "ring_time"
+msgstr "响铃时间"
+msgid "call_type"
+msgstr "呼叫类型"
+msgid "bill_time"
+msgstr "计费时长"
+msgid "callcharge"
+msgstr "通话费用"
+
+
+msgid "callcost"
+msgstr "Total Cost"
+msgid "ratepermin"
+msgstr "每分钟费用"
+msgid "conf_id"
+msgstr "会议ID"
+msgid "session_id"
+msgstr "呼叫ID"
+msgid "cdr_id"
+msgstr "话单ID"
+msgid "bill_result"
+msgstr "执行结果"
+msgid "rate"
+msgstr "费率"
+
+#####################################
+
+
+
+msgid "submittime"
+msgstr "提交时间"
+
+msgid "modifytime"
+msgstr "修改时间"
+
+msgid "gift"
+msgstr "送"
+
+msgid "recievernum"
+msgstr "收信人号码"
+
+msgid "refillamountone"
+msgstr "充值金额"
+
+msgid "transerpoint"
+msgstr "换得的积分"
+
+msgid "paymentpoint"
+msgstr "充值积分策略"
+
+msgid "strategyexists"
+msgstr "该策略名称已存在"
+
+msgid "soft_name"
+msgstr "软件名称"
+
+msgid "phone_type"
+msgstr "终端类型"
+
+msgid "soft_version"
+msgstr "软件版本"
+
+msgid "soft_link"
+msgstr "软件地址"
+
+msgid "entersoftname"
+msgstr "请输入软件名称"
+
+msgid "enterversion"
+msgstr "请输入版本"
+
+msgid "entersoft_link"
+msgstr "请输入升级地址"
+
+msgid "totalamount"
+msgstr "总充值金额"
+
+msgid "enternumfirst"
+msgstr "请输入号码"
+
+msgid "addedalready"
+msgstr "您已经添加过该号码"
+
+msgid "updatepayment"
+msgstr "修改充值记录"
+
+msgid "newpayment"
+msgstr "新交易金额"
+
+msgid "approved"
+msgstr "立即生效"
+
+msgid "approveall"
+msgstr "审批所有"
+
+msgid "approveselect"
+msgstr "审批选中"
+
+msgid "approvedd"
+msgstr "已审核"
+
+msgid "noapprovedd"
+msgstr "未审核"
+
+msgid "uniqueip"
+msgstr "Not allowed to add the same IP"
+
+msgid "family_rate_table"
+msgstr "亲情号码费率"
+
+msgid "accavailabledays"
+msgstr "注册有效天数"
+
+msgid "updatepri"
+msgstr "修改权限"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##用户管理
+msgid "activeed"
+msgstr "激活"
+msgid "usermanager"
+msgstr "用户管理"
+msgid "allcheck"
+msgstr "[全选]"
+msgid "cancelallcheck"
+msgstr "[取消全选]"
+msgid "viewuser"
+msgstr "查看用户"
+msgid "userpassword"
+msgstr "用户密码"
+msgid "createtime"
+msgstr "创建时间"
+msgid "edituser"
+msgstr "修改用户"
+msgid "if not specified, user will have access to all clients"
+msgstr "如果不指定代理商，用户将可以访问所有的路由伙伴"
+msgid "delusersucc"
+msgstr "用户已经被删除"
+msgid "delrolesucc"
+msgstr "角色已经被删除"
+msgid "thisrole"
+msgstr "角色有"
+msgid "rolecurrentuser"
+msgstr "个用户正在被使用，请先删除这个角色的用户"
+msgid "userroleuserinfoedit"
+msgstr "拥有这个角色的用户信息是否能被修改"
+msgid "userroleuserinfodel"
+msgstr "拥有这个角色的用户信息是否能被删除"
+
+msgid "delusernoprivalige"
+msgstr "您当前的角色没有权限删除这个用户"
+msgid "editusernoprivalige"
+msgstr "您当前的角色没有权限修改这个用户"
+msgid "open"
+msgstr "开放"
+msgid "closed"
+msgstr "已关闭"
+msgid "closedcomplain"
+msgstr "关闭投诉建议"
+msgid "returncomplain"
+msgstr "返回投诉建议"
+msgid "confirmclosedcomplain"
+msgstr "确定要关闭这个投诉建议"
+msgid "closedcomplainsucc"
+msgstr "这个投诉建议已经被关闭"
+msgid "delcomplainsucc"
+msgstr "这个投诉建议已经被删除"
+msgid "resolved"
+msgstr "解决"
+msgid "editcomplain"
+msgstr "修改投诉建议"
+msgid "viewmessage"
+msgstr "查看留言"
+msgid "feedbackcontent"
+msgstr "留言内容"
+msgid "addfeedback"
+msgstr "添加留言"
+msgid "complainmessage"
+msgstr "投诉建议留言"
+msgid "feedbackdate"
+msgstr "跟进日期"
+msgid "user"
+msgstr "用户"
+msgid "importstartdate"
+msgstr "上传日期"
+msgid "createclientrole"
+msgstr "请建立一个角色类型为路由伙伴的角色"
+msgid "suishentong"
+msgstr "随身通"
+
+msgid "stopconf"
+msgstr "结束会议"
+
+###################话单
+
+
+
+msgid "cdrsearch"
+msgstr "话单查找"
+msgid "cdrcount"
+msgstr "话单数"
+msgid "cdrperiod"
+msgstr "时间段"
+
+
+msgid "Mutual"
+msgstr "发票余额"
+
+msgid "today"
+msgstr "今天"
+
+msgid "yesterday"
+msgstr "昨天"
+
+msgid "currentweek"
+msgstr "本周"
+
+msgid "previousweek"
+msgstr "上周"
+
+msgid "currentmonth"
+msgstr "本月"
+
+msgid "previousmonth"
+msgstr "上月"
+
+msgid "currentyear"
+msgstr "今年"
+
+msgid "previousyear"
+msgstr "去年"
+
+msgid "custom"
+msgstr "自定义"
+
+msgid "billsucc"
+msgstr "计费成功"
+
+msgid "billfail"
+msgstr "计费失败"
+
+msgid "underreseller"
+msgstr "下游代理商"
+
+msgid "voipgateway"
+msgstr "VoIP网关"
+
+msgid "resultcode"
+msgstr "结果/代号"
+
+msgid "cost"
+msgstr "通话金额"
+
+msgid "duration"
+msgstr "通话时长"
+
+msgid "bill_time"
+msgstr "计费时长"
+msgid "bill_amount"
+msgstr "计费金额"
+
+
+msgid "callid"
+msgstr "呼叫ID"
+
+msgid "cdrid"
+msgstr "话单ID"
+
+msgid "srcnumber"
+msgstr "主叫号码"
+
+msgid "output"
+msgstr "显示方式"
+
+msgid "all"
+msgstr "所有"
+
+msgid "processed"
+msgstr "已结束"
+
+msgid "inrerating"
+msgstr "正在计费"
+
+msgid "success"
+msgstr "成功"
+
+msgid "busy"
+msgstr "繁忙"
+
+msgid "nochannel"
+msgstr "无通道"
+
+msgid "error"
+msgstr "错误"
+msgid "viewcontent"
+msgstr "查看事件详细内容"
+msgid "nonzero"
+msgstr "非零"
+
+msgid "zero"
+msgstr "零"
+
+msgid "origination"
+msgstr "打进"
+
+msgid "termination"
+msgstr "打出"
+
+msgid "type"
+msgstr "类型"
+
+####################费率模板
+msgid "ratetmpname"
+msgstr "模板名称"
+
+msgid "ratetmpusing"
+msgstr "模板正在被使用,不能删除"
+
+msgid "delselectedratesuc"
+msgstr "删除选中费率模板成功"
+
+msgid "delallratessuc"
+msgstr "已清空所有费率模板"
+
+msgid "copyratetmp"
+msgstr "拷贝费率模板"
+
+msgid "enterratename"
+msgstr "请输入新费率模板的名称"
+msgid "enterstartcode"
+msgstr "请输入开始号码"
+msgid "enterendcode"
+msgstr "请输入结束号码"
+msgid "copysuc"
+msgstr "拷贝费率模板成功"
+
+msgid "copyfail"
+msgstr "拷贝费率模板失败"
+
+msgid "addratesuc"
+msgstr "添加费率模板成功"
+
+msgid "addratefail"
+msgstr "添加费率模板失败"
+
+msgid "modifyratesuc"
+msgstr "修改费率模板成功"
+
+msgid "modifyratefail"
+msgstr "修改费率模板失败"
+
+msgid "setup_fee"
+msgstr "通话费用"
+
+msgid "ani_bind_num"
+msgstr "主叫绑定"
+
+msgid "effective_date"
+msgstr "开始时间"
+
+msgid "min_time"
+msgstr "首次时长"
+
+msgid "interval"
+msgstr "计费周期"
+
+msgid "time_profile_id"
+msgstr "时间段"
+
+msgid "seconds"
+msgstr "1分钟=?秒"
+
+msgid "addratesucc"
+msgstr "添加费率成功"
+
+msgid "addratefailed"
+msgstr "添加费率失败"
+
+msgid "grace_time"
+msgstr "免费时长"
+
+msgid "entercode"
+msgstr "请输入前缀"
+
+msgid "enterrate"
+msgstr "请输入费率"
+
+msgid "rateformat"
+msgstr "费率格式不正确,可精确到3位小数"
+
+msgid "entersetupfee"
+msgstr "请输入通话费用"
+
+msgid "setupfeeformat"
+msgstr "通话费用格式不正确,可精确到3位小数"
+
+msgid "chooseeffective"
+msgstr "请选择帐户"
+
+msgid "entermintime"
+msgstr "请输入首次时长"
+
+msgid "mintimeformat"
+msgstr "首次时长只能为整数"
+
+msgid "timenull"
+msgstr "时间不能为空"
+
+msgid "timeformat"
+msgstr "时间格式不正确"
+
+msgid "gracetimenull"
+msgstr "赠送时长不能为空"
+
+
+msgid "basic_percentagesnull"
+msgstr "基础金比例不能为空"
+
+msgid "gift_percentagesnull"
+msgstr "赠送金比例不能为空"
+
+
+
+msgid "basic_percentagesformat"
+msgstr "基础金比例格式不正确"
+
+msgid "gift_percentagesformat"
+msgstr "赠送金比例格式不正确"
+
+
+msgid "basic_gift_format"
+msgstr "基础金比例+赠送金比例要等于100"
+msgid "gracetimeformat"
+msgstr "免费时长格式不正确"
+
+msgid "nocodedeck"
+msgstr "该费率模板没有匹配号码组"
+
+msgid "intervalnull"
+msgstr "计费周期不能为空"
+
+msgid "intervalformat"
+msgstr "计费周期格式不正确,可精确到3位小数"
+
+msgid "codealreadyexists"
+msgstr "该前缀已经存在"
+
+msgid "accordingcodedeck"
+msgstr "按号码组生成"
+
+msgid "generatedsuc"
+msgstr "生成成功"
+
+msgid "generatedfail"
+msgstr "生成失败"
+
+msgid "simulatedbilling"
+msgstr "模拟计费"
+
+msgid "durations"
+msgstr "通话时长"
+
+msgid "second"
+msgstr "秒"
+
+msgid "cost"
+msgstr "扣费"
+
+msgid "billedtime"
+msgstr "计费时间单位"
+
+
+msgid "nocodeorinactive"
+msgstr "未找到匹配的前缀或前缀匹配的费率的活动期不在您选择的时间范围内"
+
+msgid "calculating"
+msgstr "正在计算,请稍后"
+
+
+
+##############软交换配置
+
+msgid "fsconfig"
+msgstr "软交换配置"
+
+msgid "routefailstrategy"
+msgstr "连接失败策略"
+
+msgid "ReturnCode "
+msgstr "错误码设置"
+
+msgid "release"
+msgstr "正常释放"
+
+msgid "distripromptandrelated"
+msgstr "发放语音,和相关的语音文件"
+
+msgid "chooserouteagain"
+msgstr "重新选路和相关的号码转换"
+
+msgid "noingressfound"
+msgstr "找不到对接网关"
+
+msgid "noingressfoundOnlyfordigital"
+msgstr "找不到对接网关代码只能为数字"
+
+msgid "noroutefound"
+msgstr "找不到静态路由表"
+
+msgid "noroutefoundOnlyfordigital"
+msgstr "找不到静态路由表代码只能为数字"
+
+msgid "noegressfound"
+msgstr "找不到落地网关"
+
+msgid "connectedallfailed"
+msgstr "所有落地网关不通"
+
+msgid "connectedallfailedOnlyfordigital"
+msgstr "所有落地网关不通代码只能为数字"
+
+msgid "nopolicyconfig"
+msgstr "您当前没有配置连接失败策略"
+
+msgid "clickconfig"
+msgstr "点击配置"
+
+msgid "intervalzero"
+msgstr "计费周期必须大于0"
+
+msgid "secondszero"
+msgstr "1分钟等于?秒必须大于0"
+
+
+######################地区管理
+msgid "locationmanager"
+msgstr "地区管理"
+msgid "updatesoft"
+msgstr "软件升级"
+msgid "country_code"
+msgstr "国家代号"
+
+msgid "state_code"
+msgstr "省份代号"
+
+msgid "city_code"
+msgstr "城市代号"
+
+msgid "addloccodesuc"
+msgstr "添加地区成功"
+
+msgid "addloccodefail"
+msgstr "添加地区失败,请稍后重试"
+
+msgid "threecodeunique"
+msgstr "国家代号、省份代号和城市代号3者组合必须唯一"
+
+msgid "countrycodenull"
+msgstr "国家代号不能为空"
+
+msgid "countrynull"
+msgstr "国家名称不能为空"
+
+msgid "statecodenull"
+msgstr "省份代号不能为空"
+
+msgid "statenull"
+msgstr "省份名称不能为空"
+
+msgid "citycodenull"
+msgstr "城市代号不能为空"
+
+msgid "citynull"
+msgstr "城市名称不能为空"
+
+msgid "durations"
+msgstr "通话时长"
+
+msgid "result"
+msgstr "执行结果"
+
+msgid "account"
+msgstr "帐户"
+
+msgid "tp"
+msgstr "类型"
+msgid "wholesale"
+msgstr "路由伙伴"
+msgid "origna"
+msgstr "打进"
+
+msgid "terms"
+msgstr "打出"
+
+msgid "nodata"
+msgstr "没有查到相关数据"
+
+msgid "refillsuccess"
+msgstr "充值成功"
+
+msgid "refillfail"
+msgstr "充值失败"
+
+msgid "msgcharges"
+msgstr "短信收费管理"
+
+msgid "newcustomer"
+msgstr "新客户短信收费"
+
+msgid "moneyperrecord"
+msgstr "元/条"
+
+msgid "querytimeofnew"
+msgstr "新客户免费查询次数"
+
+msgid "regularcustomer"
+msgstr "老客户短信收费"
+
+msgid "querytimeofregular"
+msgstr "老客户免费查询次数"
+
+msgid "configsuccess"
+msgstr "配置成功"
+
+msgid "configfail"
+msgstr "配置失败"
+
+msgid "newcustomernull"
+msgstr "请输入新客户短信收费费用"
+
+msgid "querytimeofnewnull"
+msgstr "请输入新客户的免费查询次数"
+
+msgid "regularcustomernull"
+msgstr "请输入老客户短信收费费用"
+
+msgid "querytimeofregularnull"
+msgstr "请输入老客户的免费查询次数"
+
+msgid "newcustomerformat"
+msgstr "您输入新客户短信收费费用格式不正确,可精确到3位小数"
+
+msgid "querytimeofnewformat"
+msgstr "新客户的免费查询次数只能为正整数"
+
+msgid "regularcustomerformat"
+msgstr "您输入老客户短信收费费用格式不正确,可精确到3位小数"
+
+msgid "querytimeofregularformat"
+msgstr "老客户的免费查询次数只能为正整数"
+
+
+msgid "alltime"
+msgstr "所有时间"
+
+
+msgid "bysec"
+msgstr "按秒分组统计"
+
+msgid "bymin"
+msgstr "按分钟分组统计"
+
+msgid "byhours"
+msgstr "按小时分组统计"
+
+msgid "byday"
+msgstr "按天分组统计"
+
+msgid "bymonth"
+msgstr "按月分组统计"
+
+msgid "byyear"
+msgstr "按年分组统计"
+
+msgid "weekly"
+msgstr "按周"
+
+msgid "daily"
+msgstr "按天"
+
+msgid "startweek"
+msgstr "开始周"
+
+msgid "endweek"
+msgstr "结束周"
+
+msgid "starttime"
+msgstr "开始时间"
+
+msgid "endtime"
+msgstr "结束时间"
+
+msgid "monday"
+msgstr "星期一"
+
+msgid "tuesday"
+msgstr "星期二"
+
+msgid "wed"
+msgstr "星期三"
+
+msgid "thuesday"
+msgstr "星期四"
+
+msgid "friday"
+msgstr "星期五"
+
+msgid "sat"
+msgstr "星期六"
+
+msgid "sunday"
+msgstr "星期日"
+
+msgid "h"
+msgstr "号"
+
+msgid "enterday"
+msgstr "请输入每月多少号计算提成"
+
+msgid "loginstatus"
+msgstr "登录状态"
+
+msgid "callstatus"
+msgstr "通话状态"
+
+msgid "1to31"
+msgstr "只能是1-31号之间的整数"
+
+msgid "noconfmember"
+msgstr "尚且没有添加会议人员"
+
+msgid "num"
+msgstr "号码"
+
+msgid "confmen"
+msgstr "会议人员"
+
+msgid "kick"
+msgstr "剔除人员权限"
+
+msgid "invite"
+msgstr "邀请人员权限"
+
+msgid "rec"
+msgstr "录音权限"
+
+msgid "matchall"
+msgstr "完全匹配"
+
+msgid "rateanalyze"
+msgstr "费率分析"
+
+msgid "ani_address"
+msgstr "主叫地址"
+
+msgid "codec"
+msgstr "辩解码"
+
+msgid "realcalling"
+msgstr "实时通话"
+
+##################进出统计
+msgid "origtermreport"
+msgstr "进出统计"
+
+msgid "calls"
+msgstr "呼叫数"
+
+msgid "calldelay"
+msgstr "呼叫延迟"
+
+msgid "time"
+msgstr "时间"
+
+msgid "asr"
+msgstr "成功率"
+
+msgid "acd"
+msgstr "呼叫数/分钟"
+
+msgid "avgrate"
+msgstr "平均费率"
+
+msgid "billedtime"
+msgstr "计费时间"
+
+msgid "cost"
+msgstr "支付"
+
+msgid "totalofcalls"
+msgstr "总呼叫数"
+
+msgid "failed"
+msgstr "失败"
+
+msgid "viewcharts"
+msgstr "查看报表"
+
+msgid "query"
+msgstr "查询"
+
+msgid "accountcard"
+msgstr "帐号"
+
+msgid "month_cost"
+msgstr "本月消费总额"
+
+msgid "month_durations"
+msgstr "本月通话时长"
+
+msgid "bonus"
+msgstr "积分"
+
+msgid "updatepersonalsuc"
+msgstr "更新个人基本信息成功"
+
+msgid "updatepersonalfail"
+msgstr "更新个人基本信息失败"
+
+msgid "key"
+msgstr "密钥"
+
+msgid "enterkey"
+msgstr "请输入该代理商的密钥"
+
+msgid "commandsuc"
+msgstr "申请成功"
+
+msgid "commandfail"
+msgstr "申请失败,请稍后再试"
+
+msgid "cancelsuc"
+msgstr "退订成功,您将不再享受该增值业务的任何功能"
+
+msgid "cancelfail"
+msgstr "退订失败,请稍后再试"
+
+msgid "recommendstrategy"
+msgstr "推荐策略"
+
+msgid "strategy_name"
+msgstr "策略名称"
+
+msgid "gift_type"
+msgstr "赠送类型"
+
+msgid "basic_amount"
+msgstr "基础金"
+
+msgid "gift_amount"
+msgstr "赠送金"
+
+msgid "gift_point"
+msgstr "赠送积分"
+
+msgid "recommending"
+msgstr "推荐时赠送"
+
+msgid "afterrefill"
+msgstr "充值后再送"
+
+msgid "addrecsuc"
+msgstr "添加推荐策略成功"
+
+msgid "addrecfail"
+msgstr "添加推荐策略失败"
+
+msgid "updaterecsuc"
+msgstr "修改推荐策略成功"
+
+msgid "updaterecfail"
+msgstr "修改推荐策略失败"
+
+msgid "enterstrname"
+msgstr "请输入策略名字"
+
+msgid "basicamountincorrect"
+msgstr "基础金额格式不正确,可精确到3位小数"
+
+msgid "giftamountincorrect"
+msgstr "赠送金额格式不正确,可精确到3位小数"
+
+msgid "gfitpointfomart"
+msgstr "积分格式不正确,只能为整数"
+
+msgid "canconf"
+msgstr "可打会议"
+
+msgid "noconf"
+msgstr "不可打会议"
+
+msgid "fucconf"
+msgstr "功能配置"
+
+msgid "nocallback"
+msgstr "不可打回拨"
+
+msgid "cancallback"
+msgstr "可打回拨"
+
+msgid "cansip"
+msgstr "可打SIP"
+
+msgid "nosip"
+msgstr "不可打SIP"
+
+msgid "maxconf"
+msgstr "最多参与人数"
+
+msgid "people"
+msgstr "人"
+
+msgid "billtype"
+msgstr "计费方式"
+
+msgid "dyroute"
+msgstr "动态路由"
+
+msgid "staroute"
+msgstr "静态路由"
+
+msgid "dyorsta"
+msgstr "路由方式"
+
+msgid "dyfirst"
+msgstr "动态路由后再静态路由" 
+
+msgid "pack"
+msgstr "套餐配置"
+msgid "package_amount"
+msgstr "套餐金额"
+msgid "lowbalance"
+msgstr "通话最低余额"
+
+msgid "otherparam"
+msgstr "其他参数"
+
+msgid "usingpackage"
+msgstr "正在使用的套餐"
+
+msgid "msgchargenameexists"
+msgstr "该策略名称已经存在,请更换重试"
+
+msgid "binding"
+msgstr "绑定"
+
+msgid "prefixsearch"
+msgstr "请输入前缀搜索"
+
+msgid "nobinding"
+msgstr "不绑定"
+
+msgid "trial"
+msgstr "体验帐户"
+
+msgid "bd"
+msgstr "体验"
+
+msgid "ingress_codec"
+msgstr "语音编码(对接)"
+
+msgid "egress_codec"
+msgstr "语音编码(落地)"
+
+msgid "notrial"
+msgstr "非体验帐户"
+
+msgid "confmaxf"
+msgstr "会议参与人数只能是整数"
+
+msgid "enterlowb"
+msgstr "请输入最低余额"
+
+msgid "lowbformat"
+msgstr "最低余额格式不正确,可精确到3位小数"
+
+msgid "ofcards"
+msgstr "卡数量"
+
+msgid "cuslevel"
+msgstr "客户等级"
+
+msgid "passnull"
+msgstr "密码不能为空"
+
+msgid "passformat"
+msgstr "密码只能由字母或数字组成"
+
+msgid "bindnum"
+msgstr "绑定号码"
+
+msgid "cardnoexists"
+msgstr "对不起,该充值卡不存在"
+
+msgid "cardnoteffectived"
+msgstr "该充值卡未激活,请联系买卡处查证"
+
+msgid "cardexpired"
+msgstr "对不起,该充值卡已过期"
+
+msgid "cardused"
+msgstr "该充值卡已被使用"
+
+msgid "effectrefi"
+msgstr "激活充值卡"
+
+msgid "refillpollname"
+msgstr "充值卡号池"
+
+msgid "used"
+msgstr "已使用"
+
+msgid "expired"
+msgstr "已过期"
+
+msgid "noteffectived"
+msgstr "未激活"
+
+msgid "effectived"
+msgstr "正在使用"
+
+msgid "weekly"
+msgstr "周"
+
+msgid "months"
+msgstr "月"
+
+msgid "services"
+msgstr "增值业务管理"
+
+msgid "editconfmem"
+msgstr "编辑会议成员"
+
+msgid "service_name"
+msgstr "业务名称"
+
+msgid "effective_amount"
+msgstr "激活金额" 
+
+msgid "billinterval"
+msgstr "计费模式"
+
+msgid "ofclients"
+msgstr "客户数"
+
+msgid "subs"
+msgstr "下游批发数"
+
+msgid "allsubs"
+msgstr "所有下游数"
+
+msgid "resellerinfo"
+msgstr "代理商信息"
+
+msgid "reselelrname"
+msgstr "代理商名称"
+
+msgid "ci"
+msgstr "次"
+
+msgid "cc"
+msgstr "收费"
+
+msgid "newservice"
+msgstr "新增增值业务"
+
+msgid "basicinfo"
+msgstr "基本信息"
+
+msgid "enterservicename"
+msgstr "请填写增值业务名称"
+
+msgid "servicenameformat"
+msgstr "增值业务名称不能包含特殊字符"
+
+msgid "billingtimenotnull"
+msgstr "计费时间不能为空"
+
+msgid "integeronly"
+msgstr "计费时间只能为整数"
+
+msgid "entercost"
+msgstr "请填写收费"
+
+msgid "costformat"
+msgstr "收费金额格式不正确,可精确到3位小数"
+
+msgid "effectiveamount"
+msgstr "激活金额格式不正确,可精确到3位小数"
+
+msgid "addservicesuc"
+msgstr "添加增值业务成功"
+
+msgid "addservicefail"
+msgstr "添加增值业务失败"
+
+msgid "editservice"
+msgstr "修改增值业务"
+
+msgid "editservicesuc"
+msgstr "修改增值业务成功"
+
+msgid "editservicefail"
+msgstr "修改增值业务失败"
+
+msgid "request_time"
+msgstr "申请时间"
+
+msgid "distributepermission"
+msgstr "通过请求"
+
+msgid "servicesrequest"
+msgstr "增值业务请求"
+
+msgid "determinesuc"
+msgstr "审核成功"
+
+msgid "determinefail"
+msgstr "审核失败,请稍后重试"
+
+msgid "routeconf"
+msgstr "路由配置"
+
+msgid "paramconf"
+msgstr "参数配置"
+
+msgid "basicconf"
+msgstr "基本配置"
+
+msgid "msg"
+msgstr "可发短信"
+
+msgid "nomsg"
+msgstr "不可发短信"
+
+msgid "international"
+msgstr "可打国际"
+
+msgid "nointernational"
+msgstr "不可打国际"
+
+msgid "cdrbackup"
+msgstr "话单备份"
+
+msgid "year"
+msgstr "年"
+
+msgid "month"
+msgstr "月"
+
+msgid "week"
+msgstr "周"
+
+msgid "startbackup"
+msgstr "开始备份"
+
+msgid "backupsuc"
+msgstr "备份完毕"
+
+msgid "backupfail"
+msgstr "备份过程中出现了一些问题,请联系相关管理人员"
+
+msgid "extcode"
+msgstr "分机号码"
+
+msgid "msgrate"
+msgstr "短信费率"
+
+msgid "charge_name"
+msgstr "策略名称"
+
+msgid "msgall"
+msgstr "短信群发"
+
+msgid "getpass"
+msgstr "找回密码"
+
+msgid "querybalance"
+msgstr "查询余额"
+
+msgid "free_count"
+msgstr "免费条数/天"
+
+msgid "msg_rate"
+msgstr "短信费率/条"
+
+msgid "add_suc"
+msgstr "添加成功"
+
+msgid "add_fail"
+msgstr "添加失败"
+
+msgid "using"
+msgstr "该策略正在被使用,不能删除"
+
+msgid "enternamep"
+msgstr "请输入策略名称"
+
+msgid "gobackall"
+msgstr "返回所有"
+
+msgid "samecodedifftime"
+msgstr "相同前缀不允许选择不同的时间段类型"
+
+msgid "msgrateformat"
+msgstr "短信费率格式不正确,可精确到3位小数"
+
+msgid "msgratenull"
+msgstr "请输入短信费率"
+
+msgid "enterfreecount"
+msgstr "请输入每天免费条数"
+
+msgid "free_countformat"
+msgstr "免费条数只能为整数"
+
+msgid "init_amount"
+msgstr "初始余额"
+
+msgid "enterinitamount"
+msgstr "请输入初始金额"
+
+msgid "initamountformat"
+msgstr "您输入的初始金额格式不正确,可精确到3位小数"
+
+msgid "month_rate"
+msgstr "月租费用"
+
+msgid "entermonthrate"
+msgstr "请输入月租费用"
+
+msgid "monthrateformat"
+msgstr "您输入的月租费用格式不正确,可精确到3位小数"
+
+msgid "days_after_effectived"
+msgstr "使用有效天数"
+
+msgid "entereffective"
+msgstr "请输入有效天数"
+
+msgid "memebercallrate"
+msgstr "成员互相呼叫费率"
+
+msgid "limitcharalready"
+msgstr "已经添加了该限制字符"
+
+msgid "limitchar"
+msgstr "限制字符"
+
+msgid "msglimitrule"
+msgstr "短信限制字符规则"
+
+msgid "replacechar"
+msgstr "替换字符"
+
+msgid "effectiveintegeronly"
+msgstr "有效天数只能为整数"
+
+msgid "stoprespond"
+msgstr "停止使用"
+
+msgid "continueres"
+msgstr "继续使用"
+
+msgid "stopsuc"
+msgstr "已成功修改帐号池状态"
+
+msgid "stopfail"
+msgstr "操作失败,请稍后重试"
+
+msgid "noaccounts"
+msgstr "尚未生成批次"
+
+msgid "low_cost"
+msgstr "最低消费金额"
+
+msgid "gift_money"
+msgstr "基础金额"
+
+msgid "lowcoststrategy"
+msgstr "最低消费策略"
+
+msgid "refillm"
+msgstr "充值管理"
+
+msgid "enterlowcost"
+msgstr "请输入最低消费金额"
+
+msgid "lowcostformat"
+msgstr "您输入的最低消费金额格式不正确,可精确到3位小数"
+
+msgid "allnull"
+msgstr "积分,金额,赠送金不能同时为空"
+
+msgid "pointinteger"
+msgstr "积分只能为整数"
+
+msgid "giftamoundformat"
+msgstr "赠送金格式不正确,可精确到3位小数"
+
+msgid "giftmoneyformat"
+msgstr "送赠送金格式不正确,可精确到 3位小数"
+
+msgid "msgregister"
+msgstr "注册开户"
+
+msgid "manipulated_suc"
+msgstr "操作成功"
+
+msgid "i_reqs"
+msgstr "长途请求"
+
+msgid "s_reqs"
+msgstr "业务请求"
+
+msgid "allneedapproved"
+msgstr "所有审批"
+
+msgid "serviceapproved"
+msgstr "增值业务审批"
+
+msgid "longapproved"
+msgstr "长途审批"
+
+msgid "approveselected"
+msgstr "通过选中"
+
+msgid "loginas"
+msgstr "以该用户身份登录"
+
+msgid "manipulated_fail"
+msgstr "操作失败"
+
+msgid "generatert"
+msgstr "生成费率模板"
+
+msgid "confnums"
+msgstr "会议参与人数"
+
+msgid "realconf"
+msgstr "在线会议"
+
+msgid "disableplat"
+msgstr "禁用该平台将不能使用该平台充值,是否继续"
+
+msgid "activeplat"
+msgstr "是否启用该平台"
+
+msgid "platname"
+msgstr "平台名称"
+
+msgid "trace"
+msgstr "通道"
+
+msgid "tracename"
+msgstr "通道名称"
+
+msgid "currplatform"
+msgstr "充值平台"
+
+msgid "supportedtrace"
+msgstr "支持通道"
+
+msgid "ofrates"
+msgstr "费率模板数"
+
+msgid "usingde"
+msgstr "正在被使用,不能删除"
+
+msgid "accounts"
+msgstr "帐户数"
+
+msgid "activedalready"
+msgstr "另一个平台已有相同通道运行,请先禁用"
+
+msgid "notracefound"
+msgstr "对不起,未找到可用通道,请稍后再试..."
+
+msgid "noplatformfound"
+msgstr "对不起,未找到可用平台,请稍后再试..."
+
+msgid "charge_effective_days"
+msgstr "首次充值送话费有效天数"
+
+msgid "charge_effective_daysnull"
+msgstr "请输入首次充值送话费有效天数"
+
+msgid "charge_effective_daysformat"
+msgstr "您输入的首次充值送话费有效天数格式不正确，只能为正整数"
+
+msgid "ratetableafterpayment"
+msgstr "充值后费率模板"
+
+msgid "paymentexpiredratetable"
+msgstr "充值到期后费率模板"
+
+msgid "deletecrediseries"
+msgstr "不能删除有卡的卡号池"
+
+msgid "hasrateinpackage"
+msgstr "套餐里定义了费率,不能删除"
+
+msgid "accountusingpackage"
+msgstr "该套餐正在被某些帐户使用,不能删除"
+
+msgid "groupuser"
+msgstr "集团用户"
+
+msgid "RateTable"
+msgstr "费率模板"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###系统参数配置（请不要删除或者覆盖）
+msgid "info"
+msgstr "信息"
+msgid "deletedatesms"
+msgstr "删除某时间段的短信记录"
+msgid "deletedateeventlog"
+msgstr "删除某时间段的事件日志"
+msgid "clientReseller"
+msgstr "路由伙伴/代理商"
+msgid "cdr"
+msgstr "话单"
+msgid "report"
+msgstr "报表"
+msgid "costcost"
+msgstr "收费"
+msgid "passprompt"
+msgstr "密码提示"
+msgid "cdrcost"
+msgstr "话务扣费"
+msgid "alerts"
+msgstr "提示"
+msgid "notice"
+msgstr "注意"
+msgid "manysend"
+msgstr "群发"
+
+msgid "packagecost"
+msgstr "套餐扣费"
+
+msgid "msgcost"
+msgstr "短信扣费"
+
+msgid "refills"
+msgstr "充值"
+
+msgid "tranamount"
+msgstr "交易金额"
+
+msgid "Operationsystem"
+msgstr "运营支撑系统"
+msgid "System currency"
+msgstr "默认货币"
+
+
+msgid "Timezone"
+msgstr "默认时区"
+
+
+msgid "Mailserverhost"
+msgstr "邮件服务器地址"
+
+msgid "Mail server / from"
+msgstr "邮箱地址"
+
+msgid "Default PIN Length"
+msgstr "默认卡的密码长度"
+
+
+msgid "Output and Import/Export"
+msgstr "上传下载显示"
+
+msgid "Date Format"
+msgstr "日期格式"
+
+
+msgid "Datetime Format"
+msgstr "日期和时间格式"
+
+msgid "CSV Delimiter"
+msgstr "CSV 分隔符"
+msgid "Invoicing Settings"
+msgstr "发票设置"
+msgid "Invoice No Template"
+msgstr "发票序列号模板"
+msgid "Invoice Last No"
+msgstr "序列号开始"
+msgid "Defaultinvoicefields"
+msgstr "默认量位显示"
+msgid "Account"
+msgstr "帐号"
+msgid "code_country"
+msgstr "国家"
+msgid "Destination"
+msgstr "被叫号"
+msgid "Codes"
+msgstr "匹配前缀"
+
+msgid "Calls"
+msgstr "呼叫数"
+msgid "Minutes"
+msgstr "总分钟"
+msgid "Cost"
+msgstr "费用"
+msgid "RMB"
+msgstr "人民币"
+msgid "FTPusername"
+msgstr "FTP用户名"
+msgid "FTPPASS"
+msgstr "FTP密码"
+msgid "AutoinvoicingDelay"
+msgstr "自动发票生成延期"
+
+msgid "Autoinvoice products"
+msgstr "自动发票生成方式"
+msgid "Separated invoices"
+msgstr "把套餐和话费分开"
+msgid "Combined invoice with statistics"
+msgstr "把套餐和话费放在一起"
+
+
+msgid "CDR fields for invoices"
+msgstr "发票里面的cdr量位"
+msgid "callDAte"
+msgstr "呼叫日期"
+
+
+msgid "egressresourceip"
+msgstr "落地网关地址"
+msgid "egressresourcename"
+msgstr "落地网关名字"
+
+msgid "egresscall"
+msgstr "落地网关呼叫"
+msgid "ingressresourceip"
+msgstr "对接网关地址"
+msgid "ingressresourcename"
+msgstr "对接网关名字"
+msgid "codename"
+msgstr "编号名"
+msgid "codeprefix"
+msgstr "前缀"
+
+msgid "srcnumber"
+msgstr "主叫号"
+
+msgid "dstnumber"
+msgstr "被叫号"
+
+msgid "billedtime"
+msgstr "计费时间"
+msgid "addratesucc"
+msgstr "添加费率成功"
+
+msgid "addratefailed"
+msgstr "添加费率失败"
+
+msgid "grace_time"
+msgstr "免费时长"
+
+msgid "entercode"
+msgstr "请输入前缀"
+
+msgid "enterrate"
+msgstr "请输入费率"
+msgid "rateamount"
+msgstr "费率金额"
+msgid "rateformat"
+msgstr "费率格式不正确,可精确到3位小数"
+
+msgid "entersetupfee"
+msgstr "请输入通话费用"
+
+msgid "setupfeeformat"
+msgstr "通话费用格式不正确,可精确到3位小数"
+
+msgid "chooseeffective"
+msgstr "请选择开始时间"
+
+msgid "entermintime"
+msgstr "请输入首次时长"
+
+
+
+msgid "addratesucc"
+msgstr "添加费率成功"
+
+msgid "addratefailed"
+msgstr "添加费率失败"
+
+msgid "grace_time"
+msgstr "免费时长"
+
+msgid "entercode"
+msgstr "请输入前缀"
+
+msgid "enterrate"
+msgstr "请输入费率"
+
+msgid "rateformat"
+msgstr "费率格式不正确,可精确到3位小数"
+
+msgid "entersetupfee"
+msgstr "请输入通话费用"
+
+msgid "setupfeeformat"
+msgstr "通话费用格式不正确,可精确到3位小数"
+
+msgid "chooseeffective"
+msgstr "请选择开始时间"
+
+msgid "entermintime"
+msgstr "请输入首次时长"
+msgid "analyzeperiod"
+msgstr "分析时长"
+msgid "analyzeperiodtip"
+msgstr "这里配置用多少分钟的数据来做动态路由的分析"
+msgid "logroute"
+msgstr "日志"
+msgid "disablestip"
+msgstr "不对动态路由表的路由生成作记录"
+msgid "detailedtip"
+msgstr "对所有的路由做记录"
+msgid "disables"
+msgstr "不启用"
+msgid "onlyemptytip"
+msgstr "只对找不到落地的路由作记录"
+msgid "onlyempty"
+msgstr "空路由"
+msgid "NotificationandMonitoring"
+msgstr "计费异常监控"
+
+msgid "Eventonnotfoundaccoun"
+msgstr "是否记录找不到帐户的话单"
+
+msgid "Eventonnotfoundtariff"
+msgstr "是否记录找不到费率的话单"
+
+msgid "Eventonunprofitablecalls"
+msgstr "是否记录亏钱的话单"
+
+msgid "Eventonzerotimecalls"
+msgstr "是否记录零时长的话单"
+msgid "Resendlow-balanceeventsevery"
+msgstr "每隔多久记录客户余额不足(小时)"
+msgid "detailed"
+msgstr "所有路由"
+msgid "Autorotationndcleaning"
+msgstr "日志处理"
+msgid "Deleteeventsfromlogafter"
+msgstr "删除系统日志"
+msgid "Statisticsrotatedelay"
+msgstr "删除系统统计数据"
+msgid "Deletenotactualratesafter"
+msgstr "删除过期费率数据"
+msgid "DeleteparsedCDR-filesafter"
+msgstr "删除CDR档案"
+msgid "Deletearchivedlog-filesafter"
+msgstr "删除日志文件"
+msgid "BackupSettings"
+msgstr "系统备份"
+msgid "Systembackupperiod"
+msgstr "备份时间间隔"
+
+
+
+msgid "LeavelastXpackages"
+msgstr "只保留的备份档案数"
+
+msgid "delbytime"
+msgstr "删除时间段"
+msgid "origination"
+msgstr "打进"
+msgid "termination"
+msgstr "打出"
+msgid "summaryreports"
+msgstr "汇总统计"
+
+msgid "statis_summaryreports"
+msgstr "统计---汇总统计"
+msgid "TotalCost"
+msgstr "总价格"
+msgid "avgrate"
+msgstr "平均每分钟收费"
+msgid "avgratehelp"
+msgstr "平均每分钟收费=总价格/总时间"
+msgid "totaltime"
+msgstr "总时间(分钟)"
+msgid "totalbilltime"
+msgstr "总计费时间"
+msgid "totalcalltime"
+msgstr "总通话时间"
+msgid "totalcalls"
+msgstr "total calls"
+msgid "acd"
+msgstr "平均通话时间"
+msgid "notzerocall"
+msgstr "不为0的呼叫数"
+msgid "succcalls"
+msgstr "成功呼叫数"
+msgid "busycalls"
+msgstr "繁忙呼叫数"
+msgid "asr"
+msgstr "呼叫成功率"
+msgid "Callswithdurationgreaterthan0"
+msgstr "通话时间大于0的呼叫"
+
+msgid "nochannelcalls"
+msgstr "没有通道的呼叫数"
+
+
+msgid "check_upload_file"
+msgstr "验证上传的文件"
+
+msgid "forbidden_call_interval"
+msgstr "禁止呼叫间隔时间设置"
+
+msgid "fail_times"
+msgstr  "连续失败次数设置"
+
+msgid "max_conference_time"
+msgstr "会议最长时间设置"
+
+msgid "check_pass"
+msgstr "数据已通过验证"
+
+msgid "checking"
+msgstr "开始验证"
+
+msgid "file_deleted"
+msgstr "文件已被删除"
+
+msgid "delete_duplicate"
+msgstr "删除重复"
+
+msgid "not_checked"
+msgstr "上传数据未验证"
+
+msgid "ignore_duplicate"
+msgstr "忽略重复"
+
+msgid "return_error_info"
+msgstr "出错返回错误信息"
+
+
+
+
+
+
+
+
+msgid "Emptyfiles"
+msgstr "空文件"
+msgid "name"
+msgstr "名字"
+
+msgid "delete"
+msgstr "删除"
+msgid "inputkey"
+msgstr "关键字"
+msgid "destip"
+msgstr "网关地址"
+
+msgid "Tracking"
+msgstr "跟踪时长"
+
+msgid "port"
+msgstr "端口"
+
+msgid "up"
+msgstr "上移"
+
+msgid "Down"
+msgstr "下移"
+
+
+msgid "Starttracking"
+msgstr "开始跟踪"
+
+msgid "Targetgateway"
+msgstr "Target gateway"
+
+msgid "Targetport"
+msgstr "Target port"
+
+
+msgid "Capacitylimit"
+msgstr "目标限制"
+
+msgid "Residualduration"
+msgstr "Residual duration "
+
+msgid "Stoptracking"
+msgstr "停止跟踪" 
+
+msgid "Tracktime"
+msgstr "Track time"
+
+msgid "Sourcegateway"
+msgstr "Source gateway"
+
+msgid "sourceport"
+msgstr "source port"
+
+msgid "filesize"
+msgstr "file size "
+
+
+
+
+
+msgid "jurisdiction"
+msgstr "计费区域管理"
+
+
+msgid "addjurisdiction"
+msgstr "添加计费区域"
+
+
+msgid "downloadBlockList "
+msgstr "导出拒绝名单"
+
+
+
+msgid "UploadBlockList "
+msgstr "上传拒绝名单"
+
+msgid "name"
+msgstr "名字"
+
+msgid "alias"
+msgstr "别名"
+
+msgid "domestic"
+msgstr "国内"
+
+msgid "interna"
+msgstr "国际"
+
+msgid "Thiscantbeempty"
+msgstr "该项不能为空"
+
+msgid "Systemprohibitbindingcellphonenumber"
+msgstr "系统禁止绑定的手机号码"
+
+msgid "Startregistered"
+msgstr "启动注册 "
+
+msgid "jslanguage"
+msgstr "zn"
+
+msgid "Confirmdelete"
+msgstr "确认删除"
+
+msgid "Areyousureyouwanttoprohibittheuser"
+msgstr "你确定要禁止该用户?"
+
+msgid "Areyousureyouwanttoprohibittheuser"
+msgstr "你确定要禁止该用户"
+
+msgid "ip"
+msgstr "IP"
+
+
+msgid "port"
+msgstr "端口"
+
+msgid "thumbnail"
+msgstr "缩略图"
+
+msgid "Dataconfigurationsuccess"
+msgstr "数据配置成功"
+
+msgid "Prefixalreadyexists"
+msgstr "前缀已经存在"
+
+msgid "Namealreadyexists"
+msgstr "名字已经存在"
+
+
+######################
+msgid "Buy"
+msgstr "购买"
+
+msgid "Sell"
+msgstr "出售"
+
+
+msgid "Select Country"
+msgstr "选择国家"
+
+msgid "Spam Report"
+msgstr "垃圾邮件报告"
+
+msgid "Search Private Buy"
+msgstr "搜查私人购买"
+
+msgid "Search Private Sell"
+msgstr "搜查私人卖"
+
+msgid "All Confirmed Orders"
+msgstr "所有确认的订单"
+
+msgid "Active WEB session"
+msgstr "网站活动会议"
+
+msgid "Service Charge"
+msgstr "服务费用"
+
+msgid "Payment Term"
+msgstr "付款期限"
+
+msgid "Download"
+msgstr "下载"
+
+msgid "Name"
+msgstr "名字"
+
+msgid "Unpaid Bills"
+msgstr "未付账单"
+
+msgid "Unpaid Bills Summary"
+msgstr "未付帐单摘要"
+
+msgid "ID"
+msgstr "编号"
+
+msgid "Available Balance"
+msgstr "可用余额"
+
+msgid "Transaction Date"
+msgstr "交易日期"
+
+msgid "Carriers"
+msgstr "运营商"
+
+msgid "Sum"
+msgstr "总数"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Balance"
+msgstr "结余"
+
+msgid "There were no data found for report"
+msgstr "没有数据的报告发现"
+
+msgid "Auto-generated Invoice"
+msgstr "自动生成的发票"
+
+msgid "Manual Invoice"
+msgstr "手工发票"
+
+msgid "InvoiceNo"
+msgstr "发票编号"
+
+msgid "Invoice Date"
+msgstr "发票日期"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Period"
+msgstr "时间"
+
+msgid "Amt Paid"
+msgstr "主动管理技术支付"
+
+msgid "Due Date"
+msgstr "到期日期"
+
+msgid "Upload Digit Mapping"
+msgstr "上传号码转换"
+
+msgid "List"
+msgstr "列表"
+
+msgid "Finance"
+msgstr "财务"
+
+

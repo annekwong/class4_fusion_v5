@@ -1,0 +1,2 @@
+ingress_trunk_name;egress_trunk_name;ani;dnis;time_profile_name;ani_min_length;ani_max_length;dnis_min_length;dnis_max_length
+test_template_egress;hyw_egress;1;1;time_profile_001;1;10;1;10

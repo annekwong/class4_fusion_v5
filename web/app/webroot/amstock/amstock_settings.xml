@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Only the settings with values not equal to defaults are in this file. If you want to see the
+full list of available settings, check the amstock_settings.xml file in the amstock folder. -->
+<settings>
+    
+  <margins>15</margins>                                                   
+  
+  <text_size></text_size>                                               
+
+  <number_format>  
+
+    <!-- Then you have a really big numbers, it might be comfortable to replace zeros with letters 
+    In case you don't want letters at all, delete the whole setting group. You can delete the line
+    you don't need or add more lines with bigger numbers. Letters are added only for axis' values -->    
+    <letters>
+       <letter number="1000">K</letter>
+       <letter number="1000000">M</letter>
+       <letter number="1000000000">B</letter>
+    </letters>      
+    
+    <!-- [0.000001] (Number) If absolute value of your number is equal or less then scientific_min, 
+    this number will be formatted using scientific notation, for example: 0.0000023 -> 2.3e-6 -->
+    <scientific_min></scientific_min>
+    
+    <!-- [1000000000000000] If absolute value of your number is equal or bigger then scientific_max,
+    this number will be formatted using scientific notation, for example: 15000000000000000 -> 1.5e16 -->
+    <scientific_max></scientific_max>    
+  </number_format>
+
+
+
+<!-- 给报表设置数据  -->
+  <data_sets>
+  	
+<!-- calls  -->  	 
+    <data_set did="0">
+       <title>Calls</title>
+       <short>Calls</short>
+       <description> switch processed calls quantity;</description>
+       <file_name>global_stats_call.csv</file_name>
+       <main_drop_down selected="true"></main_drop_down> 	    	  
+<!--       <compare_list_box selected="false"></compare_list_box>-->
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>  
+         </columns>
+       </csv>
+    </data_set>
+
+
+<!-- cps  -->    
+    <data_set did="1">
+       <title>CPS</title>
+       <short>CPS</short>
+       <description>Switch cps</description>
+       <file_name>global_stats_cps.csv</file_name>
+<!--       <compare_list_box selected="false"></compare_list_box>-->
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>          
+         </columns>
+       </csv>
+    </data_set>
+        
+<!-- ASR -->    
+    <data_set did="2">
+       <title>ASR</title>
+       <short>ASR</short>
+        <description>Average successful rate (percent of successful calls).</description>       
+       <file_name>global_stats_asr.csv</file_name>
+<!--              <compare_list_box selected="false"></compare_list_box>-->
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>        
+         </columns>
+       </csv>
+    </data_set> 
+    
+    
+    
+<!-- Acd --> 
+    <data_set did="3">
+       <title>ACD</title>
+       <short>ACD</short>
+       <description>Average call duration.</description>
+       <file_name>global_stats_acd.csv</file_name>
+<!--       <compare_list_box selected="false"></compare_list_box>-->
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>            
+         </columns>
+       </csv>
+    </data_set> 
+    
+  <!-- profit --> 
+    <data_set did="4">
+       <title>Profit</title>
+       <short>Profit</short>
+       <description>Profit.</description>
+       <file_name>global_stats_profit.csv</file_name>
+<!--       <compare_list_box selected="false"></compare_list_box>-->
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>            
+         </columns>
+       </csv>
+    </data_set> 
+    
+    
+    <!-- profit --> 
+    <data_set did="5">
+       <title>PDD</title>
+       <short>PDD</short>
+       <description>PDD.</description>
+       <file_name>global_stats_pdd.csv</file_name>
+<!--       <compare_list_box selected="false"></compare_list_box>-->
+       <csv>
+         <reverse>true</reverse>
+         <separator>,</separator>
+         <date_format>YYYY-MM-DD hh:mm:ss</date_format>
+         <decimal_separator>.</decimal_separator>
+         <columns>
+           <column>date</column>
+           <column>close</column>            
+         </columns>
+       </csv>
+    </data_set> 
+
+</data_sets>
+
+
+
+
+  <charts>
+  	<chart cid="0">
+  		<bg_color>f5f5f5,ffffff</bg_color>
+      <border_color>#CCCCCC</border_color>
+      <border_alpha>100</border_alpha>
+     
+      <grid>
+        <x>
+        	<color>#ffffff</color>
+          <dashed>true</dashed>    
+        </x>
+        
+       
+        <y_right>
+          <color>cccccc</color>
+          <alpha>100</alpha>
+          <dashed>true</dashed>    
+        </y_right>    
+      </grid>	
+
+      <legend>
+        <graph_on_off>false</graph_on_off>
+        <fade_others_to>10</fade_others_to>
+        <show_date>true</show_date>
+      </legend>
+
+  		<graphs>
+  			<graph gid="0">
+  			  <axis>right</axis>
+  				<type>line</type>
+  				<data_sources>
+  				  <close>close</close>
+          </data_sources>
+          
+<!--          <compare_source></compare_source>-->
+
+  		    <legend>
+            <date key="true" title="true"><![CDATA[<b>{close}</b>]]></date>
+            <period key="true" title="true"><![CDATA[open:<b>{open}</b> low:<b>{low}</b> high:<b>{high}</b> close:<b>{close}</b>]]></period>
+            <date_comparing key="true" title="true"><![CDATA[{close.data}]]></date_comparing>
+            <period_comparing key="true" title="true"><![CDATA[{close.data}]]></period_comparing>
+          </legend>         
+  			</graph>  			
+  		</graphs>
+  	</chart>
+  </charts>
+  
+  
+  <data_set_selector>
+    <width>130</width>
+    <max_comparing_count>0</max_comparing_count>
+ 		<main_drop_down_title>Select:</main_drop_down_title> 		
+<!-- 		<compare_list_box_title>Compare to:</compare_list_box_title>-->
+ 		<balloon_text>{title}: {description}</balloon_text>
+  </data_set_selector>
+  
+  <period_selector>
+    <button>
+      <bg_color_hover>b81d1b</bg_color_hover>
+      <bg_color_selected>b81d1b</bg_color_selected>
+      <text_color_hover>ffffff</text_color_hover>
+      <text_color_selected>ffffff</text_color_selected>
+    </button>
+  
+		<periods>		
+    	<period type="hh" count="3">last 3 hour</period>
+    	<period    type="DD" count="1">last  24 hour</period>
+    	<period type="DD"	count="3">last 3 days</period>
+    		<period type="WW"	count="1">last 7 days</period>
+
+<!--    	<period type="YTD" count="0">YTD</period>-->
+    	<period type="MAX">MAX</period>
+		</periods>
+		
+		<periods_title>Zoom:</periods_title>
+		<custom_period_title>Period:</custom_period_title> 
+  </period_selector>
+
+  <header>
+    <enabled></enabled>
+    <text><![CDATA[<b>{title}</b> ({short}) {description}]]></text>
+    <text_size>12</text_size>
+  </header>
+
+
+
+<background>
+	<color>#ffffff, #ffffff</color>
+	<alpha>0</alpha>
+	<border_color>#ffffff</border_color>
+	<border_alpha>0</border_alpha>
+</background>
+<plot_area>
+	<color>#ffffff</color>
+	<alpha>0</alpha>
+	<border_color>#333333</border_color>
+	<border_alpha>0</border_alpha>
+	<margins>
+		<top>35</top>
+		<right>3</right>
+		<left>5</left>
+		<bottom>20</bottom>
+	</margins>
+</plot_area>
+
+
+
+  <scroller>
+    <enabled>true</enabled>
+    <height>50</height>    
+    <graph_data_source>close</graph_data_source>
+    <bg_color>f5f5f5,ffffff</bg_color>
+    <resize_button_style>dragger</resize_button_style>
+       <playback>
+      <enabled>true</enabled>
+      <speed>1</speed>
+    </playback>
+  </scroller>
+</settings>

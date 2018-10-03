@@ -1,0 +1,1 @@
+<?php echo $this->element('amchart_column')?>

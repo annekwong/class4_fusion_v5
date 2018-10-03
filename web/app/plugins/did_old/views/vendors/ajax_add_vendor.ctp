@@ -1,0 +1,1 @@
+<?php echo $this->element('did_add_vendor_form',array('is_ajax'=> true)); ?>
