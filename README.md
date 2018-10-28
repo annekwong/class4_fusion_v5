@@ -89,6 +89,7 @@ psql -U postgres softswitch4v5 <  jurisdiction_prefix.sql ----- jurisdiction dat
 psql -U postgres softswitch4v5 < update.sql ----- Update record data
 
 copy file /etc/denovo.conf into /etc/httpd/conf.d/
+run /opt/denovo/web/web/chmod.sh
 start apache with systemctl start httpd
 if all success, navigate to the web ui with http://yourIP
 default user is admin, default pass 123456
