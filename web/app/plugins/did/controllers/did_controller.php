@@ -4,7 +4,10 @@ class DidController extends DidAppController
 {
 
     var $name = 'Did';
-    var $uses = array('RateTable', 'ImportExportLog', "prresource.Gatewaygroup", 'did.DidBillingPlan', 'did.OrigLog', 'did.Did', 'Systemparam', "pr.Invoice", 'pr.InvoiceLog');
+    var $uses = array(
+        'RateTable', 'ImportExportLog', "prresource.Gatewaygroup", 'did.DidBillingPlan', 'did.OrigLog', 'did.Did', 'Systemparam',
+        "pr.Invoice", 'pr.InvoiceLog', 'did.DidNumberUploadTask'
+    );
     var $helpers = array('javascript', 'html', 'Common', 'appCommon');
 
     function beforeFilter()
@@ -39,7 +42,7 @@ class DidController extends DidAppController
         $currPage = $page->getCurrPage() - 1;
         $pageSize = $page->getPageSize();
         $offset = $currPage * $pageSize;
-        $order_by = 'ORDER BY did ASC';
+        $order_by = 'ORDER BY did_number ASC';
 
         if (isset($_GET['order_by'])) {
             $order_by_arr = explode('-', $_GET['order_by']);
@@ -194,7 +197,7 @@ class DidController extends DidAppController
                 $data_info = $data[0][0];
                 $vendor_changed = 0;
                 $log_detail = array();
-                $isClientChanged = $this->Did->query("SELECT client_id FROM did_billing_rel LEFT JOIN resource ON resource_id = ingress_res_id WHERE did = '{$number}' ORDER BY id DESC LIMIT 1");
+                $isClientChanged = $this->Did->query("SELECT client_id FROM did_billing_brief LEFT JOIN resource ON resource_id = client_trunk_id WHERE did_number = '{$number}' ORDER BY id DESC LIMIT 1");
                 $client = $this->Did->query("SELECT client_id FROM resource WHERE resource_id = {$client_id}");
 
                 // If client changed then adding new number
@@ -624,20 +627,27 @@ EOT;
     public function upload()
     {
         $id = isset($this->params['url']['id']) ? $this->params['url']['id'] : null;
+
         if ($id) {
             $this->set("client_id", $id);
         }
         $this->set('type', 14);
+
         if ($this->RequestHandler->ispost()) {
             Configure::load('myconf');
+
             $duplicate_type = $_POST['duplicate_type'];
             $path = APP . 'tmp' . DS . 'upload' . DS . 'csv';
-            $upload_file = $path . DS . trim($_POST['myfile_guid']) . ".csv";
+            $filename = trim($_POST['myfile_guid']) . ".csv";
+            $upload_file = $path . DS . $filename;
             $user_id = 0;
+
             if (isset($_SESSION ['sst_user_id'])) {
                 $user_id = $_SESSION ['sst_user_id'];
             }
+
             App::import('Model', 'ImportExportLog');
+
             $export_log = new ImportExportLog();
             $data = array();
             $data ['ImportExportLog']['ext_attributes'] = array();
@@ -653,77 +663,25 @@ EOT;
             $data ['ImportExportLog']['duplicate_type'] = $duplicate_type;
             $data ['ImportExportLog']['myfile_filename'] = isset($this->params['form']['myfile_filename']) ? $this->params['form']['myfile_filename'] : "";
             $export_log->save($data);
-            $id = $export_log->id;
 
-            // check API
-            $sections = parse_ini_file(CONF_PATH, TRUE);
-            $url = $sections['import']['url'];
-            $url = rtrim($url, '/\\');
-            $url = explode('/', $url);
-            array_pop($url);
-            $url = implode('/', $url).'/apitest';
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL,$url);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-            curl_exec($ch);
-            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            $this->ApiLog->addRequest($url, null, null, 1, $httpcode);
+            $didNumberSaveArray = [
+                'operator_user' => $_SESSION['sst_user_name'],
+                'upload_file_path' => $path,
+                'upload_orig_file' => $filename,
+                'upload_format_file' => $filename,
+                'repeated_action' => $duplicate_type == 'ignore' ? 0 : 1
+            ];
 
-            curl_close($ch);
+            $saveResult = $this->DidNumberUploadTask->save($didNumberSaveArray);
 
-            if($httpcode != 200){
-                $export_log->save(array(
-                    'status' => -2
-                ));
-                $this->ImportExportLog->create_json_array('', 101,__('Import Module Failure!',true));
-                $this->Session->write('m', ImportExportLog::set_validator());
-                $this->redirect('/import_export_log/import');
+            if ($saveResult) {
+                $this->Session->write('m', $this->ImportExportLog->create_json(201, 'Import request created successfully!'));
+            } else {
+                $this->Session->write('m', $this->ImportExportLog->create_json(101, 'Error on creating DidNumberUploadTask record!'));
             }
-
-            $php_path = Configure::read('php_exe_path');
-            $cmd = "{$php_path} " . ROOT . "/cake/console/cake.php import {$id} > /dev/null &";
-
-            shell_exec($cmd);
-
             $this->Session->write('m', $this->ImportExportLog->create_json('Import request created successfully!'));
 
             $this->redirect('/import_export_log/import');
-
-//            $url = 'http://158.69.203.19:6060/api/v1/importfile/';
-//            $ch = curl_init();
-//            $data = array(
-//                'file' => $upload_file,
-//                'id'   => $id
-//            );
-//            curl_setopt($ch, CURLOPT_URL, $url);
-//            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-//                'Accept: application/json',
-//                'Content-Type: application/json'
-//            ));
-//            curl_setopt($ch, CURLOPT_POST, 1);
-//            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-//            curl_exec($ch);
-//            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-//            curl_close($ch);
-//            if($httpcode == 200) {
-//                $this->Session->write('m', $this->ImportExportLog->create_json(201, 'File imported successfully!'));
-//            } else {
-//                $this->Session->write('m', $this->ImportExportLog->create_json(101, 'Import failed!'));
-//            }
-//            $this->redirect('/import_export_log/import');
-
-
-//            $cmd = "perl $perl_path -c $perl_conf -i {$id}  &";
-//            $info = $this->Systemparam->find('first',array(
-//                'fields' => array('cmd_debug'),
-//            ));
-//            if (Configure::read('cmd.debug'))
-//            {
-//                file_put_contents($info["Systemparam"]["cmd_debug"], $cmd);
-//            }
-//            shell_exec($cmd);
-            $this->set('upload_id', $id);
         }
 
         $this->_get_data();

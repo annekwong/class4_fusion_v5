@@ -430,13 +430,13 @@ class CdrapiController extends AppController
         $this->loadModel('did.DidBillingRel');
 
         $dids = $this->DidBillingRel->find('all', array(
-            'fields' => array('egress_res_id'),
-            'group' => array('egress_res_id')
+            'fields' => array('vendor_trunk_id'),
+            'group' => array('vendor_trunk_id')
         ));
         $vendorsArray = array();
 
         foreach ($dids as $did) {
-            array_push($vendorsArray, $did['DidBillingRel']['egress_res_id']);
+            array_push($vendorsArray, $did['DidBillingRel']['vendor_trunk_id']);
         }
 
         $this->initNewReport();
@@ -451,7 +451,7 @@ class CdrapiController extends AppController
         $this->autoLayout = false;
 
         if ($this->RequestHandler->isPost()) {
-            $data = $this->DefaultFields->query("SELECT did FROM did_billing_rel");
+            $data = $this->DefaultFields->query("SELECT did FROM did_billing_brief");
             $result = array();
 
             foreach ($data as $item) {

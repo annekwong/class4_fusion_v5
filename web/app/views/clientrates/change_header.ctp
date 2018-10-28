@@ -73,18 +73,16 @@
                             <input type="text" name="append_prefix_value" value="<?php echo $append_prefix_value; ?>" id="append_prefix_value" maxlength="10" class="width80" style="display: none;" />
                         </td>
                     </tr>
-                    <!--
-                    <tr id="set_default_date" <?php if (isset($effective_date_flg))
-                    {
-                        ?>style="display:none;"<?php } ?>>
+                    <tr id="set_default_date">
                         <td align="right">
                             <label><?php __('Set Default Effective Date') ?>:</label>
                         </td>
                         <td align="left" style="padding-left:10px;">
-                            <input type="hidden" name="is_effective_date" id="is_effective_date" value="<?php echo isset($effective_date_flg) ? '' : 1; ?>" />
-                            <input type="text" class="validate[required] in-text" name="effetive_date" value="<?php //echo date("Y-m-d 00:00:00");   ?>" onfocus="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss'});" />
+<!--                            <input type="hidden" name="is_effective_date" id="is_effective_date" value="1" />-->
+                            <input type="text" class="in-text" name="default_effective_date" onfocus="WdatePicker({dateFmt: 'yyyy-MM-dd HH:mm:ss'});" />
                         </td>
                     </tr>
+                    <!--
                     <tr id="set_default_min_time" <?php if (isset($min_time_flg))
                     {
                         ?>style="display:none;"<?php } ?>>

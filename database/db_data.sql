@@ -631,7 +631,7 @@ values( 'did_report', 13, 'DID Report', 't', 'cdrapi/did_report'),
 ('agent:management', 37, 'Agent Management', 't', 'agent/management'),
 ('reports_db:commission', 37, 'Commission Report', 't', 'reports_db/commission');
 
-insert into version_information (program_name, major_ver, minor_ver, build_date, start_time) values ('database_version', 'V5.2.20180320', '2df1fa28374399273fddb8bd90c901951dd70531', '2018-03-20', DEFAULT);
+insert into version_information (program_name, major_ver, minor_ver, build_date, start_time) values ('database_version', 'V5.2.20181025', '2df1fa28374399273fddb8bd90c901951dd70531', '2018-10-25', DEFAULT);
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres

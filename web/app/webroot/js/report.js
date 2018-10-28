@@ -116,6 +116,7 @@ class Report {
             type: 'POST',
             data: {
                 start_time: '-1',
+                format: 'csv',
                 print_only_headers: 1
             },
             url: this.url,

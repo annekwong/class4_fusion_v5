@@ -69,7 +69,7 @@ class DidClientController extends AppController
             Configure::write('debug', 2);
             foreach ($numbers as $key => $number) {
                 $relData = $this->Did->getRelDataById($number);
-                $result = $this->Did->assign_did($clientTrunk['Resource']['resource_id'], $relData[0][0]['egress_res_id'], $relData[0][0]['did'], $relData[0][0]['sell_billing_plan_id'], $relData[0][0]['buy_billing_plan_id'], false, $number);
+                $result = $this->Did->assign_did($clientTrunk['Resource']['resource_id'], $relData[0][0]['vendor_trunk_id'], $relData[0][0]['did_number'], $relData[0][0]['vendor_billing_plan_id'], $relData[0][0]['client_billing_plan_id'], false, $number);
             }
 
             if ($result) {
@@ -88,7 +88,7 @@ class DidClientController extends AppController
                     ));
                     $billingPlanData = $this->DidBillingPlan->find('first', array(
                         'conditions' => array(
-                            'id' => $relData[0][0]['buy_billing_plan_id']
+                            'id' => $relData[0][0]['client_billing_plan_id']
                         )
                     ));
                     $mailTemplate['Mailtmp']['did_order_content'] = str_replace(
@@ -169,10 +169,10 @@ class DidClientController extends AppController
 
         $data = $this->DidBillingRel->find('all', array(
             'fields' => array(
-                'DidBillingRel.id', 'DidBillingRel.did', 'Resource.alias'
+                'DidBillingRel.id', 'DidBillingRel.did_number', 'Resource.alias'
             ),
             'conditions' => array(
-                "ingress_res_id in (SELECT resource_id FROM resource WHERE client_id = {$_SESSION['sst_client_id']} AND alias LIKE '%_{$encodedWord}_%') AND (end_date IS NULL OR end_date > now())"
+                "client_trunk_id in (SELECT resource_id FROM resource WHERE client_id = {$_SESSION['sst_client_id']} AND alias LIKE '%_{$encodedWord}_%') AND (end_date IS NULL OR end_date > now())"
             ),
             'joins' => array(
                 array(
@@ -180,7 +180,7 @@ class DidClientController extends AppController
                     'alias' => 'Code',
                     'type' => 'LEFT',
                     'conditions' => array(
-                        'cast(Code.code as varchar(255)) = cast(DidBillingRel.did as varchar(255))'
+                        'cast(Code.code as varchar(255)) = cast(DidBillingRel.did_number as varchar(255))'
                     )
                 ),
                 array(
@@ -188,14 +188,14 @@ class DidClientController extends AppController
                     'alias' => 'Resource',
                     'type' => 'LEFT',
                     'conditions' => array(
-                        'DidBillingRel.ingress_res_id = Resource.resource_id'
+                        'DidBillingRel.client_trunk_id = Resource.resource_id'
                     )
                 )
             )
         ));
 
         foreach ($data as &$item) {
-            $item['DidBillingRel']['type'] = $this->Did->didGetType($item['DidBillingRel']['did']);
+            $item['DidBillingRel']['type'] = $this->Did->didGetType($item['DidBillingRel']['did_number']);
         }
 
         $this->set('data', $data);
@@ -215,7 +215,7 @@ class DidClientController extends AppController
         $encodedWord = base64_encode('DID');
         $data = $this->DidBillingRel->find('first', array(
             'fields' => array(
-                'DidBillingRel.id', 'DidBillingRel.ingress_res_id', 'DidBillingRel.did', 'Code.country', 'Code.state', 'Resource.alias'
+                'DidBillingRel.id', 'DidBillingRel.client_trunk_id', 'DidBillingRel.did_number', 'Code.country', 'Code.state', 'Resource.alias'
             ),
             'conditions' => array(
                 "id = $id"
@@ -226,7 +226,7 @@ class DidClientController extends AppController
                     'alias' => 'Code',
                     'type' => 'LEFT',
                     'conditions' => array(
-                        'cast(Code.code as varchar(255)) = cast(DidBillingRel.did as varchar(255))'
+                        'cast(Code.code as varchar(255)) = cast(DidBillingRel.did_number as varchar(255))'
                     )
                 ),
                 array(
@@ -234,13 +234,13 @@ class DidClientController extends AppController
                     'alias' => 'Resource',
                     'type' => 'LEFT',
                     'conditions' => array(
-                        'DidBillingRel.ingress_res_id = Resource.resource_id'
+                        'DidBillingRel.client_trunk_id = Resource.resource_id'
                     )
                 )
             )
         ));
 
-        $data['DidBillingRel']['type'] = $this->Did->didGetType($data['DidBillingRel']['did']);
+        $data['DidBillingRel']['type'] = $this->Did->didGetType($data['DidBillingRel']['did_number']);
         $clientId = $_SESSION['sst_client_id'];
         $trunks = $this->Resource->find('all', array(
             'fields' => array('resource_id', 'alias'),
@@ -257,7 +257,7 @@ class DidClientController extends AppController
 
         if ($this->RequestHandler->isPost()) {
             $relData = $this->Did->getRelDataById($id);
-            $result = $this->Did->assign_did($_POST['trunk'], $relData[0][0]['egress_res_id'], $relData[0][0]['did'], $relData[0][0]['sell_billing_plan_id'], $relData[0][0]['buy_billing_plan_id'], false, $id);
+            $result = $this->Did->assign_did($_POST['trunk'], $relData[0][0]['vendor_trunk_id'], $relData[0][0]['did_number'], $relData[0][0]['vendor_billing_plan_id'], $relData[0][0]['client_billing_plan_id'], false, $id);
 
             if ($result) {
                 $this->Session->write('m', $this->Did->create_json(201, 'Successfully'));
@@ -276,9 +276,9 @@ class DidClientController extends AppController
     public function reports_did()
     {
         $dids = $this->DidBillingRel->find('all', array(
-            'fields' => array('DidBillingRel.did'),
+            'fields' => array('DidBillingRel.did_number'),
             'conditions' => array(
-                "ingress_res_id in (SELECT resource_id FROM resource WHERE client_id = {$_SESSION['sst_client_id']} AND alias LIKE '%_{$encodedWord}_%') AND (end_date IS NULL OR end_date > now())"
+                "client_trunk_id in (SELECT resource_id FROM resource WHERE client_id = {$_SESSION['sst_client_id']} AND alias LIKE '%_{$encodedWord}_%') AND (end_date IS NULL OR end_date > now())"
             )
         ));
         $clientResources = $this->Resource->find('all', array(
@@ -575,7 +575,7 @@ class DidClientController extends AppController
 
         $result = $this->DidBillingRel->save(array(
             'id' => $id,
-            'ingress_res_id' => null,
+            'client_trunk_id' => null,
             'enable_for_clients' => true
         ));
 
@@ -653,7 +653,7 @@ class DidClientController extends AppController
             'fields' => array('DidBillingPlan.rate_table_id'),
             'conditions' => array(
                 'DidBillingRel.id' => $didId,
-                'ingress_res_id' => null
+                'client_trunk_id' => null
             ),
             'joins' => array(
                 array(
@@ -661,7 +661,7 @@ class DidClientController extends AppController
                     'alias' => 'DidBillingPlan',
                     'type' => 'LEFT',
                     'conditions' => array(
-                        'DidBillingPlan.id = DidBillingRel.buy_billing_plan_id'
+                        'DidBillingPlan.id = DidBillingRel.client_billing_plan_id'
                     )
                 )
             )

@@ -535,7 +535,7 @@ class BlocklistsController extends AppController
 
     function _filter_index_conditions()
     {
-        $filter_Array = array('egress_res_id' => 'Egress.alias', 'ingress_res_id' => 'Ingress.alias', 'digit' => 'ResourceBlock.digit', 'ani_prefix' => 'ResourceBlock.ani_prefix', 'action_type' => 'ResourceBlock.action_type', 'search');
+        $filter_Array = array('vendor_trunk_id' => 'Egress.alias', 'ingress_res_id' => 'Ingress.alias', 'digit' => 'ResourceBlock.digit', 'ani_prefix' => 'ResourceBlock.ani_prefix', 'action_type' => 'ResourceBlock.action_type', 'search');
         $filter_conditions[] = $this->_filter_conditions($filter_Array);
 
 //        if ($type == 2)

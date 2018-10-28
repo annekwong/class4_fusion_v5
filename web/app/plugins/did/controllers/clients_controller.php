@@ -321,12 +321,25 @@ class ClientsController extends DidAppController
                 $this->Session->write('m', $this->Client->create_json(101, 'Update resource failed!'));
                 $this->xredirect('/did/clients/edit/' . base64_encode($client_id));
             }
+            $resource_id = $resourceInfo['Gatewaygroup']['resource_id'];
+
+
+            // Update temporary related trunks from DID Repository
+            $relatedTrunks = $this->Gatewaygroup->query("SELECT resource_id FROM resource WHERE client_id = {$client_id} and alias like '%_RElE_%'");
+
+            unset($resourceInfo['Gatewaygroup']['alias']);
+
+            foreach ($relatedTrunks as $relatedTrunk) {
+                $resourceInfo['Gatewaygroup']['resource_id'] = $relatedTrunk[0]['resource_id'];
+                $this->Gatewaygroup->save($resourceInfo);
+            }
+            ///////////////////////////////////////////
+
             $this->Client->commit();
 
             // Update dnis_cap_limit
             $this->Gatewaygroup->query("UPDATE resource SET dnis_cap_limit = {$amountPerPort} WHERE client_id = {$client_id}");
 
-            $resource_id = $resourceInfo['Gatewaygroup']['resource_id'];
             $sql = "update resource set t38 = 't' where client_id = {$client_id}";
             $this->Gatewaygroup->query($sql);
             $sql = "delete from resource_ip where resource_id = {$resource_id}";
@@ -379,11 +392,21 @@ class ClientsController extends DidAppController
 
             // Update tech prefix
             $this->Client->query("DELETE FROM resource_direction WHERE resource_id = {$resource_id}");
-            $res = $this->Client->query("insert into resource_direction (direction,action,digits,resource_id,type) values (2, 1, {$techPrefix}, {$resource_id}, 1) ");
-            if ($res === false)
-            {
-                $this->rollback = TRUE;
-                $this->Client->rollback();
+
+            if (!empty($techPrefix)) {
+                $res = $this->Client->query("insert into resource_direction (direction,action,digits,resource_id,type) values (2, 1, {$techPrefix}, {$resource_id}, 1) ");
+                if ($res === false)
+                {
+                    $this->rollback = TRUE;
+                    $this->Client->rollback();
+                }
+            }
+
+            foreach ($relatedTrunks as $relatedTrunk) {
+                $this->Client->query("DELETE FROM resource_direction WHERE resource_id = {$relatedTrunk[0]['resource_id']}");
+                if (!empty($techPrefix)) {
+                    $this->Client->query("insert into resource_direction (direction,action,digits,resource_id,type) values (2, 1, {$techPrefix}, {$relatedTrunk[0]['resource_id']}, 1) ");
+                }
             }
 
             // Update REIE egresses of the client
@@ -546,7 +569,7 @@ class ClientsController extends DidAppController
             // 检测是否存在相同client
 //            Configure::write('debug', 2);
             $flg = $this->Client->save($client);
-//            die(var_dump($flg));
+
             if ($flg === false)
             {
                 $this->Session->write('m', $this->Client->create_json(101, __('Failed to create the Client [%s] !', true, $name)));
@@ -750,11 +773,13 @@ class ClientsController extends DidAppController
             }
 
             // Save tech prefix
-            $res = $this->Client->query("insert into resource_direction (direction,action,digits,resource_id,type) values (2, 1, {$techPrefix}, {$resource_id}, 1) ");
-            if ($res === false)
-            {
-                $this->rollback = TRUE;
-                $this->Client->rollback();
+            if (!empty($techPrefix)) {
+                $res = $this->Client->query("insert into resource_direction (direction,action,digits,resource_id,type) values (2, 1, {$techPrefix}, {$resource_id}, 1) ");
+                if ($res === false)
+                {
+                    $this->rollback = TRUE;
+                    $this->Client->rollback();
+                }
             }
 //            if (!$ajax || $has_rate)
 //            {

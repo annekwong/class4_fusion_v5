@@ -1912,9 +1912,12 @@ invoice_send_mode,company_info_location,invoice_decimal_digits FROM system_param
                 $request['egress_rcause'] = $record['FtpConf']['egress_release_cause'];
                 $request['ingress_rcause'] = $record['FtpConf']['ingress_release_cause'];
 
-                if ($record['FtpConf']['duration'] == 0) {
+                if ($record['FtpConf']['duration'] == 0 && $record['FtpConf']['duration'] !== NULL) {
+                    $request['non_zero'] = 0;
+                } elseif ($record['FtpConf']['duration'] == 1) {
                     $request['non_zero'] = 1;
                 }
+
                 if (isset($record['FtpConf']['file_type'])) {
                     $compressionArray = ['gz', 'tar.gz', 'tar.bz2', 'tar.bz2'];
                     $request['ftp_compress'] = $compressionArray[$record['FtpConf']['file_type']];

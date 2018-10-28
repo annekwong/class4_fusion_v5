@@ -432,6 +432,10 @@ WHERE rate_table_id = {$rate_table_id}";
             $adv_search .= " and reseller_id = {$f['search_res']}";
             $last_conditions .= "&search_res={$f['search_res']}";
         }
+
+        // Skip origination rates
+        $adv_search .= " and origination = false";
+
         $this->set('last_conditions', $last_conditions);
         //$this->set('searchForm', $f);
 //        }

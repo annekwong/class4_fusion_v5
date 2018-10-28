@@ -1,6 +1,6 @@
 
 
-1.psql -U postgres db < class4_db_schema.sql -----  Structure of schema
+1.psql -U postgres db < class4_db_schema.sql -----  Structure of schma
 
 2.psql -U postgres db < db_data.sql  -----  Basic data
 
@@ -12,4 +12,6 @@
 
 6.psql -U postgres db < update.sql  ----- Update record data
 
+
+Note: Change switch_profile  Server  ip =  update switch_profile set sip_ip ='192.99.10.113' ;
 

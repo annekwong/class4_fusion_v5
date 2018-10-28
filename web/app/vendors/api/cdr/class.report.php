@@ -125,10 +125,10 @@ class Report extends Base
                             );
 
                             if (!empty($item['egress_id']) && $item['egress_id'] != 'NULL') {
-                                $conditions['ingress_res_id'] = $item['egress_id'];
+                                $conditions['client_trunk_id'] = $item['egress_id'];
                             }
                             if (!empty($item['ingress_id']) && $item['ingress_id'] != 'NULL') {
-                                $conditions['egress_res_id'] = $item['ingress_id'];
+                                $conditions['vendor_trunk_id'] = $item['ingress_id'];
                             }
 
                             if ($additionalField == 'min_price') {
@@ -141,7 +141,7 @@ class Report extends Base
                                             'alias' => 'DidBillingPlan',
                                             'type' => 'INNER',
                                             'conditions' => array(
-                                                'DidBillingRel.buy_billing_plan_id = DidBillingPlan.id'
+                                                'DidBillingRel.client_billing_plan_id = DidBillingPlan.id'
                                             )
                                         )
                                     )
@@ -169,7 +169,7 @@ class Report extends Base
                                             'alias' => 'DidBillingPlan',
                                             'type' => 'INNER',
                                             'conditions' => array(
-                                                'DidBillingRel.buy_billing_plan_id = DidBillingPlan.id'
+                                                'DidBillingRel.client_billing_plan_id = DidBillingPlan.id'
                                             )
                                         )
                                     )

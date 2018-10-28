@@ -16,18 +16,18 @@ class Did extends DidAppModel
         $encodedWord = base64_encode('DID');
         $where = ["t1.start_date <= now()::date AND (t1.end_date > now()::date OR t1.end_date IS NULL) AND (client_resource.alias LIKE '%_{$encodedWord}_%' OR client_resource.alias is null)"];
         if ($vendor_id)
-            $where[] = "t1.egress_res_id = $vendor_id";
+            $where[] = "t1.vendor_trunk_id = $vendor_id";
         if (isset($_GET['orig_client_id']) && $_GET['orig_client_id']) {
             $where[] = "orig_client.client_id ='{$_GET['orig_client_id']}' ";
         }
         if ($client_id)
             $where[] = "orig_client.client_id = $client_id";
         if ($number)
-            $where[] = "t1.did::text like '%{$number}%'";
+            $where[] = "t1.did_number::text like '%{$number}%'";
         if ($show_type == 1)
-            $where[] = "t1.ingress_res_id is not null";
+            $where[] = "t1.client_trunk_id is not null";
         elseif ($show_type == 2)
-            $where[] = "t1.ingress_res_id is null";
+            $where[] = "t1.client_trunk_id is null";
         $where_sql = '';
         if (!empty($where))
         {
@@ -39,15 +39,15 @@ class Did extends DidAppModel
 SELECT count(*) as sum
 from
 (
-SELECT did_billing_rel.*, product_items.update_at
-from did_billing_rel 
-LEFT JOIN product_items on cast(did_billing_rel.did as varchar(255)) = cast(product_items.digits as varchar(255))
+SELECT did_billing_brief.*, product_items.update_at
+from did_billing_brief 
+LEFT JOIN product_items on cast(did_billing_brief.did_number as varchar(255)) = cast(product_items.digits as varchar(255))
 -- left join product_items_resource ON product_items_resource.item_id = product_items.item_id 
-order by did_billing_rel.did desc 
+order by did_billing_brief.did_number desc 
 ) as t1
-LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.egress_res_id)
-LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.ingress_res_id)
-LEFT JOIN resource as client_resource ON resource_id = t1.ingress_res_id
+LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.vendor_trunk_id)
+LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.client_trunk_id)
+LEFT JOIN resource as client_resource ON resource_id = t1.client_trunk_id
 $where_sql 
 SQL;
         //$sql = "select count(*) as sum FROM rate where did_type = 1";
@@ -64,18 +64,18 @@ SQL;
         $encodedWord = base64_encode('DID');
         $where = ["t1.start_date <= now()::date AND (t1.end_date > now()::date OR t1.end_date IS NULL) AND (client_resource.alias LIKE '%_{$encodedWord}_%' OR client_resource.alias is null)"];
         if ($vendor_id)
-            $where[] = "t1.egress_res_id = $vendor_id";
+            $where[] = "t1.vendor_trunk_id = $vendor_id";
         if (isset($_GET['orig_client_id']) && $_GET['orig_client_id']) {
             $where[] = "orig_client.client_id ='{$_GET['orig_client_id']}' ";
         }
         if ($client_id)
             $where[] = "orig_client.client_id = $client_id";
         if ($number)
-            $where[] = "t1.did::text like '%{$number}%'";
+            $where[] = "t1.did_number::text like '%{$number}%'";
         if ($show_type == 1)
-            $where[] = "t1.ingress_res_id is not null";
+            $where[] = "t1.client_trunk_id is not null";
         elseif ($show_type == 2)
-            $where[] = "t1.ingress_res_id is null";
+            $where[] = "t1.client_trunk_id is null";
         $where_sql = '';
         if (!empty($where))
         {
@@ -89,30 +89,30 @@ SQL;
         }
 
         $sql = <<<SQL
-SELECT client_resource.alias, t1.id, t1.did, t1.egress_res_id as vendor_id, t1.ingress_res_id as client_id, vendor_client.name as vendor_name,
+SELECT client_resource.alias, t1.id, t1.did_number, t1.vendor_trunk_id as vendor_id, t1.client_trunk_id as client_id, vendor_client.name as vendor_name,
 orig_client.name as client_name,
-(SELECT ip FROM resource_ip WHERE resource_ip.resource_id = t1.egress_res_id LIMIT 1) as vendor_ip,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.sell_billing_plan_id LIMIT 1) as vendor_rule,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as client_rule,
-(SELECT did_billing_plan.monthly_charge FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as monthly_charge,
-(SELECT did_billing_plan.min_price FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as min_price,
-(SELECT did_billing_plan.payphone_subcharge FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as payphone_subcharge,
-t1.sell_billing_plan_id as vendor_billing_id,
+(SELECT ip FROM resource_ip WHERE resource_ip.resource_id = t1.vendor_trunk_id LIMIT 1) as vendor_ip,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.vendor_billing_plan_id LIMIT 1) as vendor_rule,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as client_rule,
+(SELECT did_billing_plan.monthly_charge FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as monthly_charge,
+(SELECT did_billing_plan.min_price FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as min_price,
+(SELECT did_billing_plan.payphone_subcharge FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as payphone_subcharge,
+t1.vendor_billing_plan_id as vendor_billing_id,
 t1.end_date as end_date,
-t1.buy_billing_plan_id as client_billing_id,
+t1.client_billing_plan_id as client_billing_id,
 t1.start_date as start_date,
 t1.enable_for_clients as enable_for_clients
 from
 (
-SELECT did_billing_rel.*, product_items.update_at
-from did_billing_rel 
-LEFT JOIN product_items on cast(did_billing_rel.did as varchar(255)) = cast(product_items.digits as varchar(255))
+SELECT did_billing_brief.*, product_items.update_at
+from did_billing_brief 
+LEFT JOIN product_items on cast(did_billing_brief.did_number as varchar(255)) = cast(product_items.digits as varchar(255))
 -- left join product_items_resource ON product_items_resource.item_id = product_items.item_id 
-order by did_billing_rel.did desc 
+order by did_billing_brief.did_number desc 
 ) as t1
-LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.egress_res_id)
-LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.ingress_res_id)
-LEFT JOIN resource as client_resource ON resource_id = t1.ingress_res_id
+LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.vendor_trunk_id)
+LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.client_trunk_id)
+LEFT JOIN resource as client_resource ON resource_id = t1.client_trunk_id
 $where_sql $order_by $limit
 SQL;
 //        Configure::write('debug', 2);
@@ -126,14 +126,14 @@ SQL;
     public function get_data_by_client($client_id,$pageSize, $offset){
         $sql = <<<SQL
 SELECT rs.alias,rate.code,rate.rate_table_id,rate.code_name,rate.create_time,product_items.update_at,rate.country, 
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = did_billing_rel.sell_billing_plan_id LIMIT 1) as vendor_rule,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = did_billing_rel.buy_billing_plan_id LIMIT 1) as client_rule,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = did_billing_brief.vendor_billing_plan_id LIMIT 1) as vendor_rule,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = did_billing_brief.client_billing_plan_id LIMIT 1) as client_rule,
 (SELECT ip FROM resource_ip WHERE rs.resource_id = resource_ip.resource_id LIMIT 1) as vendor_ip
 FROM resource
 LEFT JOIN product_items_resource on product_items_resource.resource_id = resource.resource_id
 LEFT JOIN product_items on product_items_resource.item_id = product_items.item_id
 LEFT JOIN rate on rate.code = product_items.digits  
-LEFT JOIN did_billing_rel ON cast(did_billing_rel.did as varchar(255)) = cast(rate.code as varchar(255))
+LEFT JOIN did_billing_brief ON cast(did_billing_brief.did_number as varchar(255)) = cast(rate.code as varchar(255))
 LEFT JOIN resource rs on rate.rate_table_id = rs.rate_table_id
 WHERE rate.did_type = 1 AND resource.client_id='$client_id'  LIMIT $pageSize OFFSET $offset
 SQL;
@@ -147,7 +147,7 @@ FROM resource
 LEFT JOIN product_items_resource on product_items_resource.resource_id = resource.resource_id
 LEFT JOIN product_items on product_items_resource.item_id = product_items.item_id
 LEFT JOIN rate on rate.code = product_items.digits  
-LEFT JOIN did_billing_rel ON cast(did_billing_rel.did as varchar(255)) = cast(rate.code as varchar(255))
+LEFT JOIN did_billing_brief ON cast(did_billing_brief.did_number as varchar(255)) = cast(rate.code as varchar(255))
 LEFT JOIN resource rs on rate.rate_table_id = rs.rate_table_id
 WHERE rate.did_type = 1 AND resource.client_id='$client_id'
 SQL;
@@ -160,27 +160,27 @@ SQL;
     public function get_data_by_id($id)
     {
         $sql = <<<SQL
-SELECT client_resource.alias, t1.id, t1.did, t1.egress_res_id as vendor_id, t1.ingress_res_id as client_id, vendor_client.name as vendor_name,
+SELECT client_resource.alias, t1.id, t1.did_number, t1.vendor_trunk_id as vendor_id, t1.client_trunk_id as client_id, vendor_client.name as vendor_name,
 orig_client.name as client_name,
-(SELECT ip FROM resource_ip WHERE resource_ip.resource_id = t1.egress_res_id LIMIT 1) as vendor_ip,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.sell_billing_plan_id LIMIT 1) as vendor_rule,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as client_rule,
-t1.sell_billing_plan_id as vendor_billing_id,
+(SELECT ip FROM resource_ip WHERE resource_ip.resource_id = t1.vendor_trunk_id LIMIT 1) as vendor_ip,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.vendor_billing_plan_id LIMIT 1) as vendor_rule,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as client_rule,
+t1.vendor_billing_plan_id as vendor_billing_id,
 t1.end_date as end_date,
-t1.buy_billing_plan_id as client_billing_id,
+t1.client_billing_plan_id as client_billing_id,
 t1.start_date as start_date,
 t1.enable_for_clients as enable_for_clients
 from
 (
-SELECT did_billing_rel.*, product_items.update_at
-from did_billing_rel 
-LEFT JOIN product_items on cast(did_billing_rel.did as varchar(255)) = cast(product_items.digits as varchar(255))
+SELECT did_billing_brief.*, product_items.update_at
+from did_billing_brief 
+LEFT JOIN product_items on cast(did_billing_brief.did_number as varchar(255)) = cast(product_items.digits as varchar(255))
 -- left join product_items_resource ON product_items_resource.item_id = product_items.item_id 
-WHERE did_billing_rel.id = {$id} order by did_billing_rel.did desc 
+WHERE did_billing_brief.id = {$id} order by did_billing_brief.did_number desc 
 ) as t1
-LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.egress_res_id)
-LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.ingress_res_id)
-LEFT JOIN resource as client_resource ON resource_id = t1.ingress_res_id
+LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.vendor_trunk_id)
+LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.client_trunk_id)
+LEFT JOIN resource as client_resource ON resource_id = t1.client_trunk_id
 SQL;
         return $this->query($sql);
     }
@@ -301,8 +301,8 @@ SQL;
 
                     if (empty($newClient)) {
                         $sql = <<<EOT
-                                INSERT INTO resource (alias, client_id, dnis_cap_limit, media_type, capacity, trunk_type2, egress, rate_table_id, enough_balance, billing_rule, route_strategy_id, t38)
-                                (SELECT '{$clientName}', client_id, dnis_cap_limit, media_type, capacity, trunk_type2, egress, {$result[0][0]['rate_table_id']}, enough_balance, billing_rule, route_strategy_id,'true' FROM resource WHERE resource_id = {$client_id} LIMIT 1)
+                                INSERT INTO resource (alias, client_id, dnis_cap_limit, media_type, capacity, trunk_type2, egress, rate_table_id, enough_balance, billing_rule, route_strategy_id, rpid, paid, t38)
+                                (SELECT '{$clientName}', client_id, dnis_cap_limit, media_type, capacity, trunk_type2, egress, {$result[0][0]['rate_table_id']}, enough_balance, billing_rule, route_strategy_id, rpid, paid, 'true' FROM resource WHERE resource_id = {$client_id} LIMIT 1)
                                 returning resource_id
 EOT;
                         $newClient = $this->query($sql);
@@ -385,38 +385,38 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
                 $vendor_id = $vendor_id?: 0;
 
                 if (isset($newClient) && $newClient) {
-                    $newClientSql = ",ingress_res_id = {$newClient}";
+                    $newClientSql = ",client_trunk_id = {$newClient}";
                 } else {
                     $newClientSql = "";
                 }
-                $this->query("UPDATE did_billing_rel SET did_billing_id = {$clientBillingId}, buy_billing_plan_id = {$clientBillingId}, sell_billing_plan_id = {$vendorBillingId}, egress_res_id = {$vendor_id}, enable_for_clients = '{$enableForClients}' {$newClientSql}  WHERE id = {$id}");
+                $this->query("UPDATE did_billing_brief SET client_billing_plan_id = {$clientBillingId}, vendor_billing_plan_id = {$vendorBillingId}, vendor_trunk_id = {$vendor_id}, enable_for_clients = '{$enableForClients}' {$newClientSql}  WHERE id = {$id}");
             } else {
-                $checkExists = $this->query("SELECT id, start_date FROM did_billing_rel WHERE did = '{$number}' ORDER BY id DESC LIMIT 1");
+                $checkExists = $this->query("SELECT id, start_date FROM did_billing_brief WHERE did_number = '{$number}' ORDER BY id DESC LIMIT 1");
 
                 if (!empty($checkExists)) {
                     $expiredDate = date('Y-m-d');
                     $startDateNewRecord = date('Y-m-d');
-                    $this->query("UPDATE did_billing_rel SET end_date = '{$expiredDate}' WHERE id = {$checkExists[0][0]['id']}");
+                    $this->query("UPDATE did_billing_brief SET end_date = '{$expiredDate}' WHERE id = {$checkExists[0][0]['id']}");
 
                     if ($newClient) {
-                        $this->query("INSERT INTO did_billing_rel (did, did_billing_id, buy_billing_plan_id, sell_billing_plan_id, ingress_res_id, egress_res_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$clientBillingId}, {$vendorBillingId}, {$newClient}, {$vendor_id}, '{$startDateNewRecord}', '{$enableForClients}')");
+                        $this->query("INSERT INTO did_billing_brief (did_number, client_billing_plan_id, vendor_billing_plan_id, client_trunk_id, vendor_trunk_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$vendorBillingId}, {$newClient}, {$vendor_id}, '{$startDateNewRecord}', '{$enableForClients}')");
                     } else {
                         if ($clientBillingId) {
-                            $this->query("INSERT INTO did_billing_rel (did, did_billing_id, buy_billing_plan_id, sell_billing_plan_id, egress_res_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$clientBillingId}, {$vendorBillingId}, {$vendor_id}, '{$startDateNewRecord}', '{$enableForClients}')");
+                            $this->query("INSERT INTO did_billing_brief (did_number, client_billing_plan_id, vendor_billing_plan_id, vendor_trunk_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$vendorBillingId}, {$vendor_id}, '{$startDateNewRecord}', '{$enableForClients}')");
                         } else {
-                            $this->query("INSERT INTO did_billing_rel (did, sell_billing_plan_id, egress_res_id, start_date, enable_for_clients) VALUES ('{$number}', {$vendorBillingId}, {$vendor_id}, '{$startDateNewRecord}', '{$enableForClients}')");
+                            $this->query("INSERT INTO did_billing_brief (did_number, vendor_billing_plan_id, vendor_trunk_id, start_date, enable_for_clients) VALUES ('{$number}', {$vendorBillingId}, {$vendor_id}, '{$startDateNewRecord}', '{$enableForClients}')");
                         }
                     }
                 } else {
                     $startDate = date('Y-m-d');
 
                     if ($newClient) {
-                        $this->query("INSERT INTO did_billing_rel (did, did_billing_id, buy_billing_plan_id, sell_billing_plan_id, ingress_res_id, egress_res_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$clientBillingId}, {$vendorBillingId}, {$newClient}, {$vendor_id}, '{$startDate}', '{$enableForClients}')");
+                        $this->query("INSERT INTO did_billing_brief (did_number, client_billing_plan_id, vendor_billing_plan_id, client_trunk_id, vendor_trunk_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$vendorBillingId}, {$newClient}, {$vendor_id}, '{$startDate}', '{$enableForClients}')");
                     } else {
                         if ($clientBillingId) {
-                            $this->query("INSERT INTO did_billing_rel (did, did_billing_id, buy_billing_plan_id, sell_billing_plan_id, egress_res_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$clientBillingId}, {$vendorBillingId}, {$vendor_id}, '{$startDate}', '{$enableForClients}')");
+                            $this->query("INSERT INTO did_billing_brief (did_number, client_billing_plan_id, vendor_billing_plan_id, vendor_trunk_id, start_date, enable_for_clients) VALUES ('{$number}', {$clientBillingId}, {$vendorBillingId}, {$vendor_id}, '{$startDate}', '{$enableForClients}')");
                         } else {
-                            $this->query("INSERT INTO did_billing_rel (did, sell_billing_plan_id, egress_res_id, start_date, enable_for_clients) VALUES ('{$number}', {$vendorBillingId}, {$vendor_id}, '{$startDate}', '{$enableForClients}')");
+                            $this->query("INSERT INTO did_billing_brief (did_number, vendor_billing_plan_id, vendor_trunk_id, start_date, enable_for_clients) VALUES ('{$number}', {$vendorBillingId}, {$vendor_id}, '{$startDate}', '{$enableForClients}')");
                         }
                     }
                 }
@@ -498,7 +498,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
             return false;
         }
 
-        $delete_sql = "DELETE FROM did_billing_rel where did = '$number'";
+        $delete_sql = "DELETE FROM did_billing_brief where did_number = '$number'";
         $this->query($delete_sql);
 
         $this->commit();
@@ -507,14 +507,14 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
 
     public function delete_did_by_id($id)
     {
-        $did = $this->query("SELECT * FROM did_billing_rel WHERE id = {$id}");
-        $count = $this->query("SELECT count(*) as count FROM did_billing_rel where ingress_res_id = {$did[0][0]['ingress_res_id']}");
+        $did = $this->query("SELECT * FROM did_billing_brief WHERE id = {$id}");
+        $count = $this->query("SELECT count(*) as count FROM did_billing_brief where client_trunk_id = {$did[0][0]['client_trunk_id']}");
 
         $this->begin();
 
         if ($count[0][0]['count'] == 1) {
-            if ($did[0][0]['ingress_res_id']) {
-                $delete_sql = "DELETE FROM product_items_resource where resource_id = {$did[0][0]['ingress_res_id']}";
+            if ($did[0][0]['client_trunk_id']) {
+                $delete_sql = "DELETE FROM product_items_resource where resource_id = {$did[0][0]['client_trunk_id']}";
                 $delete_items = $this->query($delete_sql);
                 if ($delete_items === false)
                 {
@@ -522,7 +522,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
                     return false;
                 }
 
-                $delete_sql = "DELETE FROM resource_ip where resource_id = {$did[0][0]['ingress_res_id']}";
+                $delete_sql = "DELETE FROM resource_ip where resource_id = {$did[0][0]['client_trunk_id']}";
                 $delete_items = $this->query($delete_sql);
                 if ($delete_items === false)
                 {
@@ -530,7 +530,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
                     return false;
                 }
 
-                $delete_sql = "DELETE FROM resource where resource_id = {$did[0][0]['ingress_res_id']}";
+                $delete_sql = "DELETE FROM resource where resource_id = {$did[0][0]['client_trunk_id']}";
                 $delete_items = $this->query($delete_sql);
                 if ($delete_items === false)
                 {
@@ -540,7 +540,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
             }
         }
         $endDate = date('Y-m-d');
-        $sql = "UPDATE did_billing_rel SET end_date = '{$endDate}' where id = {$id}";
+        $sql = "UPDATE did_billing_brief SET end_date = '{$endDate}' where id = {$id}";
         $this->query($sql);
 
         $this->commit();
@@ -566,7 +566,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
 
     public function check_exist_number($number)
     {
-        $sql = "SELECT count(*) as sum FROM did_billing_rel WHERE did = '$number' AND (end_date IS NULL or end_date > now())";
+        $sql = "SELECT count(*) as sum FROM did_billing_brief WHERE did_number = '$number' AND (end_date IS NULL or end_date > now())";
         $data = $this->query($sql);
         return $data[0][0]['sum'];
     }
@@ -580,8 +580,8 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
             if (!is_numeric($selected))
                 continue;
 
-            $record = $this->query("SELECT egress_res_id, sell_billing_plan_id, did FROM did_billing_rel WHERE id = {$selected}");
-            $flag = $this->assign_did($client_id, $record[0][0]['egress_res_id'], $record[0][0]['did'], $record[0][0]['sell_billing_plan_id'], $clientBillingId, false, $selected);
+            $record = $this->query("SELECT vendor_trunk_id, vendor_billing_plan_id, did_number FROM did_billing_brief WHERE id = {$selected}");
+            $flag = $this->assign_did($client_id, $record[0][0]['vendor_trunk_id'], $record[0][0]['did_number'], $record[0][0]['vendor_billing_plan_id'], $clientBillingId, false, $selected);
 
             if (!$flag) {
                 break;
@@ -605,7 +605,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
             $this->query("DELETE FROM client WHERE client_id = {$clientId}");
         }
 
-        $this->query("DELETE FROM did_billing_rel WHERE 1=1");
+        $this->query("DELETE FROM did_billing_brief WHERE 1=1");
     }
 
     public function deleteByResourceId($id)
@@ -661,7 +661,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
         }
 
         $endDate = date('Y-m-d');
-        $result = $this->query("UPDATE did_billing_rel set end_date = '{$endDate}' WHERE egress_res_id = {$resourceId}");
+        $result = $this->query("UPDATE did_billing_brief set end_date = '{$endDate}' WHERE vendor_trunk_id = {$resourceId}");
         if ($result === false) {
             $this->rollback();
             return false;
@@ -673,12 +673,12 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
     public function exportDid($selected, $file, $type)
     {
         $ids = '\'' . implode('\',\'', $selected) . '\'';
-        $sql = "select did as DID from did_billing_rel where egress_res_id in ({$ids})";
+        $sql = "select did_number as DID from did_billing_brief where vendor_trunk_id in ({$ids})";
 
         if ($type == 3) {
-            $sql .= " and ingress_res_id is not null";
+            $sql .= " and client_trunk_id is not null";
         }
-        $sql .= " group by did";
+        $sql .= " group by did_number";
 
         $sql = "\COPY ($sql) TO '{$file}' CSV HEADER";
         $this->_get_psql_cmd($sql);
@@ -689,7 +689,7 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
         $prefixes = ['1800', '1888', '1877', '1866', '1855', '1844'];
         $prefixes = implode('|', $prefixes);
 
-        $where = empty($prefix) ? " cast(t1.did as varchar(255)) NOT SIMILAR TO '({$prefixes})%'" : " cast(t1.did as varchar(255)) like '{$prefix}%'";
+        $where = empty($prefix) ? " cast(t1.did_number as varchar(255)) NOT SIMILAR TO '({$prefixes})%'" : " cast(t1.did_number as varchar(255)) like '{$prefix}%'";
 
         if (!empty($country)) {
             $where .= " AND code.country like '%{$country}%'";
@@ -697,46 +697,47 @@ WHERE product_items_resource.resource_id = $client_id AND product_id = $product_
         $where .= " AND (t1.end_date is null OR t1.end_date > now()) AND start_date <= now()";
 
         $sql = <<<SQL
-SELECT client_resource.alias, t1.id, t1.did, code.country, code.state, t1.egress_res_id as vendor_id, t1.ingress_res_id as client_id, vendor_client.name as vendor_name,
+SELECT client_resource.alias, t1.id, t1.did_number, code.country, code.state, t1.vendor_trunk_id as vendor_id, t1.client_trunk_id as client_id, vendor_client.name as vendor_name,
 orig_client.name as client_name,
-(SELECT ip FROM resource_ip WHERE resource_ip.resource_id = t1.egress_res_id LIMIT 1) as vendor_ip,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.sell_billing_plan_id LIMIT 1) as vendor_rule,
-(SELECT did_billing_plan.did_price FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as one_time_fee,
-(SELECT did_billing_plan.monthly_charge FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as monthly_fee,
-(SELECT did_billing_plan.min_price FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as per_min_fee,
-(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as client_rule,
-(SELECT did_billing_plan.rate_type FROM did_billing_plan WHERE did_billing_plan.id = t1.buy_billing_plan_id LIMIT 1) as client_rule_rate_type,
-t1.sell_billing_plan_id as vendor_billing_id,
+(SELECT ip FROM resource_ip WHERE resource_ip.resource_id = t1.vendor_trunk_id LIMIT 1) as vendor_ip,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.vendor_billing_plan_id LIMIT 1) as vendor_rule,
+(SELECT did_billing_plan.did_price FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as one_time_fee,
+(SELECT did_billing_plan.monthly_charge FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as monthly_fee,
+(SELECT did_billing_plan.min_price FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as per_min_fee,
+(SELECT did_billing_plan.name FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as client_rule,
+(SELECT did_billing_plan.rate_type FROM did_billing_plan WHERE did_billing_plan.id = t1.client_billing_plan_id LIMIT 1) as client_rule_rate_type,
+t1.vendor_billing_plan_id as vendor_billing_id,
 t1.end_date as end_date,
-t1.buy_billing_plan_id as client_billing_id,
+t1.client_billing_plan_id as client_billing_id,
 t1.start_date as start_date
 from
 (
-SELECT did_billing_rel.*, product_items.update_at
-from did_billing_rel 
-LEFT JOIN product_items on cast(did_billing_rel.did as varchar(255)) = cast(product_items.digits as varchar(255))
-order by did_billing_rel.did desc 
+SELECT did_billing_brief.*, product_items.update_at
+from did_billing_brief 
+LEFT JOIN product_items on cast(did_billing_brief.did_number as varchar(255)) = cast(product_items.digits as varchar(255))
+order by did_billing_brief.did_number desc 
 ) as t1
-LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.egress_res_id)
-LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.ingress_res_id)
-LEFT JOIN resource as client_resource ON resource_id = t1.ingress_res_id
-LEFT JOIN code ON cast(code.code as varchar(255)) = cast(t1.did as varchar(255))
-WHERE t1.enable_for_clients = 't' AND t1.ingress_res_id is null AND $where
+LEFT JOIN client as vendor_client ON vendor_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.vendor_trunk_id)
+LEFT JOIN client as orig_client ON orig_client.client_id = (SELECT client_id FROM resource WHERE resource_id = t1.client_trunk_id)
+LEFT JOIN resource as client_resource ON resource_id = t1.client_trunk_id
+LEFT JOIN code ON cast(code.code as varchar(255)) = cast(t1.did_number as varchar(255))
+WHERE t1.enable_for_clients = 't' AND t1.client_trunk_id is null AND $where
 SQL;
-//        die(var_dump($sql));
-        return $this->query($sql);
+
+        $result = $this->query($sql);
+        return $result;
     }
 
     public function getRelData($did)
     {
-        $data = $this->query("SELECT * FROM did_billing_rel WHERE did = '{$did}' LIMIT 1");
+        $data = $this->query("SELECT * FROM did_billing_brief WHERE did_number = '{$did}' LIMIT 1");
 
         return $data;
     }
 
     public function getRelDataById($id)
     {
-        $data = $this->query("SELECT * FROM did_billing_rel WHERE id = {$id} LIMIT 1");
+        $data = $this->query("SELECT * FROM did_billing_brief WHERE id = {$id} LIMIT 1");
 
         return $data;
     }

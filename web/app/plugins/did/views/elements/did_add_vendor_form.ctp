@@ -29,7 +29,7 @@
                         <option value="<?php echo $i ?>"><?php echo $i ?></option>
                     <?php endfor; ?>
                 </select>
-                <input style="width: 37px;" class="validate[custom[integer]]" type="text" id="ip_port" name="ip_port[]"  class="width40" maxlength="5" >
+                <input style="width: 37px;" class="validate[custom[integer]]" value="5060" type="text" id="ip_port" name="ip_port[]"  class="width40" maxlength="5" >
                 <a href="javascript:void(0)" id="add_ip">
                     <i class="icon-plus"></i>
                 </a>
@@ -44,7 +44,7 @@
                         <option value="<?php echo $i ?>"><?php echo $i ?></option>
                     <?php endfor; ?>
                 </select>
-                <input type="text" name="ip_port[]"  class="width40" maxlength="5" >
+                <input type="text" name="ip_port[]" value="5060"  class="width40 validate[custom[integer]]" maxlength="5" >
                 <a href="javascript:void(0)" class="ip_delete">
                     <i class="icon-remove"></i>
                 </a>

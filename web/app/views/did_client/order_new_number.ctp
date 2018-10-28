@@ -67,7 +67,7 @@
                     <tbody>
                         <tr v-for="item in numbers">
                             <td><input type="checkbox" name="codes[]" v-model="number" :value="item[0].id"></td>
-                            <td>{{item[0].did}}</td>
+                            <td>{{item[0].did_number}}</td>
 <!--                            <td>{{item[0].country}}</td>-->
 <!--                            <td>{{item[0].jur_type}}</td>-->
 <!--                            <td>{{item[0].state}}</td>-->

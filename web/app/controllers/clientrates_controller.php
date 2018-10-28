@@ -2752,7 +2752,7 @@ class ClientratesController extends AppController
             $interval_min_time_flg = isset($this->params['form']['interval_mintime']['code']) && $this->params['form']['interval_mintime']['code'] != '';
             $default_headers = array();
             $default_values = array();
-            $is_effective_date = trim($postData['is_effective_date']);
+            $is_effective_date = !empty($_POST['default_effective_date']);
             $is_min_time = trim($postData['is_min_time']);
             $is_interval = trim($postData['is_interval']);
             $default_info_arr = array();
@@ -2768,8 +2768,8 @@ class ClientratesController extends AppController
             {
                 array_push($postData['columns'], 'effective_date');
                 array_push($default_headers, 'effective_date');
-                array_push($default_values, $postData['effetive_date']);
-                $default_info_arr[] = __('Effective Date',true).":".$postData['effetive_date'];
+                array_push($default_values, $_POST['default_effective_date']);
+                $default_info_arr[] = __('Effective Date',true).":".$_POST['default_effective_date'];
             }
 
             if (!$interval_min_time_flg)
@@ -2855,6 +2855,7 @@ class ClientratesController extends AppController
                 shell_exec($add_prefix_cmd);
                 $abspath = $tmp_path;
             }
+
             $cmds_3 = array();
 
             $default_headers_c = implode(',', $default_headers);

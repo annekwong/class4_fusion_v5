@@ -54,7 +54,7 @@
 
             foreach ($data as $item): ?>
                 <tr data-id="<?php echo $item['DidBillingRel']['id']; ?>">
-                    <td><?php echo $item['DidBillingRel']['did']; ?></td>
+                    <td><?php echo $item['DidBillingRel']['did_number']; ?></td>
                     <td><?php echo explode("_{$encodedWord}_", $item['Resource']['alias'])[0]; ?></td>
                     <td><?php echo $item['DidBillingRel']['type']; ?></td>
 <!--                    <td>--><?php //echo $item['Code']['country']; ?><!--</td>-->

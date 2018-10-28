@@ -166,7 +166,7 @@
                               <th>
                                   <input type="checkbox" id="selectAll">
                               </th>
-                              <th rowspan="2"><?php echo $appCommon->show_order('did', 'DID'); ?></th>
+                              <th rowspan="2"><?php echo $appCommon->show_order('did_number', 'DID'); ?></th>
                               <th><?php echo $appCommon->show_order('vendor_name', 'DID Vendor'); ?></th>
                               <th><?php echo $appCommon->show_order('vendor_rule', 'Vendor Billing Rule'); ?></th>
                               <th><?php echo $appCommon->show_order('client_name', 'DID Client'); ?></th>
@@ -195,7 +195,7 @@
                                 <th>
                                     <input type="checkbox" id="selectAll">
                                 </th>
-                                <th><?php echo $appCommon->show_order('did', 'DID'); ?></th>
+                                <th><?php echo $appCommon->show_order('did_number', 'DID'); ?></th>
                                 <th><?php echo $appCommon->show_order('vendor_name', 'DID Vendor'); ?></th>
                                 <th><?php echo $appCommon->show_order('vendor_rule', 'Vendor Billing Rule'); ?></th>
                                 <th><?php echo $appCommon->show_order('client_name', 'DID Client'); ?></th>
@@ -216,7 +216,7 @@
                                     <td>
                                         <input type="checkbox" class="multi_select" value="<?php echo $item[0]['id']; ?>">
                                     </td>
-                                    <td><?php echo $item[0]['did']; ?></td>
+                                    <td><?php echo $item[0]['did_number']; ?></td>
                                     <td><?php echo isset($item[0]['vendor_name']) ? $item[0]['vendor_name']: (isset($ingresses[$item[0]['vendor_id']]) ? $ingresses[$item[0]['vendor_id']] : ''); ?></td>
                                     <td><?php echo $item[0]['vendor_rule']; ?></td>
                                     <td class="client_name"><?php echo $item[0]['client_name'] ?></td>
