@@ -80,12 +80,19 @@ after that, initialise postgresql database:
 systemctl start postgresql-9.6
 systemctl enable postgresql-9.6
 su to the postgres user, then  navigate to the database directory
-psql -U postgres -c "create user class4 user superuser login password 'password'"
+
+psql -U postgres -c "create user class4_user superuser login password 'password'"
+
 psql -U postgres -c "create database softswitch4v5"
+
 psql -U postgres softswitch4v5 < class4_db_schema.sql ----- DB Structure
+
 psql -U postgres softswitch4v5 < db_data.sql ----- Basic data
+
 psql -U postgres softswitch4v5 < code.sql ----Code data
+
 psql -U postgres softswitch4v5 <  jurisdiction_prefix.sql ----- jurisdiction data
+
 psql -U postgres softswitch4v5 < update.sql ----- Update record data
 
 copy file /etc/denovo.conf into /etc/httpd/conf.d/
